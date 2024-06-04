@@ -176,4 +176,46 @@
 **Flujos Alternativos**:
 - Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
 
+---
 
+## Generar informe de asistencia
+**Descripción**: Permite generar un informe con la cantidad de asistencias del paciente a las sesiones.
+**Actor(es)**: Psicólogo
+**Flujo Principal**:
+1. El psicólogo selecciona al paciente.
+2. El sistema lista todas las sesiones de ese paciente .
+3. El psicologo genera el informe de asistencia.
+4. El sistema emite el infrome y lo guarda en un historial de informes emitidos.
+
+**Flujos Alternativos**:
+- Si el paciente no tiene ninguna sesion para listar, se termina el caso de uso.
+
+---
+
+## Enviar recordatorio de sesión al paciente
+**Descripción**: El sistema envia un recordatorio al paciente sobre su sesión pendiente, unas horas antes de que suceda la misma, mediante WhatsApp.
+**Actor(es)**: Sistema
+**Flujo Principal**:
+1. El sistema verifica que pacientes tienen una sesion en la fecha actual.
+2. El sistema envia un recordatorio de la sesion pendiente a cada paciente mediante un mensaje de WhatsApp.
+
+**Flujos Alternativos**:
+- Si el paciente no tiene un numero de telefono cargado, se termina el caso de uso.
+
+---
+
+## Adelantar sesión de un paciente en caso de cancelacion
+**Descripción**: El sistema puede adelantar la sesion de un paciente, si este está de acuerdo, en caso de que otro paciente cancele su sesión con anticipación.
+**Actor(es)**: Sistema, Secretario y Paciente
+**Flujo Principal**:
+1. El secretario recibe una solicitud de cancelacion de la sesion de un paciente, siendole proporcionado el DNI del paciente, la fecha y la hora de la sesión.
+2. El sistema verifica que el paciente tenga una sesion en la fecha y hora proporcionadas para la cancelacion, y cancela la sesión.
+3. Posteriormente el sistema verifica quien es el paciente mas proximo cuya sesion sea mas cercana, tanto en fecha y hora, a la sesion cancelada y le envia un correo electronico preguntandole si desea adelantar la sesion, solo si el paciente selecciono durante el registro de la sesion que estaba dispuesto a ser notificado en cuanto surguiera la posibilidad de adelantar su sesión.
+4. El paciente marca que si en el correo electronico.
+5. El sistema modifica automaticamente la sesion del cliente para actualizar la nueva fecha y hora de la sesion.
+6. El sistema envia otro correo electronico al paciente para confirmarle que su sesion fue actualizada correctamente
+6. El sistema envia una notificacion al secretario con el cambio de horario y/o fecha de la sesión del paciente.
+
+**Flujos Alternativos**:
+- Si no hay ningun paciente que desea cambiar la fecha y/o hora de su sesion se termina el caso de uso
+- Si el paciente no desea modificar su sesion el sistema realizará el paso 3 nuevamente con la proxima persona de la lista
