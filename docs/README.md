@@ -1,6 +1,6 @@
 # Documentación del Proyecto
 
 - [Introducción](introduccion.md)
-- [Requisitos del Sistema](requisitos.md)
+- [Requisitos del Sistema](requerimientos.md)
 - [Modelo](modelo.md)
 - [Casos de Uso](casosDeUso.md)
