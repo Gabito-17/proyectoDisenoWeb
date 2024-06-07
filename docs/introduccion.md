@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-El proyecto consiste en el desarrollo de un sistema web para "Policonsultorios Alma", ubicado en la ciudad de Montecarlo, Misiones. Este sistema se centrará en optimizar la gestión del consultorio psicológico que forma parte del sanatorio, el cual actualmente ofrece servicios de psicoterapia presencial para adultos de forma individual.
+El proyecto consiste en el desarrollo de un sistema web para "Consultorio Alma", ubicado en la ciudad de Montecarlo, Misiones. Este sistema se centrará en optimizar la gestión del consultorio psicológico que forma parte del sanatorio, el cual actualmente ofrece servicios de psicoterapia presencial para adultos de forma individual.
 
 El objetivo principal del sistema es mejorar la eficiencia y la organización del consultorio, reemplazando los métodos tradicionales de almacenamiento de información en papel con una solución digital moderna que garantice la confidencialidad y la accesibilidad de los datos de los pacientes.
 
@@ -27,7 +27,7 @@ El sistema web desarrollado abarcará las siguientes funcionalidades principales
 
 ## Contexto y Motivación
 
-En el contexto del "Sanatorio Norte", la gestión de información mediante carpetas y registros en papel ha demostrado ser ineficiente y propenso a errores. La transición a una solución digital no solo modernizará el consultorio psicológico, sino que también mejorará significativamente la eficiencia operativa, la seguridad de los datos y la satisfacción tanto de los pacientes como de los profesionales.
+En el contexto del "Consultorio Alma", la gestión de información mediante carpetas y registros en papel ha demostrado ser ineficiente y propenso a errores. La transición a una solución digital no solo modernizará el consultorio psicológico, sino que también mejorará significativamente la eficiencia operativa, la seguridad de los datos y la satisfacción tanto de los pacientes como de los profesionales.
 
 Este proyecto integrador representa una oportunidad para aplicar conocimientos en desarrollo web, diseño de bases de datos y seguridad informática, contribuyendo a la mejora de un servicio esencial en la comunidad.
 

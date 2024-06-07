@@ -4,4 +4,3 @@
 - [Requisitos del Sistema](requisitos.md)
 - [Modelo](modelo.md)
 - [Casos de Uso](casosDeUso.md)
-- [Referencias](referencias.md)

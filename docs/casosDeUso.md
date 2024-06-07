@@ -1,9 +1,8 @@
-# Modelo
-
 ## Diagrama de Casos de Uso
-![Diagrama de Casos de Uso](/docs/diagramaCasosDeUso.png)
+![Diagrama de Casos de Uso](/proyectoDisenoWeb/docs/diagramaCasosDeUso.png)
 
 ---
+
 # Casos de Uso Extendidos
 
 ## Registrar Paciente
@@ -15,7 +14,7 @@
 3. El sistema registra al paciente y confirma el registro.
 
 **Flujos Alternativos**:
-- Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
+- 3a. Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
 
 ---
 
@@ -30,7 +29,7 @@
 5. El sistema actualiza la información del paciente y confirma la modificación.
 
 **Flujos Alternativos**:
-- Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
+- 5a. Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
 
 ---
 
@@ -44,7 +43,7 @@
 4. El sistema elimina al paciente y confirma la eliminación.
 
 **Flujos Alternativos**:
-- Si el secretario no confirma la eliminación, el paciente no es eliminado.
+- 2a. Si el secretario no confirma la eliminación, el paciente no es eliminado.
 
 ---
 
@@ -67,7 +66,7 @@
 4. El sistema registra la sesión y confirma el registro.
 
 **Flujos Alternativos**:
-- Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
+- 3a. Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
 
 ---
 
@@ -90,7 +89,7 @@
 4. El sistema cancela la sesión y confirma la cancelación.
 
 **Flujos Alternativos**:
-- Si el secretario no confirma la cancelación, la sesión no es cancelada.
+- 2a. Si el secretario no confirma la cancelación, la sesión no es cancelada.
 
 ---
 
@@ -113,10 +112,9 @@
 4. El sistema registra la derivación y confirma el registro.
 
 **Flujos Alternativos**:
-- Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
+- 3a. Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
 
 ---
-
 ## Consultar Historia Clínica
 **Descripción**: Permite consultar la historia clínica de un paciente.
 **Actor(es)**: Psicólogo
@@ -136,7 +134,7 @@
 4. El sistema registra la historia clínica y confirma el registro.
 
 **Flujos Alternativos**:
-- Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
+- 3a. Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
 
 ---
 
@@ -151,7 +149,7 @@
 5. El sistema actualiza la información del informe de sesión y confirma la modificación.
 
 **Flujos Alternativos**:
-- Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
+- 4a. Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
 
 ---
 
@@ -174,7 +172,7 @@
 4. El sistema registra el informe de sesión y confirma el registro.
 
 **Flujos Alternativos**:
-- Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
+- 3a. Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
 
 ---
 
@@ -183,39 +181,39 @@
 **Actor(es)**: Psicólogo
 **Flujo Principal**:
 1. El psicólogo selecciona al paciente.
-2. El sistema lista todas las sesiones de ese paciente .
-3. El psicologo genera el informe de asistencia.
-4. El sistema emite el infrome y lo guarda en un historial de informes emitidos.
+2. El sistema lista todas las sesiones de ese paciente.
+3. El psicólogo genera el informe de asistencia.
+4. El sistema emite el informe y lo guarda en un historial de informes emitidos.
 
 **Flujos Alternativos**:
-- Si el paciente no tiene ninguna sesion para listar, se termina el caso de uso.
+- 2a. Si el paciente no tiene ninguna sesión para listar, se termina el caso de uso.
 
 ---
 
 ## Enviar recordatorio de sesión al paciente
-**Descripción**: El sistema envia un recordatorio al paciente sobre su sesión pendiente, unas horas antes de que suceda la misma, mediante WhatsApp.
+**Descripción**: El sistema envía un recordatorio al paciente sobre su sesión pendiente, unas horas antes de que suceda la misma, mediante WhatsApp.
 **Actor(es)**: Sistema
 **Flujo Principal**:
-1. El sistema verifica que pacientes tienen una sesion en la fecha actual.
-2. El sistema envia un recordatorio de la sesion pendiente a cada paciente mediante un mensaje de WhatsApp.
+1. El sistema verifica qué pacientes tienen una sesión en la fecha actual.
+2. El sistema envía un recordatorio de la sesión pendiente a cada paciente mediante un mensaje de WhatsApp.
 
 **Flujos Alternativos**:
-- Si el paciente no tiene un numero de telefono cargado, se termina el caso de uso.
+- 2a. Si el paciente no tiene un número de teléfono cargado, se termina el caso de uso.
 
 ---
 
-## Adelantar sesión de un paciente en caso de cancelacion
-**Descripción**: El sistema puede adelantar la sesion de un paciente, si este está de acuerdo, en caso de que otro paciente cancele su sesión con anticipación.
+## Adelantar sesión de un paciente en caso de cancelación
+**Descripción**: El sistema puede adelantar la sesión de un paciente, si este está de acuerdo, en caso de que otro paciente cancele su sesión con anticipación.
 **Actor(es)**: Sistema, Secretario y Paciente
 **Flujo Principal**:
-1. El secretario recibe una solicitud de cancelacion de la sesion de un paciente, siendole proporcionado el DNI del paciente, la fecha y la hora de la sesión.
-2. El sistema verifica que el paciente tenga una sesion en la fecha y hora proporcionadas para la cancelacion, y cancela la sesión.
-3. Posteriormente el sistema verifica quien es el paciente mas proximo cuya sesion sea mas cercana, tanto en fecha y hora, a la sesion cancelada y le envia un correo electronico preguntandole si desea adelantar la sesion, solo si el paciente selecciono durante el registro de la sesion que estaba dispuesto a ser notificado en cuanto surguiera la posibilidad de adelantar su sesión.
-4. El paciente marca que si en el correo electronico.
-5. El sistema modifica automaticamente la sesion del cliente para actualizar la nueva fecha y hora de la sesion.
-6. El sistema envia otro correo electronico al paciente para confirmarle que su sesion fue actualizada correctamente
-6. El sistema envia una notificacion al secretario con el cambio de horario y/o fecha de la sesión del paciente.
+1. El secretario recibe una solicitud de cancelación de la sesión de un paciente, siendo proporcionado el DNI del paciente, la fecha y la hora de la sesión.
+2. El sistema verifica que el paciente tenga una sesión en la fecha y hora proporcionadas para la cancelación, y cancela la sesión.
+3. Posteriormente, el sistema verifica quién es el paciente más próximo cuya sesión sea más cercana, tanto en fecha como en hora, a la sesión cancelada y le envía un correo electrónico preguntándole si desea adelantar su sesión, solo si el paciente seleccionó durante el registro de la sesión que estaba dispuesto a ser notificado en cuanto surgiera la posibilidad de adelantar su sesión.
+4. El paciente marca que sí en el correo electrónico.
+5. El sistema modifica automáticamente la sesión del cliente para actualizar la nueva fecha y hora de la sesión.
+6. El sistema envía otro correo electrónico al paciente para confirmarle que su sesión fue actualizada correctamente.
+7. El sistema envía una notificación al secretario con el cambio de horario y/o fecha de la sesión del paciente.
 
 **Flujos Alternativos**:
-- Si no hay ningun paciente que desea cambiar la fecha y/o hora de su sesion se termina el caso de uso
-- Si el paciente no desea modificar su sesion el sistema realizará el paso 3 nuevamente con la proxima persona de la lista
+- 3a. Si no hay ningún paciente que desea cambiar la fecha y/o hora de su sesión, se termina el caso de uso.
+- 4a. Si el paciente no desea modificar su sesión, el sistema realizará el paso 3 nuevamente con la próxima persona de la lista.

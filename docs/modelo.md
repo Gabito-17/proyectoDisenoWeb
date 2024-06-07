@@ -1,7 +1,7 @@
 # Modelo de Contenidos
 
 ## Diagrama de Clases
-![Diagrama de Clases](/docs/diagramaClases.png)
+![Diagrama de Clases](/proyectoDisenoWeb/docs/diagramaClases.png)
 
 # Descripción de Clases del Sistema
 
