@@ -5,7 +5,7 @@
 
 # Casos de Uso Extendidos
 
-## Registrar Paciente
+## UC- 01 - Registrar Paciente
 **Descripción**: Permite registrar un nuevo paciente en el sistema.
 **Actor(es)**: Secretario
 **Flujo Principal**:
@@ -18,7 +18,7 @@
 
 ---
 
-## Modificar Paciente
+## UC- 02 - Modificar Paciente
 **Descripción**: Permite modificar la información de un paciente existente.
 **Actor(es)**: Secretario
 **Flujo Principal**:
@@ -33,8 +33,8 @@
 
 ---
 
-## Eliminar Paciente
-**Descripción**: Permite eliminar un paciente del sistema.
+## UC- 03 -  Eliminar Paciente
+**Descripción**: Permite dar de baja logicamente a un paciente del sistema.
 **Actor(es)**: Secretario
 **Flujo Principal**:
 1. El secretario selecciona al paciente a eliminar.
@@ -47,7 +47,7 @@
 
 ---
 
-## Consultar Paciente
+## UC- 04 - Consultar Paciente
 **Descripción**: Permite consultar la información de un paciente.
 **Actor(es)**: Secretario, Psicólogo
 **Flujo Principal**:
@@ -56,7 +56,7 @@
 
 ---
 
-## Registrar Sesión
+## UC- 05 - Registrar Sesión
 **Descripción**: Permite registrar una nueva sesión para un paciente.
 **Actor(es)**: Secretario
 **Flujo Principal**:
@@ -70,7 +70,7 @@
 
 ---
 
-## Consultar Sesión
+## UC- 06 - Consultar Sesión
 **Descripción**: Permite consultar las sesiones programadas.
 **Actor(es)**: Secretario, Psicólogo
 **Flujo Principal**:
@@ -79,7 +79,7 @@
 
 ---
 
-## Cancelar Sesión
+## UC- 07 - Cancelar Sesión
 **Descripción**: Permite cancelar una sesión programada.
 **Actor(es)**: Secretario
 **Flujo Principal**:
@@ -93,7 +93,7 @@
 
 ---
 
-## Consultar Agenda
+## UC- 08 - Consultar Agenda
 **Descripción**: Permite consultar la agenda de sesiones.
 **Actor(es)**: Secretario, Psicólogo
 **Flujo Principal**:
@@ -102,7 +102,7 @@
 
 ---
 
-## Derivar Paciente
+## UC- 09 - Derivar Paciente
 **Descripción**: Permite derivar un paciente a otro psicólogo.
 **Actor(es)**: Psicólogo
 **Flujo Principal**:
@@ -115,7 +115,7 @@
 - 3a. Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos.
 
 ---
-## Consultar Historia Clínica
+## UC- 10 - Consultar Historia Clínica
 **Descripción**: Permite consultar la historia clínica de un paciente.
 **Actor(es)**: Psicólogo
 **Flujo Principal**:
@@ -124,7 +124,7 @@
 
 ---
 
-## Registrar Historia Clínica
+## UC- 11 - Registrar Historia Clínica
 **Descripción**: Permite registrar una nueva historia clínica para un paciente.
 **Actor(es)**: Psicólogo
 **Flujo Principal**:
@@ -138,7 +138,7 @@
 
 ---
 
-## Modificar Informe de Sesión
+## UC- 12 - Modificar Informe de Sesión
 **Descripción**: Permite modificar la información de un informe de sesión existente.
 **Actor(es)**: Psicólogo
 **Flujo Principal**:
@@ -153,7 +153,7 @@
 
 ---
 
-## Consultar Informe de Sesión
+## UC- 13 - Consultar Informe de Sesión
 **Descripción**: Permite consultar los informes de sesión de un paciente.
 **Actor(es)**: Psicólogo
 **Flujo Principal**:
@@ -162,7 +162,7 @@
 
 ---
 
-## Registrar Informe de Sesión
+## UC- 14 - Registrar Informe de Sesión
 **Descripción**: Permite registrar un nuevo informe de sesión para un paciente.
 **Actor(es)**: Psicólogo
 **Flujo Principal**:
@@ -176,7 +176,7 @@
 
 ---
 
-## Generar informe de asistencia
+## UC- 15 - Generar informe de asistencia
 **Descripción**: Permite generar un informe con la cantidad de asistencias del paciente a las sesiones.
 **Actor(es)**: Psicólogo
 **Flujo Principal**:
@@ -190,7 +190,7 @@
 
 ---
 
-## Enviar recordatorio de sesión al paciente
+## UC- 16 - Enviar recordatorio de sesión al paciente
 **Descripción**: El sistema envía un recordatorio al paciente sobre su sesión pendiente, unas horas antes de que suceda la misma, mediante WhatsApp.
 **Actor(es)**: Sistema
 **Flujo Principal**:
@@ -202,7 +202,7 @@
 
 ---
 
-## Adelantar sesión de un paciente en caso de cancelación
+## UC- 17 - Adelantar sesión de un paciente en caso de cancelación
 **Descripción**: El sistema puede adelantar la sesión de un paciente, si este está de acuerdo, en caso de que otro paciente cancele su sesión con anticipación.
 **Actor(es)**: Sistema, Secretario y Paciente
 **Flujo Principal**:
