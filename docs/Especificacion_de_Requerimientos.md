@@ -479,3 +479,41 @@ Este requisito garantiza que toda la información relevante sobre las sesiones s
 | **Flujo Alternativo** | **Paso** | **Acción** |
 | | 3a | Si no hay ningún paciente que desea cambiar la fecha y/o hora de su sesión, se termina el caso de uso |
 | | 4a | Si el paciente no desea modificar su sesión, el sistema realizará el paso 3 nuevamente con la próxima persona de la lista |
+
+---
+# Requerimientos no Funcionales
+
+| **NFR - 01**                 | **Soporte de actualizaciones** |
+|--------------------------|------------------------|
+| Objetivos asociados      |**OBJ - 01**: Mantener el software actualizado|
+| Requisitos asociados     |**IRQ - 01**: Mecanismo de actualización del software |
+| Descripción              | El sistema debe ser capaz de recibir e implementar actualizaciones periódicas para mejorar su funcionamiento y seguridad. |
+| Comentarios              | Ninguno                |
+
+| **NFR - 02**                 | **Soporte de nuevas funcionalidades** |
+|--------------------------|------------------------|
+| Objetivos asociados      |**OBJ - 02**: Permitir la incorporación de nuevas funcionalidades|
+| Requisitos asociados     |**IRQ - 02**: Flexibilidad para la adición de funciones|
+| Descripción              | El sistema debe ser diseñado de manera que sea fácil agregar nuevas funcionalidades sin afectar la estabilidad del sistema existente. |
+| Comentarios              | Ninguno                |
+
+| **NFR - 03**                 | **Plataforma web**        |
+|--------------------------|------------------------|
+| Objetivos asociados      |**OBJ - 03**: Desarrollar el sistema para funcionar en plataformas web|
+| Requisitos asociados     |**IRQ - 03**: Compatibilidad con navegadores web estándar|
+| Descripción              | El sistema estará diseñado y desarrollado para ser accesible a través de navegadores web estándar, lo que permitirá un fácil acceso desde diferentes dispositivos. |
+| Comentarios              | Ninguno                |
+
+| **NFR - 04**                 | **Restricción de documentación** |
+|--------------------------|------------------------|
+| Objetivos asociados      | **OBJ - 04**: Restringir acceso a la documentación según los roles |
+| Requisitos asociados     | **IRQ - 04**: Mecanismo de control de acceso a la documentación |
+| Descripción              | La documentación del sistema estará disponible solo para los roles autorizados, con un mecanismo de control de acceso que asegure la confidencialidad de la información. |
+| Comentarios              | Ninguno                |
+
+| **NFR - 05**                 | **Computadora principal y para la secretaria** |
+|--------------------------|------------------------|
+| Objetivos asociados      |**OBJ - 05**: Garantizar acceso adecuado a los registros según los roles|
+| Requisitos asociados     |**IRQ - 05**: Control de acceso diferenciado para la computadora principal y la de la secretaria |
+| Descripción              | El sistema debe garantizar que la computadora principal tenga acceso completo a todos los registros contables y de pacientes, mientras que la computadora de la secretaria tendrá acceso restringido únicamente a los aspectos pertinentes para su función. |
+| Comentarios              | Ninguno                |
