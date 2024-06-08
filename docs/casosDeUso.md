@@ -1,5 +1,5 @@
 ## Diagrama de Casos de Uso
-![Diagrama de Casos de Uso](/proyectoDisenoWeb/docs/diagramaCasosDeUso.png)
+![Diagrama de Casos de Uso](/docs/diagramaCasosDeUso.png)
 
 ---
 

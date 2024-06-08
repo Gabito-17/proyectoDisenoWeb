@@ -23,7 +23,7 @@
 
 ---
 
-## Descripción del Proyecto
+## Presentacion General
 
 El proyecto consiste en el desarrollo de un sistema web para "Consultorio Alma", ubicado en la ciudad de Montecarlo, Misiones. Este sistema se centrará en optimizar la gestión del consultorio psicológico que forma parte del sanatorio, el cual actualmente ofrece servicios de psicoterapia presencial para adultos de forma individual.
 
@@ -58,7 +58,7 @@ El objetivo principal del sistema es mejorar la eficiencia y la organización de
 - UC-11: Modificación de Psicólogos
 - UC-12: Baja de Psicólogos
 
-**Descripción**  
+**Descripción**
 Se almacenará toda la información necesaria de los psicólogos que trabajan en el consultorio.
 
 **Datos específicos**
@@ -71,10 +71,10 @@ Se almacenará toda la información necesaria de los psicólogos que trabajan en
 - Motivo de Baja (en caso de ser necesario)
 - Fecha de Baja (en caso de ser necesario)
 
-**Estabilidad**  
+**Estabilidad**
 Alta
 
-**Comentarios**  
+**Comentarios**
 Este requisito garantiza que toda la información relevante sobre los psicólogos se gestione adecuadamente, permitiendo su registro, modificación y baja lógica en el sistema para mantener un historial coherente y actualizado.
 
 ---
@@ -90,7 +90,7 @@ Este requisito garantiza que toda la información relevante sobre los psicólogo
 - UC-04: Modificación de Pacientes
 - UC-05: Baja de Pacientes
 
-**Descripción**  
+**Descripción**
 Se almacenará toda la información necesaria de los Pacientes que desean ser atendidos en el consultorio.
 
 **Datos específicos**
@@ -105,10 +105,10 @@ Se almacenará toda la información necesaria de los Pacientes que desean ser at
 - Motivo Baja (en caso de ser necesario)
 - Fecha Baja (en caso de ser necesario)
 
-**Estabilidad**  
+**Estabilidad**
 Alta
 
-**Comentarios**  
+**Comentarios**
 Ninguno
 
 ---
@@ -124,7 +124,7 @@ Ninguno
 - UC-11: Modificación de Sesiones
 - UC-12: Baja de Sesiones
 
-**Descripción**  
+**Descripción**
 Se almacenará toda la información necesaria de las Sesiones que se realicen en el consultorio.
 
 **Datos específicos**
@@ -137,10 +137,35 @@ Se almacenará toda la información necesaria de las Sesiones que se realicen en
 - Motivo de cancelación (en caso de ser necesario)
 - Fecha de cancelación (en caso de ser necesario)
 
-**Estabilidad**  
+**Estabilidad**
 Alta
 
-**Comentarios**  
+**Comentarios**
 Este requisito garantiza que toda la información relevante sobre las sesiones se gestione de manera adecuada, permitiendo su registro, modificación y baja lógica en el sistema para mantener un historial coherente y actualizado.
 
 ---
+
+## Requisitos Funcionales
+
+- Registrar paciente: Permitir el registro de nuevos pacientes.
+- Consultar paciente: Permitir la consulta de los datos de un paciente.
+- Modificar paciente: Permitir la modificacion de un paciente previamente registrado.
+- Eliminar paciente:  Permitir la baja de un paciente previamente registrado.
+- Registrar Sesion: Permitir el registro de nuevas sesiones, asociarla a un Psicologo y un Paciente.
+- Consultar Sesion: Permitir la consulta de los datos de una sesion.
+- Modificar Sesion: Permitir la modificacion de una sesion previamente registrada.
+- Eliminar Sesion:  Permitir la baja de una sesion previamente registrada.
+
+---
+## Diagrama de Subsistemas
+![Diagrama de Subsistemas](/docs/resources/subsistemas.png)
+
+---
+## Diagrama de Caso de Uso del Subsistema Gestión de Socios
+### Definición de Actores:
+| ACT–01  | Secretaria             |
+|---------|-------------------|
+| **Descripción** | Este actor representa a la secretaria del consultorio |
+| **Comentarios** | La secretaria es la responsable de realizar la gestion de pacientes y de sesiones |
+
+
