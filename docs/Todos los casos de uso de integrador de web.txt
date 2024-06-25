@@ -1,0 +1,63 @@
+UC- 01 - Registrar Paciente
+UC- 02 - Modificar Paciente
+UC- 03 - Eliminar Paciente
+UC- 04 - Consultar Paciente
+UC- 05 - Registrar Sesión
+UC- 06 - Consultar Sesión
+UC- 07 - Cancelar Sesión
+UC- 08 - Consultar Agenda
+UC- 09 - Derivar Paciente
+UC- 10 - Consultar Historia Clínica
+UC- 11 - Registrar Historia Clínica
+UC- 12 - Modificar Informe de Sesión
+UC- 13 - Consultar Informe de Sesión
+UC- 14 - Registrar Informe de Sesión
+UC- 15 - Generar informe de asistencia
+UC- 16 - Enviar recordatorio de sesión al paciente
+UC- 17 - Adelantar sesión de un paciente en caso de cancelación
+UC- 18 - Registrar Psicologo
+UC- 19 - Modificar Psicologo
+UC- 20 - Consultar Psicologo
+UC- 21 - Eliminar Psicologo
+UC- 22 - Registrar Secretario
+UC- 23 - Modificar Secretario
+UC- 24 - Consultar Secretario
+UC- 25 - Eliminar Secretario
+UC- 26 - Obtener Paises
+UC- 27 - Modificar Paises
+UC- 28 - Consultar Paises
+UC- 29 - Eliminar Paises
+UC- 30 - Obtener Provincias
+UC- 31 - Modificar Provincias
+UC- 32 - Consultar Provincias
+UC- 33 - Eliminar Provincias
+UC- 34 - Obtener Ciudades
+UC- 35 - Modificar Ciudades
+UC- 36 - Consultar Ciudades
+UC- 37 - Eliminar Ciudades
+UC- 38 - Obtener Tipos de Documento
+UC- 39 - Modificar Tipos de Documento
+UC- 40 - Consultar Tipos de Documento
+UC- 41 - Eliminar Tipos de Documento
+UC- 42 - Obtener Sexo
+UC- 43 - Modificar Sexo
+UC- 44 - Consultar Sexo
+UC- 45 - Eliminar Sexo
+UC- 46 - Obtener Estado Civil
+UC- 47 - Modificar Estado Civil
+UC- 48 - Consultar Estado Civil
+UC- 49 - Eliminar Estado Civil
+UC- 50 - Registrar Especialidad
+UC- 51 - Modificar Especialidad
+UC- 52 - Consultar Especialidad
+UC- 53 - Eliminar Especialidad
+UC- 54 - Registrar Estado de la Sesion
+UC- 55 - Modificar Estado de la Sesion
+UC- 56 - Consultar Estado de la Sesion
+UC- 57 - Eliminar Estado de la Sesion
+UC- 58 - Registrar Tipo de descripcion
+UC- 59 - Modificar Tipo de descripcion
+UC- 60 - Consultar Tipo de descripcion
+UC- 61 - Eliminar Tipo de descripcion
+UC- 62 - Iniciar Sesion
+UC- 63 - Cerrar Sesion
