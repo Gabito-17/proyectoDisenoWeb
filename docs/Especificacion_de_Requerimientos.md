@@ -56,10 +56,11 @@ El objetivo principal del sistema es mejorar la eficiencia y la organización de
 - OBJ – 02: Gestionar Pacientes
 
 **Requisitos asociados**
-- UC-60: Validar usuario
+
 - UC-01: Registrar Pacientes
 - UC-02: Modificación de Pacientes
 - UC-03: Eliminar Pacientes
+- UC-60: Validar usuario
 
 **Descripción**
 Se almacenará toda la información necesaria de los Pacientes que desean ser atendidos en el consultorio.
@@ -90,7 +91,6 @@ Ninguno
 - OBJ05-Gestionar Seguridad
 
 **Requisitos asociados**
-- UC- 60: Validar usuario
 - UC- 26 - Obtener Paises
 - UC- 27 - Consultar Paises
 - UC- 28 - Eliminar Paises
@@ -125,6 +125,7 @@ Ninguno
 - UC- 57 - Eliminar Tipo de Descripción
 - UC- 58: Inicio de Sesión
 - UC- 59: Cerrar Sesión
+- UC- 60: Validar usuario
 - UC- 67: Validar Sesión
 - UC- 68: Validar Informe de Sesión
 
@@ -223,6 +224,15 @@ Alta
 |---------|-------------------|
 | **Descripción** | Este actor representa a un psicologo del consultorio |
 | **Comentarios** | El Psicologo es la responsable de llevar a cabo las sesiones con los pacientes y realizar los informes de sesion correspondientes, ademas debe poder registrar nuevos pacientes y sesiones |
+
+---
+## Diagrama de Caso de Uso del Subsistema Gestión de Parametros del sistema
+![Diagrama de Casos de Uso del Subsistemas Gestion de Pacientes](/docs/resources/ucSubsistemaParametrosSistema.png)
+### Definición de Actores:
+| ACT–01  | Administrador             |
+|---------|-------------------|
+| **Descripción** | Este actor es el encargado de asignar los permisos a los usuarios para poder utilizar el sistema; tendrá privilegios para hacer todo tipo de modificación en cuanto a los grupos de usuarios y poder reparar algún tipo de inconsistencia en los datos que presenta el sistema. También se encargará de cargar y actualizar todos los parámetros del sistema cuando así lo requieran|
+| **Comentarios** | Ninguno |
 
 ---
 
