@@ -44,62 +44,32 @@ El objetivo principal del sistema es mejorar la eficiencia y la organización de
 - **OBJ01-Gestión de Psicólogos**: Permitir el registro sencillo de psicólogos, asegurando que toda la información relevante se almacene de forma digital y segura. Además, permitir la modificación de los datos almacenados de un psicólogo ya registrado. Por último, permitir la baja lógica de un psicólogo, garantizando que el historial de sesiones y pacientes se mantenga coherente y actualizado.
 - **OBJ02-Gestion de Pacientes**: Permitir el registro sencillo de un paciente y su respectiva asociacion a un psicologo del consultorio, asegurando que toda la información relevante se almacene de forma digital y segura. Ademas permitir la modificacion de los datos almacenados de un paciente. Por ultimo permitir la baja logica de un paciente el historial de pacientes se mantenga coherente y actualizado.
 - **OBJ03-Gestión de Sesiones**: Permitir el registro sencillo de sesiones y su respectiva asociación a un psicólogo y a un paciente del consultorio, asegurando que toda la información relevante se almacene de forma digital y segura. Además, permitir la modificación de los datos almacenados de una sesión ya registrada. Por último, permitir la baja lógica de una sesión, garantizando que el historial de sesiones se mantenga coherente y actualizado.
+- **OBJ04-Gestionar Parámetros de Sistema**: El sistema permitirá la gestión integral de todos los parámetros necesarios para su óptimo funcionamiento. Estos parámetros incluirán los tipos de especialidad de los psicologos, los estados de las sesiones, ciertos datos de los pacientes (como podria ser su pais de residencia, su ciudad, etc) y cualquier otra variable que influya en la operativa diaria del consultorio. La gestión de estos parámetros garantizará que el sistema se adapte de manera flexible y eficiente a las necesidades específicas del consultorio, facilitando un entorno operativo fluido y personalizado.
+- **OBJ05-Gestionar Seguridad**: El sistema gestionará toda la información relacionada con la seguridad de acceso del sitio, garantizando la protección de los datos sensibles de los pacientes y del consultorio. Esto incluirá la implementación de medidas de seguridad como la validación de usuarios, contar con sesiones, y la gestión de permisos y roles. Estas medidas asegurarán que solo el personal autorizado tenga acceso a la información relevante, manteniendo la confidencialidad y la integridad de los datos en cumplimiento con las normativas vigentes de protección de datos en el ámbito de la salud.
 ---
 
 ## Requisitos de Información
 
-### IRQ – 01 Información sobre Psicólogos
-
-**Objetivos asociados**
-- OBJ01-Gestión de Psicólogos
-
-**Requisitos asociados**
-- UC-10: Alta de Psicólogos
-- UC-11: Modificación de Psicólogos
-- UC-12: Baja de Psicólogos
-
-**Descripción**
-Se almacenará toda la información necesaria de los psicólogos que trabajan en el consultorio.
-
-**Datos específicos**
-- Nombre y apellido
-- Especialidad
-- Dirección
-- Ciudad – Provincia - País
-- Teléfono
-- Mail
-- Motivo de Baja (en caso de ser necesario)
-- Fecha de Baja (en caso de ser necesario)
-
-**Estabilidad**
-Alta
-
-**Comentarios**
-Este requisito garantiza que toda la información relevante sobre los psicólogos se gestione adecuadamente, permitiendo su registro, modificación y baja lógica en el sistema para mantener un historial coherente y actualizado.
-
----
-
-### IRQ – 02 Información sobre Pacientes
+### IRQ – 01 Información sobre Pacientes
 
 **Objetivos asociados**
 - OBJ – 02: Gestionar Pacientes
 
 **Requisitos asociados**
-- UC-01: Validar usuario
-- UC-02: Alta de Pacientes
-- UC-04: Modificación de Pacientes
-- UC-05: Baja de Pacientes
+- UC-60: Validar usuario
+- UC-01: Registrar Pacientes
+- UC-02: Modificación de Pacientes
+- UC-03: Eliminar Pacientes
 
 **Descripción**
 Se almacenará toda la información necesaria de los Pacientes que desean ser atendidos en el consultorio.
 
 **Datos específicos**
-- Login
-- Password
 - Nombre y apellido
+- Tipo de DNI
 - DNI
-- Dirección
 - Ciudad – Provincia - País
+- Dirección
 - Teléfono
 - Mail
 - Motivo Baja (en caso de ser necesario)
@@ -113,48 +83,128 @@ Ninguno
 
 ---
 
-### IRQ – 03 Información sobre Sesiones
+### IRQ – 02 Información sobre los parámetros del Sistema
 
 **Objetivos asociados**
-- OBJ03-Gestión de Sesiones
+- OBJ04-Gestionar Parámetros de Sistema
+- OBJ05-Gestionar Seguridad
 
 **Requisitos asociados**
-- UC-09: Validar usuario
-- UC-10: Alta de Sesiones
-- UC-11: Modificación de Sesiones
-- UC-12: Baja de Sesiones
+- UC- 60: Validar usuario
+- UC- 26 - Obtener Paises
+- UC- 27 - Consultar Paises
+- UC- 28 - Eliminar Paises
+- UC- 29 - Obtener Provincias
+- UC- 30 - Consultar Provincias
+- UC- 31 - Eliminar Provincias
+- UC- 32 - Obtener Ciudades
+- UC- 33 - Consultar Ciudades
+- UC- 34 - Eliminar Ciudades
+- UC- 35 - Obtener Tipos de Documento
+- UC- 36 - Consultar Tipos de Documento
+- UC- 37 - Eliminar Tipos de Documento
+- UC- 38 - Obtener Sexo
+- UC- 39 - Modificar Sexo
+- UC- 40 - Consultar Sexo
+- UC- 41 - Eliminar Sexo
+- UC- 42 - Obtener Estado Civil
+- UC- 43 - Modificar Estado Civil
+- UC- 44 - Consultar Estado Civil
+- UC- 45 - Eliminar Estado Civil
+- UC- 46 - Registrar Especialidad
+- UC- 47 - Modificar Especialidad
+- UC- 48 - Consultar Especialidad
+- UC- 49 - Eliminar Especialidad
+- UC- 50 - Registrar Estado de la Sesión
+- UC- 51 - Modificar Estado de la Sesión
+- UC- 52 - Consultar Estado de la Sesión
+- UC- 53 - Eliminar Estado de la Sesión
+- UC- 54 - Registrar Tipo de Descripción
+- UC- 55 - Modificar Tipo de Descripción
+- UC- 56 - Consultar Tipo de Descripción
+- UC- 57 - Eliminar Tipo de Descripción
+- UC- 58: Inicio de Sesión
+- UC- 59: Cerrar Sesión
+- UC- 67: Validar Sesión
+- UC- 68: Validar Informe de Sesión
 
 **Descripción**
-Se almacenará toda la información necesaria de las Sesiones que se realicen en el consultorio.
+Se registrara toda la información necesaria, reconocidas como parámetros del sistema, para poder operar con el sitio del consultorio
 
 **Datos específicos**
-- Fecha y hora de la sesión
-- Psicólogo asignado
-- Paciente asociado
-- Descripción de la sesión
-- Tipo de sesión
-- Estado de la sesión (activo, cancelado, completado)
-- Motivo de cancelación (en caso de ser necesario)
-- Fecha de cancelación (en caso de ser necesario)
+- Nombre de País
+- Nombre de provincia
+- Nombre de Ciudad
+- Tipo de Documento
+- Estado Civil
+- Especialidad del Psicologo
+- Estado de la sesión
+- Tipo de descripcion del informe de sesión
 
 **Estabilidad**
 Alta
 
 **Comentarios**
-Este requisito garantiza que toda la información relevante sobre las sesiones se gestione de manera adecuada, permitiendo su registro, modificación y baja lógica en el sistema para mantener un historial coherente y actualizado.
+Ninguno
+
+---
+
+### IRQ – 03 Información sobre Seguridad
+
+**Objetivos asociados**
+- OBJ05-Gestionar Seguridad
+
+**Requisitos asociados**
+- UC- 58 - Iniciar Sesión
+- UC- 59 - Cerrar Sesión
+- UC- 60 - Validar Usuario
+- UC- 61 - Crear Rol
+- UC- 62 - Modificar Rol
+- UC- 63 - Eliminar Rol
+- UC- 64 - Asignar Rol
+- UC- 65 - Desasignar Rol
+- UC- 66 - Consultar Roles
+
+**Descripción**
+El sistema permitirá llevar un control sobre los permisos y los roles que tendrá cada usuario que lo utilice.
+
+**Datos específicos**
+- Nombre Rol
+- Permisos
+
+**Estabilidad**
+Alta
+
+**Comentarios**
 
 ---
 
 ## Requisitos Funcionales
 
-- Registrar paciente: Permitir el registro de nuevos pacientes.
-- Consultar paciente: Permitir la consulta de los datos de un paciente.
-- Modificar paciente: Permitir la modificacion de un paciente previamente registrado.
-- Eliminar paciente:  Permitir la baja de un paciente previamente registrado.
-- Registrar Sesion: Permitir el registro de nuevas sesiones, asociarla a un Psicologo y un Paciente.
-- Consultar Sesion: Permitir la consulta de los datos de una sesion.
-- Modificar Sesion: Permitir la modificacion de una sesion previamente registrada.
-- Eliminar Sesion:  Permitir la baja de una sesion previamente registrada.
+- **Registrar pacientes**: El secretario debe poder registrar pacientes en el software.
+- **Modificar paciente**: El psicólogo o secretario debe poder modificar un paciente registrado en el sistema.
+- **Eliminar paciente**: El psicólogo o secretario debe poder eliminar un paciente del sistema.
+- **Listar pacientes**: El psicólogo o secretario debe poder listar todos los pacientes registrados.
+- **Registrar Psicólogo**: El sistema debe poder registrar psicólogos en el sistema.
+- **Modificar Psicólogo**: El psicólogo debe poder modificar sus datos registrados en el sistema.
+- **Eliminar Psicólogo**: El sistema debe poder eliminar un psicólogo del sistema.
+- **Listar Psicólogos**: El sistema debe poder listar a todos los psicólogos registrados.
+- **Registrar Secretario**: El sistema debe permitir el registro de un nuevo secretario.
+- **Modificar Secretario**: El sistema debe permitir la modificación de la información de un secretario previamente registrado.
+- **Eliminar Secretario**: El sistema debe permitir la eliminación de un secretario previamente registrado.
+- **Listar Secretarios**: El sistema debe permitir listar todos los secretarios.
+- **Registrar sesión**: El sistema debe permitir registrar una nueva sesión.
+- **Modificar sesión**: El sistema debe permitir modificar una sesión registrada.
+- **Cancelar sesión**: El sistema debe permitir cancelar una nueva sesión registrada.
+- **Listar sesiones**: El sistema debe poder listar todas las sesiones registradas.
+- **Generar historia clínica**: El psicólogo debe poder generar una nueva historia clínica y asociarla a un paciente.
+- **Buscar historia clínica**: Permitir la búsqueda sencilla de una historia clínica particular.
+- **Listar historias clínicas**: Permitir la visualización de todas las historias clínicas.
+- **Registrar informe de sesión**: El psicólogo debe poder registrar la información recaudada durante una sesión.
+- **Consultar informe de sesión**: El psicólogo debe poder ver un informe de sesión en particular para su posterior análisis.
+- **Derivar paciente**: El psicólogo debe poder generar un documento de derivación, el cual incluirá los informes de sesión asociados al mismo.
+- **Incluir inicio de sesión**: El sistema debe incluir un apartado que permita el inicio de sesión mediante roles.
+
 
 ---
 ## Diagrama de Subsistemas
@@ -176,18 +226,13 @@ Este requisito garantiza que toda la información relevante sobre las sesiones s
 
 ---
 
-## Diagrama de Caso de Uso del Subsistema Gestión de Sesiones
-![Diagrama de Casos de Uso del Subsistema de Gestión de Sesiones](/docs/resources/ucSubsistemaSesiones.png)
+## Diagrama de Caso de Uso del Subsistema Gestión de Seguridad
+![Diagrama de Casos de Uso del Subsistema de Gestión de Seguridad](/docs/resources/ucSubsistemaSeguridad.png)
 ### Definición de Actores:
-| ACT–01  | Secretario             |
+| ACT–01  | Administrador             |
 |---------|-------------------|
-| **Descripción** | Este actor representa a la secretaria del consultorio |
-| **Comentarios** | La secretaria es la responsable de realizar la gestion de pacientes y de sesiones |
-
-| ACT–02  | Psicologo             |
-|---------|-------------------|
-| **Descripción** | Este actor representa a un psicologo del consultorio |
-| **Comentarios** | El Psicologo es la responsable de llevar a cabo las sesiones con los pacientes y realizar los informes de sesion correspondientes, ademas debe poder registrar nuevos pacientes y sesiones |
+| **Descripción** | Este actor es el encargado de asignar los permisos a los usuarios para poder utilizar el sistema; tendrá privilegios para hacer todo tipo de modificación en cuanto a los grupos de usuarios y poder reparar algún tipo de inconsistencia en los datos que presenta el sistema. También se encargará de cargar y actualizar todos los parámetros del sistema cuando así lo requieran|
+| **Comentarios** | Ninguno |
 
 ---
 

@@ -24,40 +24,45 @@ UC- 23 - Modificar Secretario
 UC- 24 - Consultar Secretario
 UC- 25 - Eliminar Secretario
 UC- 26 - Obtener Paises
-UC- 27 - Modificar Paises
-UC- 28 - Consultar Paises
-UC- 29 - Eliminar Paises
-UC- 30 - Obtener Provincias
-UC- 31 - Modificar Provincias
-UC- 32 - Consultar Provincias
-UC- 33 - Eliminar Provincias
-UC- 34 - Obtener Ciudades
-UC- 35 - Modificar Ciudades
-UC- 36 - Consultar Ciudades
-UC- 37 - Eliminar Ciudades
-UC- 38 - Obtener Tipos de Documento
-UC- 39 - Modificar Tipos de Documento
-UC- 40 - Consultar Tipos de Documento
-UC- 41 - Eliminar Tipos de Documento
-UC- 42 - Obtener Sexo
-UC- 43 - Modificar Sexo
-UC- 44 - Consultar Sexo
-UC- 45 - Eliminar Sexo
-UC- 46 - Obtener Estado Civil
-UC- 47 - Modificar Estado Civil
-UC- 48 - Consultar Estado Civil
-UC- 49 - Eliminar Estado Civil
-UC- 50 - Registrar Especialidad
-UC- 51 - Modificar Especialidad
-UC- 52 - Consultar Especialidad
-UC- 53 - Eliminar Especialidad
-UC- 54 - Registrar Estado de la Sesion
-UC- 55 - Modificar Estado de la Sesion
-UC- 56 - Consultar Estado de la Sesion
-UC- 57 - Eliminar Estado de la Sesion
-UC- 58 - Registrar Tipo de descripcion
-UC- 59 - Modificar Tipo de descripcion
-UC- 60 - Consultar Tipo de descripcion
-UC- 61 - Eliminar Tipo de descripcion
-UC- 62 - Iniciar Sesion
-UC- 63 - Cerrar Sesion
+UC- 27 - Consultar Paises
+UC- 28 - Eliminar Paises
+UC- 29 - Obtener Provincias
+UC- 30 - Consultar Provincias
+UC- 31 - Eliminar Provincias
+UC- 32 - Obtener Ciudades
+UC- 33 - Consultar Ciudades
+UC- 34 - Eliminar Ciudades
+UC- 35 - Obtener Tipos de Documento
+UC- 36 - Consultar Tipos de Documento
+UC- 37 - Eliminar Tipos de Documento
+UC- 38 - Obtener Sexo
+UC- 39 - Modificar Sexo
+UC- 40 - Consultar Sexo
+UC- 41 - Eliminar Sexo
+UC- 42 - Obtener Estado Civil
+UC- 43 - Modificar Estado Civil
+UC- 44 - Consultar Estado Civil
+UC- 45 - Eliminar Estado Civil
+UC- 46 - Registrar Especialidad
+UC- 47 - Modificar Especialidad
+UC- 48 - Consultar Especialidad
+UC- 49 - Eliminar Especialidad
+UC- 50 - Registrar Estado de la Sesión
+UC- 51 - Modificar Estado de la Sesión
+UC- 52 - Consultar Estado de la Sesión
+UC- 53 - Eliminar Estado de la Sesión
+UC- 54 - Registrar Tipo de Descripción
+UC- 55 - Modificar Tipo de Descripción
+UC- 56 - Consultar Tipo de Descripción
+UC- 57 - Eliminar Tipo de Descripción
+UC- 58 - Iniciar Sesión
+UC- 59 - Cerrar Sesión
+UC- 60 - Validar Usuario
+UC- 61 - Crear Rol
+UC- 62 - Modificar Rol
+UC- 63 - Eliminar Rol
+UC- 64 - Asignar Rol
+UC- 65 - Desasignar Rol
+UC- 66 - Consultar Roles
+UC- 67: Validar Sesión
+UC- 68: Validar Informe de Sesión
