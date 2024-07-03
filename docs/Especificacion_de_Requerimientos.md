@@ -249,7 +249,7 @@ Alta
 ## Casos de Uso del Sistema
 | UC–01  | Registrar Paciente | |
 |--------|--------------------|----|
-| **Objetivos asociados** | OBJ–01 Gestionar pacientes |
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ05-Gestionar Seguridad |
 | **Requisitos asociados** | IRQ–01 Información sobre pacientes |
 | **Descripción** | Permite registrar un nuevo paciente en el sistema |
 | **Precondición** | El secretario tiene acceso al sistema y los datos necesarios del paciente |
@@ -273,7 +273,7 @@ Alta
 
 | UC–02  | Modificar Paciente | |
 |--------|--------------------|----|
-| **Objetivos asociados** | OBJ–01 Gestionar pacientes |
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ05-Gestionar Seguridad |
 | **Requisitos asociados** | IRQ–01 Información sobre pacientes |
 | **Descripción** | Permite modificar la información de un paciente existente |
 | **Precondición** | El secretario tiene acceso al sistema y los datos necesarios del paciente |
@@ -298,7 +298,7 @@ Alta
 
 | UC–03  | Eliminar Paciente | |
 |--------|-------------------|----|
-| **Objetivos asociados** | OBJ–01 Gestionar pacientes |
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ05-Gestionar Seguridad |
 | **Requisitos asociados** | IRQ–01 Información sobre pacientes |
 | **Descripción** | Permite dar de baja lógicamente a un paciente del sistema |
 | **Precondición** | El secretario tiene acceso al sistema y los datos necesarios del paciente |
@@ -322,7 +322,7 @@ Alta
 
 | UC–04  | Consultar Paciente | |
 |--------|--------------------|----|
-| **Objetivos asociados** | OBJ–01 Gestionar pacientes |
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ05-Gestionar Seguridad |
 | **Requisitos asociados** | IRQ–01 Información sobre pacientes |
 | **Descripción** | Permite consultar la información de un paciente |
 | **Precondición** | El usuario tiene acceso al sistema y los datos necesarios del paciente |
@@ -340,49 +340,49 @@ Alta
 
 ---
 
-### UC–05 - Registrar Sesión
+### UC–60 - Validar Usuario
 
-| UC–05  | Registrar Sesión | |
+| UC–60  | Validar Usuario | |
 |--------|------------------|----|
-| **Objetivos asociados** | OBJ–02 Gestionar sesiones |
-| **Requisitos asociados** | IRQ–02 Información sobre sesiones |
-| **Descripción** | Permite registrar una nueva sesión para un paciente |
-| **Precondición** | El secretario tiene acceso al sistema y los datos necesarios del paciente |
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-01: Información sobre Pacientes <br> - IRQ-02: Información sobre los parámetros del sistema <br> - IRQ-03: Información sobre Seguridad |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso, cuando un psicologo, secretario o usuario desea ingresar al sistema.|
+| **Precondición** | El usuario tiene su inicio de sesión y su contraseña disponible.|
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El secretario selecciona al paciente |
-| | 2 | El secretario ingresa los detalles de la sesión (fecha, hora, psicólogo, etc.) |
-| | 3 | El sistema valida los datos ingresados |
-| | 4 | El sistema registra la sesión y confirma el registro |
-| **Postcondición** | La sesión está registrada en el sistema |
+| | 1 | El sistema pide que se identifique el usuario |
+| | 2 | El usuario proporciona su nombre de sesión y la contraseña |
+| | 3 | El sistema valida los datos ingresados por el usuario |
+| **Postcondición** | El usuario se encuentra dentro del sistema, de acuerdo a los permisos que le hayan dado |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3a | Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso|
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | 4 | 2 segundos |
-| **Frecuencia** | 5 veces/día |
-| **Estabilidad** | alta |
-| **Comentarios** | Si hay algún error en los datos, el sistema permite corregirlos y reintentar el registro |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | - |
+| **Comentarios** | - |
 
 ---
 
-### UC–06 - Consultar Sesión
+### UC–58 - Iniciar Sesión
 
-| UC–06  | Consultar Sesión | |
+| UC–58  | Iniciar Sesión | |
 |--------|-------------------|----|
-| **Objetivos asociados** | OBJ–02 Gestionar sesiones |
-| **Requisitos asociados** | IRQ–02 Información sobre sesiones |
-| **Descripción** | Permite consultar las sesiones programadas |
-| **Precondición** | El usuario tiene acceso al sistema y los datos necesarios de las sesiones |
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-01: Información sobre Pacientes <br> - IRQ-02: Información sobre los parámetros del sistema <br> - IRQ-03: Información sobre Seguridad |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el Administrador, Psicologo o Secretario desee iniciar sesión como usuario. |
+| **Precondición** | El Administrador, Psicologo o Secretario que desee iniciar sesión debe poseer usuario y contraseña. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El usuario selecciona el criterio de búsqueda (paciente, fecha, psicólogo, etc.) |
-| | 2 | El sistema muestra la lista de sesiones que coinciden con el criterio seleccionado |
-| **Postcondición** | La información de las sesiones es visualizada por el usuario |
+| | 1 | El Administrador, Psicologo o Secretario solicita al sistema comenzar con el proceso de Inicio de Sesión. |
+| | 2 | El sistema solicita nombre de usuario y contraseña.|
+| | 3 | El sistema termina el proceso de Inicio de Sesión.|
+| **Postcondición** | El usuario ha iniciado sesion en el sistema |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 1a | Si no se encuentran sesiones, el sistema muestra un mensaje de error |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | 2 | 1 segundo |
-| **Frecuencia** | 10 veces/día |
+| | - | - |
+| **Frecuencia** | - |
 | **Estabilidad** | alta |
-| **Comentarios** | La consulta de sesiones está disponible solo para usuarios autorizados |
+| **Comentarios** | - |
 
 ---
 
@@ -414,7 +414,7 @@ Alta
 
 | UC–08  | Consultar Agenda | |
 |--------|------------------|----|
-| **Objetivos asociados** | OBJ–02 Gestionar sesiones |
+| **Objetivos asociados** | algo aqui |
 | **Requisitos asociados** | IRQ–02 Información sobre sesiones |
 | **Descripción** | Permite consultar la agenda de sesiones |
 | **Precondición** | El usuario tiene acceso al sistema y los datos necesarios de las sesiones |
