@@ -411,6 +411,8 @@ Alta
 | | 8 | El sistema muestra la lista de países al administrador. |
 | **Postcondición** | El usuario obtiene la lista de países solicitada, ya sea completa o filtrada por región. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 4 | Si el sistema. |
 | | 6 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
 | | 7 | Si la API externa devuelve un error o no se encuentran países, se muestra un mensaje indicando que no se encontraron resultados. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
@@ -421,37 +423,58 @@ Alta
 
 ---
 
-| UC–09  | Derivar Paciente | |
+### UC–27 - Consultar Paises
+
+| UC–27  | Consultar Paises | |
 |--------|------------------|----|
-| **Descripción** | Permite derivar un paciente a otro psicólogo |
-| **Actor(es)** | Psicólogo |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de país.  |
+| **Precondición** | Se desea conocer los distintos países que el sistema posee cargados. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El psicólogo selecciona al paciente a derivar |
-| | 2 | El psicólogo ingresa los detalles de la derivación (psicólogo receptor, descripción, etc.) |
-| | 3 | El sistema valida los datos ingresados |
-| | 4 | El sistema registra la derivación y confirma el registro |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El sistema muestra la lista de países al administrador. |
+| **Postcondición** | Los distintos países son listados para el usuario. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3a | Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 4 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
 
-| UC–10  | Consultar Historia Clínica | |
-|--------|---------------------------|----|
-| **Descripción** | Permite consultar la historia clínica de un paciente |
-| **Actor(es)** | Psicólogo |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El psicólogo selecciona al paciente |
-| | 2 | El sistema muestra la historia clínica del paciente |
+---
 
-| UC–11  | Registrar Historia Clínica | |
-|--------|---------------------------|----|
-| **Descripción** | Permite registrar una nueva historia clínica para un paciente |
-| **Actor(es)** | Psicólogo |
+### UC–27 - Eliminar Paises
+
+| UC–27  | Eliminar Paises | |
+|--------|------------------|----|
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un país.  |
+| **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El psicólogo selecciona al paciente |
-| | 2 | El psicólogo ingresa los detalles de la historia clínica (cantidad de sesiones, descripción, etc.) |
-| | 3 | El sistema valida los datos ingresados |
-| | 4 | El sistema registra la historia clínica y confirma el registro |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El sistema muestra la lista de países al administrador. |
+| | 5 | El administrador selecciona de la lista, el/los País/es que desea eliminar. |
+| | 6 | El sistema pregunta si quiere continuar con la operación. |
+| | 7 | El sistema informa que el País ha sido removido. |
+| **Postcondición** | El o los Países fueron eliminados correctamente |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3a | Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 7 | El sistema informa que posee datos relacionados dicho país y que no podrá eliminarse. El caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
+
+---
 
 | UC–12  | Modificar Informe de Sesión | |
 |--------|---------------------------|----|
