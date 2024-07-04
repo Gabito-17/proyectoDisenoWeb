@@ -412,7 +412,7 @@ Alta
 | **Postcondición** | El usuario obtiene la lista de países solicitada, ya sea completa o filtrada por región. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
 | | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 4 | Si el sistema. |
+| | 4 | Si el sistema detecta que ya hay Paises almacenados le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
 | | 6 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
 | | 7 | Si la API externa devuelve un error o no se encuentran países, se muestra un mensaje indicando que no se encontraron resultados. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
@@ -448,9 +448,9 @@ Alta
 
 ---
 
-### UC–27 - Eliminar Paises
+### UC–28 - Eliminar Paises
 
-| UC–27  | Eliminar Paises | |
+| UC–28  | Eliminar Paises | |
 |--------|------------------|----|
 | **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
@@ -476,76 +476,182 @@ Alta
 
 ---
 
-| UC–12  | Modificar Informe de Sesión | |
-|--------|---------------------------|----|
-| **Descripción** | Permite modificar la información de un informe de sesión existente |
-| **Actor(es)** | Psicólogo |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El psicólogo selecciona el informe de sesión a modificar |
-| | 2 | El sistema muestra los datos actuales del informe de sesión |
-| | 3 | El psicólogo modifica los datos necesarios |
-| | 4 | El sistema valida los nuevos datos |
-| | 5 | El sistema actualiza la información del informe de sesión y confirma la modificación |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 4a | Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos |
+### UC–29 - Obtener Provincias
 
-| UC–13  | Consultar Informe de Sesión | |
-|--------|---------------------------|----|
-| **Descripción** | Permite consultar los informes de sesión de un paciente |
-| **Actor(es)** | Psicólogo |
+| UC–29  | Obtener Provincias | |
+|--------|------------------|----|
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema debe permitir obtener una lista de todas las provincias de los paises deseados mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.  |
+| **Precondición** | El sistema tiene acceso a la API externa que proporciona la información de las provincias. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El psicólogo selecciona al paciente |
-| | 2 | El sistema muestra los informes de sesión del paciente |
-
-| UC–14  | Registrar Informe de Sesión | |
-|--------|---------------------------|----|
-| **Descripción** | Permite registrar un nuevo informe de sesión para un paciente |
-| **Actor(es)** | Psicólogo |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El psicólogo selecciona al paciente |
-| | 2 | El psicólogo ingresa los detalles del informe de sesión (fecha, hora, descripción, tipo de descripción, etc.) |
-| | 3 | El sistema valida los datos ingresados |
-| | 4 | El sistema registra el informe de sesión y confirma el registro |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador solicita al sistema la lista de provincias de los paises presentes en el mismo. |
+| | 5 | (Opcional) El administrador proporciona un filtro de paises para la búsqueda. |
+| | 6 | El sistema envía una solicitud a la API externa para obtener la lista de provincias, con o sin filtro de pais. |
+| | 7 | La API externa responde con la lista de provincias. |
+| | 8 | El sistema muestra un mensaje al administrador indicando de que países se obtuvieron las provincias. |
+| **Postcondición** | El usuario obtiene la lista de provincias solicitada, ya sea completa o filtrada por país. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3a | Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 4 | Si el sistema detecta que ya hay provincias almacenadas en los paises le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
+| | 6 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
+| | 7 | Si la API externa devuelve un error o no se encuentran provincias, se muestra un mensaje indicando que no se encontraron resultados. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | 7 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario. |
 
-| UC–15  | Generar informe de asistencia | |
-|--------|----------------------------|----|
-| **Descripción** | Permite generar un informe con la cantidad de asistencias del paciente a las sesiones |
-| **Actor(es)** | Psicólogo |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El psicólogo selecciona al paciente |
-| | 2 | El sistema lista todas las sesiones de ese paciente |
-| | 3 | El psicólogo genera el informe de asistencia |
-| | 4 | El sistema emite el informe y lo guarda en un historial de informes emitidos |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 2a | Si el paciente no tiene ninguna sesión para listar, se termina el caso de uso |
+---
 
-| UC–16  | Enviar recordatorio de sesión al paciente | |
-|--------|------------------------------------------|----|
-| **Descripción** | El sistema envía un recordatorio al paciente sobre su sesión pendiente, unas horas antes de que suceda la misma, mediante WhatsApp |
-| **Actor(es)** | Sistema |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema verifica qué pacientes tienen una sesión en la fecha actual |
-| | 2 | El sistema envía un recordatorio de la sesión pendiente a cada paciente mediante un mensaje de WhatsApp |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 2a | Si el paciente no tiene un número de teléfono cargado, se termina el caso de uso |
+### UC–30 - Consultar Provincias
 
-| UC–17  | Adelantar sesión de un paciente en caso de cancelación | |
-|--------|-----------------------------------------------|----|
-| **Descripción** | El sistema puede adelantar la sesión de un paciente, si este está de acuerdo, en caso de que otro paciente cancele su sesión con anticipación |
-| **Actor(es)** | Sistema, Secretario y Paciente |
+| UC–30  | Consultar Provincias | |
+|--------|------------------|----|
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de provincias.  |
+| **Precondición** | Se desea conocer las distintas provincias que el sistema posee cargados. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El secretario recibe una solicitud de cancelación de la sesión de un paciente, siendo proporcionado el DNI del paciente, la fecha y la hora de la sesión |
-| | 2 | El sistema verifica que el paciente tenga una sesión en la fecha y hora proporcionadas para la cancelación, y cancela la sesión |
-| | 3 | Posteriormente, el sistema verifica quién es el paciente más próximo cuya sesión sea más cercana, tanto en fecha como en hora, a la sesión cancelada y le envía un correo electrónico preguntándole si desea adelantar su sesión, solo si el paciente seleccionó durante el registro de la sesión que estaba dispuesto a ser notificado en cuanto surgiera la posibilidad de adelantar su sesión |
-| | 4 | El paciente marca que sí en el correo electrónico |
-| | 5 | El sistema modifica automáticamente la sesión del cliente para actualizar la nueva fecha y hora de la sesión |
-| | 6 | El sistema envía otro correo electrónico al paciente para confirmarle que su sesión fue actualizada correctamente |
-| | 7 | El sistema envía una notificación al secretario con el cambio de horario y/o fecha de la sesión del paciente |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador selecciona el pais del cual desea ver las provincias cargadas. |
+| | 5 | El sistema muestra la lista de provincias al administrador. |
+| **Postcondición** | Las distintas provincias son listadas para el usuario. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3a | Si no hay ningún paciente que desea cambiar la fecha y/o hora de su sesión, se termina el caso de uso |
-| | 4a | Si el paciente no desea modificar su sesión, el sistema realizará el paso 3 nuevamente con la próxima persona de la lista |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
+
+---
+
+### UC–31 - Eliminar Provincias
+
+| UC–31  | Eliminar Provincias | |
+|--------|------------------|----|
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de una provincia.  |
+| **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El sistema muestra la lista de países al administrador. |
+| | 5 | El administrador selecciona el pais del cual desea ver las provincias cargadas. |
+| | 6 | El sistema muestra la lista de provincias al administrador. |
+| | 7 | El administrador selecciona de la lista, la/s provincia/s que desea eliminar. |
+| | 8 | El sistema pregunta si quiere continuar con la operación. |
+| | 9 | El sistema informa que la provincia ha sido removida. |
+| **Postcondición** | La o las provincias fueron eliminadas correctamente |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 9 | El sistema informa que posee datos relacionados dicha provincia y que no podrá eliminarse. El caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
+
+---
+### UC–32 - Obtener Ciudades
+
+| UC–32  | Obtener Ciudades | |
+|--------|------------------|----|
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema debe permitir obtener una lista de todas las ciudades de las provincias deseadas mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.  |
+| **Precondición** | El sistema tiene acceso a la API externa que proporciona la información de las ciudades. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador solicita al sistema la lista de ciudades de las provincias presentes en el mismo. |
+| | 5 | (Opcional) El administrador proporciona un filtro de provincias para la búsqueda. |
+| | 6 | El sistema envía una solicitud a la API externa para obtener la lista de ciudades, con o sin filtro de provincia. |
+| | 7 | La API externa responde con la lista de ciudades. |
+| | 8 | El sistema muestra un mensaje al administrador indicando de que provincias se obtuvieron las ciudades. |
+| **Postcondición** | El usuario obtiene la lista de ciudades solicitada, ya sea completa o filtrada por provincia. |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 4 | Si el sistema detecta que ya hay ciudades almacenadas en las provincias le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
+| | 6 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
+| | 7 | Si la API externa devuelve un error o no se encuentran ciudades, se muestra un mensaje indicando que no se encontraron resultados. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | 7 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario. |
+
+---
+
+### UC–33 - Consultar Ciudades
+
+| UC–33  | Consultar Ciudades | |
+|--------|------------------|----|
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de ciudades.  |
+| **Precondición** | Se desea conocer las distintas ciudades que el sistema posee cargados. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador selecciona el pais del cual desea ver las provincias cargadas. |
+| | 5 | El sistema muestra la lista de provincias al administrador. |
+| | 6 | El administrador selecciona la provincia de la cual desea ver las ciudades cargadas. |
+| | 7 | El sistema muestra la lista de ciudades al administrador. |
+| **Postcondición** | Las distintas ciudades son listadas para el usuario. |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 7 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
+
+---
+
+### UC–34 - Eliminar Ciudades
+
+| UC–34  | Eliminar Ciudades | |
+|--------|------------------|----|
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de una ciudad.  |
+| **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El sistema muestra la lista de países al administrador. |
+| | 5 | El administrador selecciona el pais del cual desea ver las provincias cargadas. |
+| | 6 | El sistema muestra la lista de provincias al administrador. |
+| | 7 | El administrador selecciona la provincia de la cual desea ver las ciudades cargadas. |
+| | 8 | El sistema muestra la lista de ciudades al administrador. |
+| | 9 | El administrador selecciona de la lista, la/s ciudad/es que desea eliminar. |
+| | 10 | El sistema pregunta si quiere continuar con la operación. |
+| | 11 | El sistema informa que la ciudad ha sido removida. |
+| **Postcondición** | La o las ciudades fueron eliminadas correctamente |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 11 | El sistema informa que posee datos relacionados dicha ciudad y que no podrá eliminarse. El caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
+
+---
 
 ---
 # Requerimientos no Funcionales
