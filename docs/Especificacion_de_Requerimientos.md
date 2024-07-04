@@ -111,23 +111,9 @@ Ninguno
 - UC- 43 - Modificar Estado Civil
 - UC- 44 - Consultar Estado Civil
 - UC- 45 - Eliminar Estado Civil
-- UC- 46 - Registrar Especialidad
-- UC- 47 - Modificar Especialidad
-- UC- 48 - Consultar Especialidad
-- UC- 49 - Eliminar Especialidad
-- UC- 50 - Registrar Estado de la Sesión
-- UC- 51 - Modificar Estado de la Sesión
-- UC- 52 - Consultar Estado de la Sesión
-- UC- 53 - Eliminar Estado de la Sesión
-- UC- 54 - Registrar Tipo de Descripción
-- UC- 55 - Modificar Tipo de Descripción
-- UC- 56 - Consultar Tipo de Descripción
-- UC- 57 - Eliminar Tipo de Descripción
 - UC- 58: Inicio de Sesión
 - UC- 59: Cerrar Sesión
 - UC- 60: Validar usuario
-- UC- 67: Validar Sesión
-- UC- 68: Validar Informe de Sesión
 
 **Descripción**
 Se registrara toda la información necesaria, reconocidas como parámetros del sistema, para poder operar con el sitio del consultorio
@@ -138,9 +124,6 @@ Se registrara toda la información necesaria, reconocidas como parámetros del s
 - Nombre de Ciudad
 - Tipo de Documento
 - Estado Civil
-- Especialidad del Psicologo
-- Estado de la sesión
-- Tipo de descripcion del informe de sesión
 
 **Estabilidad**
 Alta
@@ -386,49 +369,55 @@ Alta
 
 ---
 
-### UC–07 - Cancelar Sesión
+### UC–59 - Cerrar Sesión
 
-| UC–07  | Cancelar Sesión | |
-|--------|------------------|----|
-| **Objetivos asociados** | OBJ–02 Gestionar sesiones |
-| **Requisitos asociados** | IRQ–02 Información sobre sesiones |
-| **Descripción** | Permite cancelar una sesión programada |
-| **Precondición** | El secretario tiene acceso al sistema y los datos necesarios de las sesiones |
+| UC–58  | Cerrar Sesión | |
+|--------|-------------------|----|
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-01: Información sobre Pacientes <br> - IRQ-02: Información sobre los parámetros del sistema <br> - IRQ-03: Información sobre Seguridad |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el Administrador, Psicologo o Secretario desee cerrar sesión. |
+| **Precondición** | El Administrador, Psicologo o Secretario qque desee cerrar sesión tuvo que haber iniciado sesión. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El secretario selecciona la sesión a cancelar |
-| | 2 | El sistema solicita confirmación para cancelar la sesión |
-| | 3 | El secretario confirma la cancelación |
-| | 4 | El sistema cancela la sesión y confirma la cancelación |
-| **Postcondición** | La sesión está cancelada en el sistema |
+| | 1 | El Administrador, Psicologo o Secretario solicita al sistema comenzar con el proceso de Cierre de Sesión. |
+| | 2 | El sistema pregunta si realmente desea cerrar sesión.|
+| | 3 | El sistema termina el proceso de Cierre de Sesión.|
+| **Postcondición** | El usuario ha cerrado sesion en el sistema |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 2a | Si el secretario no confirma la cancelación, la sesión no es cancelada |
+| | - | - |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | 4 | 1 segundo |
-| **Frecuencia** | 1 vez/día |
+| | - | - |
+| **Frecuencia** | - |
 | **Estabilidad** | alta |
-| **Comentarios** | Si la sesión es cancelada, el paciente es notificado y la sesión queda disponible para ser reprogramada |
+| **Comentarios** | - |
 
 ---
 
-### UC–08 - Consultar Agenda
+### UC–26 - Obtener Paises
 
-| UC–08  | Consultar Agenda | |
+| UC–26  | Obtener Paises | |
 |--------|------------------|----|
-| **Objetivos asociados** | algo aqui |
-| **Requisitos asociados** | IRQ–02 Información sobre sesiones |
-| **Descripción** | Permite consultar la agenda de sesiones |
-| **Precondición** | El usuario tiene acceso al sistema y los datos necesarios de las sesiones |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema debe permitir obtener una lista de todos los países del mundo, o filtrar algunos países por región, mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.  |
+| **Precondición** | El sistema tiene acceso a la API externa que proporciona la información de los países. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El usuario selecciona el criterio de consulta (fecha, psicólogo, etc.) |
-| | 2 | El sistema muestra la agenda de sesiones que coinciden con el criterio seleccionado |
-| **Postcondición** | La información de la agenda es visualizada por el usuario |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador solicita la lista de países desde el sistema. |
+| | 5 | (Opcional) El administrador proporciona un filtro de región para la búsqueda. |
+| | 6 | El sistema envía una solicitud a la API externa para obtener la lista de países, con o sin filtro de región. |
+| | 7 | La API externa responde con la lista de países. |
+| | 8 | El sistema muestra la lista de países al administrador. |
+| **Postcondición** | El usuario obtiene la lista de países solicitada, ya sea completa o filtrada por región. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 1a | Si no se encuentran sesiones, el sistema muestra un mensaje de error |
+| | 6 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
+| | 7 | Si la API externa devuelve un error o no se encuentran países, se muestra un mensaje indicando que no se encontraron resultados. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | 2 | 1 segundo |
-| **Frecuencia** | 10 veces/día |
+| | 7 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
+| **Frecuencia** | - |
 | **Estabilidad** | alta |
-| **Comentarios** | La consulta de la agenda está disponible solo para usuarios autorizados |
+| **Comentarios** | Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario. |
 
 ---
 
