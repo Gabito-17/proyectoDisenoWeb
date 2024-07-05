@@ -1,8 +1,3 @@
-## Diagrama de Casos de Uso
-![Diagrama de Casos de Uso](/docs/diagramaCasosDeUso.png)
-
----
-
 # Todos los casos de uso del sistema
 
 - ### UC-01 - Registrar Paciente
