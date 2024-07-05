@@ -147,26 +147,8 @@ Alta
 - **Registrar pacientes**: El secretario debe poder registrar pacientes en el software.
 - **Modificar paciente**: El psicólogo o secretario debe poder modificar un paciente registrado en el sistema.
 - **Eliminar paciente**: El psicólogo o secretario debe poder eliminar un paciente del sistema.
-- **Listar pacientes**: El psicólogo o secretario debe poder listar todos los pacientes registrados.
-- **Registrar Psicólogo**: El sistema debe poder registrar psicólogos en el sistema.
-- **Modificar Psicólogo**: El psicólogo debe poder modificar sus datos registrados en el sistema.
-- **Eliminar Psicólogo**: El sistema debe poder eliminar un psicólogo del sistema.
-- **Listar Psicólogos**: El sistema debe poder listar a todos los psicólogos registrados.
-- **Registrar Secretario**: El sistema debe permitir el registro de un nuevo secretario.
-- **Modificar Secretario**: El sistema debe permitir la modificación de la información de un secretario previamente registrado.
-- **Eliminar Secretario**: El sistema debe permitir la eliminación de un secretario previamente registrado.
-- **Listar Secretarios**: El sistema debe permitir listar todos los secretarios.
-- **Registrar sesión**: El sistema debe permitir registrar una nueva sesión.
-- **Modificar sesión**: El sistema debe permitir modificar una sesión registrada.
-- **Cancelar sesión**: El sistema debe permitir cancelar una nueva sesión registrada.
-- **Listar sesiones**: El sistema debe poder listar todas las sesiones registradas.
-- **Generar historia clínica**: El psicólogo debe poder generar una nueva historia clínica y asociarla a un paciente.
-- **Buscar historia clínica**: Permitir la búsqueda sencilla de una historia clínica particular.
-- **Listar historias clínicas**: Permitir la visualización de todas las historias clínicas.
-- **Registrar informe de sesión**: El psicólogo debe poder registrar la información recaudada durante una sesión.
-- **Consultar informe de sesión**: El psicólogo debe poder ver un informe de sesión en particular para su posterior análisis.
-- **Derivar paciente**: El psicólogo debe poder generar un documento de derivación, el cual incluirá los informes de sesión asociados al mismo.
-- **Incluir inicio de sesión**: El sistema debe incluir un apartado que permita el inicio de sesión mediante roles.
+- **Registrar, modificar y eliminar parameteros del sistema**: Se debe poder registrar toda la información necesaria, reconocidas como parámetros del sistema, para poder operar con el sitio del consultorio.
+- **Validación de Usuarios**: El sistema deberá implementar la validación de usuarios para asegurar que solo el personal autorizado pueda acceder a la información relevante.
 
 
 ---
@@ -231,7 +213,6 @@ Alta
 
 ---
 
-"""
 ### UC–02 - Modificar Paciente
 
 | UC–02  | Modificar Paciente | |
@@ -662,6 +643,9 @@ Alta
 | Termino  | Categoría | Comentarios |
 |--------|--------------|----|
 | **Administrador** | Actor | Este actor representa a la persona que se administrar los usuarios del sistema, como axial también agregar todos los parámetros para su uso. |
+| **Secretario** | Actor | El secretario es el responsable de realizar la gestion de pacientes y de sesiones. |
+| **Psicologo** | Actor | El Psicologo es la responsable de llevar a cabo las sesiones con los pacientes y realizar los informes de sesion correspondientes ademas debe poder registrar nuevos pacientes y sesiones. |
+
 
 ## Modelo Conceptual
 ![Modelo Conceptual](/docs/resources/ModeloConceptualDiseñoWeb.png)
