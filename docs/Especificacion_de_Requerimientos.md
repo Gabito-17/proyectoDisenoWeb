@@ -583,3 +583,5 @@ Ninguno
 ---
 ![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónSexo.png)
 ---
+![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPaciente.png)
+---
