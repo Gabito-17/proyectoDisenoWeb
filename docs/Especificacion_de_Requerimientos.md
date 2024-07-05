@@ -664,5 +664,8 @@ Alta
 ## U.I.D. - Diagrama de Interacción de Usuario
 
 ![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPaís.png)
-
-![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónProvincia.png)
+---
+![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónTipoDocumento.png)
+---
+![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónSexo.png)
+---
