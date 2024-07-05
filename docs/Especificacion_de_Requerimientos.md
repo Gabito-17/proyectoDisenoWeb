@@ -95,12 +95,6 @@ Ninguno
 - UC- 26 - Obtener Paises
 - UC- 27 - Consultar Paises
 - UC- 28 - Eliminar Paises
-- UC- 29 - Obtener Provincias
-- UC- 30 - Consultar Provincias
-- UC- 31 - Eliminar Provincias
-- UC- 32 - Obtener Ciudades
-- UC- 33 - Consultar Ciudades
-- UC- 34 - Eliminar Ciudades
 - UC- 35 - Obtener Tipos de Documento
 - UC- 36 - Consultar Tipos de Documento
 - UC- 37 - Eliminar Tipos de Documento
@@ -108,12 +102,6 @@ Ninguno
 - UC- 39 - Modificar Sexo
 - UC- 40 - Consultar Sexo
 - UC- 41 - Eliminar Sexo
-- UC- 42 - Obtener Estado Civil
-- UC- 43 - Modificar Estado Civil
-- UC- 44 - Consultar Estado Civil
-- UC- 45 - Eliminar Estado Civil
-- UC- 58: Inicio de Sesión
-- UC- 59: Cerrar Sesión
 - UC- 60: Validar usuario
 
 **Descripción**
@@ -121,10 +109,8 @@ Se registrara toda la información necesaria, reconocidas como parámetros del s
 
 **Datos específicos**
 - Nombre de País
-- Nombre de provincia
-- Nombre de Ciudad
 - Tipo de Documento
-- Estado Civil
+- Sexo
 
 **Estabilidad**
 Alta
@@ -140,18 +126,10 @@ Ninguno
 - OBJ05-Gestionar Seguridad
 
 **Requisitos asociados**
-- UC- 58 - Iniciar Sesión
-- UC- 59 - Cerrar Sesión
 - UC- 60 - Validar Usuario
-- UC- 61 - Crear Rol
-- UC- 62 - Modificar Rol
-- UC- 63 - Eliminar Rol
-- UC- 64 - Asignar Rol
-- UC- 65 - Desasignar Rol
-- UC- 66 - Consultar Roles
 
 **Descripción**
-El sistema permitirá llevar un control sobre los permisos y los roles que tendrá cada usuario que lo utilice.
+El sistema permitirá verificar que el nombre de usuario o contraseña proporcionado concuerda con unos de los usuarios del sistema.
 
 **Datos específicos**
 - Nombre Rol
