@@ -64,5 +64,5 @@ UC- 63 - Eliminar Rol
 UC- 64 - Asignar Rol
 UC- 65 - Desasignar Rol
 UC- 66 - Consultar Roles
-UC- 67: Validar Sesión
-UC- 68: Validar Informe de Sesión
+UC- 67 - Validar Sesión
+UC- 68 - Validar Informe de Sesión
