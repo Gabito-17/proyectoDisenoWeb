@@ -61,7 +61,6 @@ El objetivo principal del sistema es mejorar la eficiencia y la organización de
 - UC-01: Registrar Pacientes
 - UC-02: Modificación de Pacientes
 - UC-03: Eliminar Pacientes
-- UC-60: Validar usuario
 
 **Descripción**
 Se almacenará toda la información necesaria de los Pacientes que desean ser atendidos en el consultorio.
@@ -102,7 +101,6 @@ Ninguno
 - UC- 39 - Modificar Sexo
 - UC- 40 - Consultar Sexo
 - UC- 41 - Eliminar Sexo
-- UC- 60: Validar usuario
 
 **Descripción**
 Se registrara toda la información necesaria, reconocidas como parámetros del sistema, para poder operar con el sitio del consultorio
@@ -120,35 +118,12 @@ Ninguno
 
 ---
 
-### IRQ – 03 Información sobre Seguridad
-
-**Objetivos asociados**
-- OBJ05-Gestionar Seguridad
-
-**Requisitos asociados**
-- UC- 60 - Validar Usuario
-
-**Descripción**
-El sistema permitirá verificar que el nombre de usuario o contraseña proporcionado concuerda con unos de los usuarios del sistema.
-
-**Datos específicos**
-- Nombre Rol
-- Permisos
-
-**Estabilidad**
-Alta
-
-**Comentarios**
-
----
-
 ## Requisitos Funcionales
 
 - **Registrar pacientes**: El secretario debe poder registrar pacientes en el software.
 - **Modificar paciente**: El psicólogo o secretario debe poder modificar un paciente registrado en el sistema.
 - **Eliminar paciente**: El psicólogo o secretario debe poder eliminar un paciente del sistema.
 - **Registrar, modificar y eliminar parameteros del sistema**: Se debe poder registrar toda la información necesaria, reconocidas como parámetros del sistema, para poder operar con el sitio del consultorio.
-- **Validación de Usuarios**: El sistema deberá implementar la validación de usuarios para asegurar que solo el personal autorizado pueda acceder a la información relevante.
 
 
 ---
@@ -171,17 +146,7 @@ Alta
 
 ---
 ## Diagrama de Caso de Uso del Subsistema Gestión de Parametros del sistema
-![Diagrama de Casos de Uso del Subsistemas Gestion de Pacientes](/docs/resources/ucSubsistemaParametrosSistema.png)
-### Definición de Actores:
-| ACT–01  | Administrador             |
-|---------|-------------------|
-| **Descripción** | Este actor es el encargado de asignar los permisos a los usuarios para poder utilizar el sistema; tendrá privilegios para hacer todo tipo de modificación en cuanto a los grupos de usuarios y poder reparar algún tipo de inconsistencia en los datos que presenta el sistema. También se encargará de cargar y actualizar todos los parámetros del sistema cuando así lo requieran|
-| **Comentarios** | Ninguno |
-
----
-
-## Diagrama de Caso de Uso del Subsistema Gestión de Seguridad
-![Diagrama de Casos de Uso del Subsistema de Gestión de Seguridad](/docs/resources/ucSubsistemaSeguridad.png)
+![Diagrama de Casos de Uso del Subsistemas Gestion de Parametros del sistema](/docs/resources/ucSubsistemaParametrosSistema.png)
 ### Definición de Actores:
 | ACT–01  | Administrador             |
 |---------|-------------------|
@@ -194,7 +159,7 @@ Alta
 
 | UC–01  | Registrar Paciente | |
 |--------|--------------------|----|
-| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes |
 | **Requisitos asociados** | IRQ–01 Información sobre pacientes |
 | **Descripción** | Permite registrar un nuevo paciente en el sistema |
 | **Precondición** | El secretario tiene acceso al sistema y los datos necesarios del paciente |
@@ -217,7 +182,7 @@ Alta
 
 | UC–02  | Modificar Paciente | |
 |--------|--------------------|----|
-| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes |
 | **Requisitos asociados** | IRQ–01 Información sobre pacientes |
 | **Descripción** | Permite modificar la información de un paciente existente |
 | **Precondición** | El secretario tiene acceso al sistema y los datos necesarios del paciente |
@@ -242,7 +207,7 @@ Alta
 
 | UC–03  | Eliminar Paciente | |
 |--------|-------------------|----|
-| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes |
 | **Requisitos asociados** | IRQ–01 Información sobre pacientes |
 | **Descripción** | Permite dar de baja lógicamente a un paciente del sistema |
 | **Precondición** | El secretario tiene acceso al sistema y los datos necesarios del paciente |
@@ -266,7 +231,7 @@ Alta
 
 | UC–04  | Consultar Paciente | |
 |--------|--------------------|----|
-| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes |
 | **Requisitos asociados** | IRQ–01 Información sobre pacientes |
 | **Descripción** | Permite consultar la información de un paciente |
 | **Precondición** | El usuario tiene acceso al sistema y los datos necesarios del paciente |
@@ -284,54 +249,27 @@ Alta
 
 ---
 
-### UC–60 - Validar Usuario
-
-| UC–60  | Validar Usuario | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
-| **Requisitos asociados** | - IRQ-01: Información sobre Pacientes <br> - IRQ-02: Información sobre los parámetros del sistema <br> - IRQ-03: Información sobre Seguridad |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso, cuando un psicologo, secretario o usuario desea ingresar al sistema.|
-| **Precondición** | El usuario tiene su inicio de sesión y su contraseña disponible.|
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide que se identifique el usuario |
-| | 2 | El usuario proporciona su nombre de sesión y la contraseña |
-| | 3 | El sistema valida los datos ingresados por el usuario |
-| **Postcondición** | El usuario se encuentra dentro del sistema, de acuerdo a los permisos que le hayan dado |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso|
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | - | - |
-| **Frecuencia** | - |
-| **Estabilidad** | - |
-| **Comentarios** | - |
-
----
-
 ### UC–26 - Obtener Paises
 
 | UC–26  | Obtener Paises | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
 | **Descripción** | El sistema debe permitir obtener una lista de todos los países del mundo, o filtrar algunos países por región, mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.  |
 | **Precondición** | El sistema tiene acceso a la API externa que proporciona la información de los países. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita la lista de países desde el sistema. |
-| | 5 | (Opcional) El administrador proporciona un filtro de región para la búsqueda. |
-| | 6 | El sistema envía una solicitud a la API externa para obtener la lista de países, con o sin filtro de región. |
-| | 7 | La API externa responde con la lista de países. |
-| | 8 | El sistema muestra la lista de países al administrador. |
+| | 1 | El administrador solicita la lista de países desde el sistema. |
+| | 2 | (Opcional) El administrador proporciona un filtro de región para la búsqueda. |
+| | 2 | El sistema envía una solicitud a la API externa para obtener la lista de países, con o sin filtro de región. |
+| | 4 | La API externa responde con la lista de países. |
+| | 5 | El sistema muestra la lista de países al administrador. |
 | **Postcondición** | El usuario obtiene la lista de países solicitada, ya sea completa o filtrada por región. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 4 | Si el sistema detecta que ya hay Paises almacenados le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
-| | 6 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
-| | 7 | Si la API externa devuelve un error o no se encuentran países, se muestra un mensaje indicando que no se encontraron resultados. |
+| | 1 | Si el sistema detecta que ya hay Paises almacenados le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
+| | 2 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
+| | 4 | Si la API externa devuelve un error o no se encuentran países, se muestra un mensaje indicando que no se encontraron resultados. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | 7 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
+| | 4 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
 | **Frecuencia** | - |
 | **Estabilidad** | alta |
 | **Comentarios** | Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario. |
@@ -342,19 +280,16 @@ Alta
 
 | UC–27  | Consultar Paises | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
 | **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de país.  |
 | **Precondición** | Se desea conocer los distintos países que el sistema posee cargados. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El sistema muestra la lista de países al administrador. |
+| | 1 | El administrador solicita la lista de países al sistema. |
+| | 2 | El sistema muestra la lista de países al administrador. |
 | **Postcondición** | Los distintos países son listados para el usuario. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 4 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
@@ -367,22 +302,19 @@ Alta
 
 | UC–28  | Eliminar Paises | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
 | **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un país.  |
 | **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El sistema muestra la lista de países al administrador. |
-| | 5 | El administrador selecciona de la lista, el/los País/es que desea eliminar. |
-| | 6 | El sistema pregunta si quiere continuar con la operación. |
-| | 7 | El sistema informa que el País ha sido removido. |
+| | 1 | El administrador solicita la lista de países al sistema. |
+| | 2 | El sistema muestra la lista de países al administrador. |
+| | 3 | El administrador selecciona de la lista, el/los País/es que desea eliminar. |
+| | 4 | El sistema pregunta si quiere continuar con la operación. |
+| | 5 | El sistema informa que el País ha sido removido. |
 | **Postcondición** | El o los Países fueron eliminados correctamente |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 7 | El sistema informa que posee datos relacionados dicho país y que no podrá eliminarse. El caso de uso queda sin efecto. |
+| | 5 | El sistema informa que posee datos relacionados dicho país y que no podrá eliminarse. El caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
@@ -390,33 +322,50 @@ Alta
 | **Comentarios** | - |
 
 ---
-### UC–35 - Obtener Tipos de Documento
+### UC–35 - Alta de Tipo de Documento
 
-| UC–35  | Obtener Tipos de Documento | |
+| UC–35  | Alta de Tipo de Documento | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema debe permitir obtener todos los tipos de documento de los paises deseados mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.  |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice el alta de un Tipo de documento.  |
 | **Precondición** | El sistema tiene acceso a la API externa que proporciona los tipos de documento de identidad. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema la lista de tipos de documentos de identidad del país seleccionado desde el sistema. |
-| | 5 | El sistema envía una solicitud a la API externa para obtener la lista de tipos de documentos de identidad. |
-| | 6 | La API externa responde con la lista de tipos de documentos de identidad. |
-| | 7 | El sistema muestra la lista de los tipos de documentos de identidad obtenidos para el país. |
-| **Postcondición** | El usuario obtiene la lista de tipos de documentos de identidad solicitada. |
+| | 1 | El administrador proporciona los datos para registrar el Tipo de Documento. |
+| | 2 | El sistema valida los datos ingresados. |
+| | 3 | El sistema avisa que el Tipo de Documento ha sido registrado. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 4 | Si el sistema detecta que ya hay tipos de documentos de identidad almacenados en el País correspondiente le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
-| | 5 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
-| | 6 | Si la API externa devuelve un error o no se encuentran ciudades, se muestra un mensaje indicando que no se encontraron resultados. |
+| | 3 | Si el sistema detecta que los datos que se estan intentando ingresar ya existen, se le informa al usuario y se le solicita que cambie los datos o que cancele la carga |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | 6 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
+| | - | - |
 | **Frecuencia** | - |
 | **Estabilidad** | alta |
-| **Comentarios** | Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario. |
+| **Comentarios** | - |
+
+---
+
+### UC–69 - Modificar Tipo de Documento
+
+| UC–69  | Modificar Tipo de Documento | |
+|--------|------------------|----|
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la modificación de un Tipo de Documento.  |
+| **Precondición** | El usuario debe tener permisos de administrador para realizar esta tarea. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El administrador solicita los datos del Tipo de Documento |
+| | 2 | El sistema le devuelve los datos requeridos. |
+| | 3 | El administrador ingresa los nuevos datos. |
+| | 4 | El sistema pregunta si quiere continuar con la operación. |
+| | 5 | El sistema informa que el Tipo de Documento ha sido modificado |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| | 5 | Si el sistema detecta que los datos que se estan intentando ingresar ya existen, se le informa al usuario y se le solicita que cambie los datos o que cancele la carga |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
 
 ---
 
@@ -424,20 +373,16 @@ Alta
 
 | UC–36  | Consultar Tipos de Documento | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
 | **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de tipos de documentos de identidad.  |
 | **Precondición** | Se desea conocer los distintos tipos de documentos de identidad que el sistema posee cargados. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador selecciona el pais del cual desea ver los tipos de documentos de identidad cargados. |
-| | 5 | El sistema muestra la lista de tipos de documentos de identidad al administrador. |
+| | 1 | El administrador solicita al sistema los tipos de documentos de identidad cargados. |
+| | 2 | El sistema muestra la lista de tipos de documentos de identidad al administrador. |
 | **Postcondición** | Los distintos tipos de documentos de identidad son listados para el usuario. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
@@ -450,24 +395,19 @@ Alta
 
 | UC–37  | Eliminar Tipos de Documento | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
 | **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un tipo de documentos de identidad.  |
 | **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El sistema muestra la lista de países al administrador. |
-| | 5 | El administrador selecciona el pais del cual desea ver los tipos de documentos de identidad cargados. |
-| | 6 | El sistema muestra la lista de tipos de documentos de identidad al administrador. |
-| | 7 | El administrador selecciona de la lista, el/los tipos de documentos de identidad que desea eliminar. |
-| | 8 | El sistema pregunta si quiere continuar con la operación. |
-| | 9 | El sistema informa que el tipo de documentos de identidad ha sido eliminado. |
+| | 1 | El administrador solicita al sistema los tipos de documentos de identidad cargados. |
+| | 2 | El sistema muestra la lista de tipos de documentos de identidad al administrador. |
+| | 3 | El administrador selecciona de la lista, el/los tipos de documentos de identidad que desea eliminar. |
+| | 4 | El sistema pregunta si quiere continuar con la operación. |
+| | 5 | El sistema informa que el tipo de documentos de identidad ha sido eliminado. |
 | **Postcondición** | El o los tipos de documentos de identidad fueron eliminados correctamente |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 9 | El sistema informa que posee datos relacionados dicho tipo de documento de identidad y que no podrá eliminarse. El caso de uso queda sin efecto. |
+| | 5 | El sistema informa que posee datos relacionados dicho tipo de documento de identidad y que no podrá eliminarse. El caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
@@ -479,26 +419,22 @@ Alta
 
 | UC–38  | Obtener Sexo | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
 | **Descripción** | El sistema debe permitir obtener todos los tipos de sexo biologico que tiene una persona mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.  |
 | **Precondición** | El sistema tiene acceso a la API externa que proporciona los tipos de sexo biologico que tiene una persona. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema la lista de los tipos de sexo biologico que tiene una persona. |
-| | 5 | El sistema envía una solicitud a la API externa para obtener lista de los tipos de sexo biologico que tiene una persona. |
-| | 6 | La API externa responde con lista de los tipos de sexo biologico que tiene una persona. |
-| | 7 | El sistema muestra la lista de los tipos de sexo biologico que tiene una persona. |
+| | 1 | El administrador solicita al sistema la lista de los tipos de sexo biologico que tiene una persona. |
+| | 2 | El sistema envía una solicitud a la API externa para obtener lista de los tipos de sexo biologico que tiene una persona. |
+| | 3 | La API externa responde con lista de los tipos de sexo biologico que tiene una persona. |
+| | 4 | El sistema muestra la lista de los tipos de sexo biologico que tiene una persona. |
 | **Postcondición** | El usuario obtiene la lista de los tipos de sexo biologico que tiene una persona. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 4 | Si el sistema detecta que ya hay una lista de los tipos de sexo biologico que tiene una persona, le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
-| | 5 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
-| | 6 | Si la API externa devuelve un error o no se encuentran los tipos de sexo biologico que tiene una persona, se muestra un mensaje indicando que no se encontraron resultados. |
+| | 1 | Si el sistema detecta que ya hay una lista de los tipos de sexo biologico que tiene una persona, le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
+| | 2 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
+| | 3 | Si la API externa devuelve un error o no se encuentran los tipos de sexo biologico que tiene una persona, se muestra un mensaje indicando que no se encontraron resultados. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | 6 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
+| | 3 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
 | **Frecuencia** | - |
 | **Estabilidad** | alta |
 | **Comentarios** | Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario. |
@@ -509,23 +445,19 @@ Alta
 
 | UC–39  | Modificar Sexo | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
 | **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la modificación de un tipo de sexo biologico que tiene una persona.  |
 | **Precondición** | El usuario debe tener permisos de administrador para realizar esta tarea. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema los datos del tipo de sexo biologico que tiene una persona. |
-| | 5 | El sistema le devuelve los datos requeridos. |
-| | 6 | El administrador ingresa los nuevos datos. |
-| | 7 | El sistema pregunta si quiere continuar con la operación. |
-| | 8 | El sistema informa que el tipo de sexo ha sido modificado. |
+| | 1 | El administrador solicita al sistema los datos del tipo de sexo biologico que tiene una persona. |
+| | 2 | El sistema le devuelve los datos requeridos. |
+| | 3 | El administrador ingresa los nuevos datos. |
+| | 4 | El sistema pregunta si quiere continuar con la operación. |
+| | 5 | El sistema informa que el tipo de sexo ha sido modificado. |
 | **Postcondición** | El tipo de sexo biologico, posee los datos actualizados. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
@@ -538,20 +470,16 @@ Alta
 
 | UC–40  | Consultar Sexo | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
 | **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de de los tipos de sexo biologico que tiene una persona.  |
 | **Precondición** | Se desea conocer los distintos tipos de sexo biologico que tiene una persona que el sistema posee cargados. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema la lista de los tipos de sexo biologico que tiene una persona. |
-| | 5 | El sistema le proporciona los datos obtenidos. |
+| | 1 | El administrador solicita al sistema la lista de los tipos de sexo biologico que tiene una persona. |
+| | 2 | El sistema le proporciona los datos obtenidos. |
 | **Postcondición** | Los distintos tipos de sexo biologico que tiene una persona son listados para el usuario. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
@@ -564,23 +492,19 @@ Alta
 
 | UC–41  | Eliminar Sexo | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
 | **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un tipo de sexo biologico que tiene una persona.  |
 | **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema la lista de los tipos de sexo biologico que tiene una persona. |
-| | 5 | El sistema le proporciona los datos obtenidos. |
-| | 7 | El administrador selecciona de la lista, el/los tipo/s de sexo biologico que desea eliminar. |
-| | 8 | El sistema pregunta si quiere continuar con la operación. |
-| | 9 | El sistema informa que el tipo de sexo biologico ha sido eliminado. |
+| | 1 | El administrador solicita al sistema la lista de los tipos de sexo biologico que tiene una persona. |
+| | 2 | El sistema le proporciona los datos obtenidos. |
+| | 3 | El administrador selecciona de la lista, el/los tipo/s de sexo biologico que desea eliminar. |
+| | 4 | El sistema pregunta si quiere continuar con la operación. |
+| | 5 | El sistema informa que el tipo de sexo biologico ha sido eliminado. |
 | **Postcondición** | El o los tipos de sexo biologico fueron eliminados correctamente |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 9 | El sistema informa que posee datos relacionados dicho tipo de sexo biologico y que no podrá eliminarse. El caso de uso queda sin efecto. |
+| | 5 | El sistema informa que posee datos relacionados dicho tipo de sexo biologico y que no podrá eliminarse. El caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
