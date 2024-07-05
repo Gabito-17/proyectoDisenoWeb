@@ -657,6 +657,12 @@ Alta
 **NFR 05**|||||**X**|
 ---
 
+## Glosario de Términos
+
+| Termino  | Categoría | Comentarios |
+|--------|--------------|----|
+| **Administrador** | Actor | Este actor representa a la persona que se administrar los usuarios del sistema, como axial también agregar todos los parámetros para su uso. |
+
 ## Modelo Conceptual
 ![Modelo Conceptual](/docs/resources/ModeloConceptualDiseñoWeb.png)
 ---
