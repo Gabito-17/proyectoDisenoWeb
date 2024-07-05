@@ -1,19 +1,20 @@
 # Planificacion de la Iteracion 01
 
 ## Proyecto
-### ALMA
+- ALMA
 
 ## Titulo
-### Plan de Iteración – IT-001 Fecha 2024-07-09
+- Plan de Iteración – IT-001 Fecha 2024-07-09
 
 ## Generado Por
-### - Gelabert Andre
-### - Pavon Juan Gabriel
+- Gelabert Andre
+- Pavon Juan Gabriel
 
 ## Aprobado Por
-### - Rubén Urquijo
+- Rubén Urquijo
 
 ## Alcance de la Distribución
+- Documentacion interna
 
 ## **Lista de Cambios**
 
