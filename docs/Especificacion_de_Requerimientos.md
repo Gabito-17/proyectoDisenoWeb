@@ -278,7 +278,7 @@ Alta
 | **Estabilidad** | alta |
 | **Comentarios** | Si el paciente es eliminado, toda su información es archivada y no se puede acceder a ella a menos que sea reactivada |
 
----99
+---
 
 ### UC–04 - Consultar Paciente
 
