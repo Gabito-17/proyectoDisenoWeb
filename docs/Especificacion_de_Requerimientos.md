@@ -569,7 +569,21 @@ Ninguno
 | **Administrador** | Actor | Este actor representa a la persona que se administrar los usuarios del sistema, como axial también agregar todos los parámetros para su uso. |
 | **Secretario** | Actor | El secretario es el responsable de realizar la gestion de pacientes y de sesiones. |
 | **Psicologo** | Actor | El Psicologo es la responsable de llevar a cabo las sesiones con los pacientes y realizar los informes de sesion correspondientes ademas debe poder registrar nuevos pacientes y sesiones. |
-
+| **Registrar Pacientes** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para registrar un paciente. |
+| **Modificar Pacientes** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar un paciente. |
+| **Eliminar Pacientes** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un paciente del sistema. |
+| **Consultar Pacientes** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los datos de los paciente del sistema. |
+| **Obtener Países** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para obtener un país mediante una API. |
+| **Consultar Países** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los paises presentes en el sistema. |
+| **Eliminar Países** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un país del sistema. |
+| **Alta Tipo de Documento** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para registrar un tipo de documento. |
+| **Modificar Tipos de Documento** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar un tipo de documento. |
+| **Eliminar Tipo de Documento** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un tipo de documento del sistema. |
+| **Consultar Tipos de Documento** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los tipos de documento presentes en el sistema. |
+| **Obtener Sexo** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para obtener todos los tipos de sexo biologico que tiene una persona mediante una API. |
+| **Modificar Sexo** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar un tipo de sexo biologico que puede tener una persona. |
+| **Consultar Sexo** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar todos los tipos de sexo biologico que tiene una persona presentes en el sistema. |
+| **Eliminar Sexo** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un tipo de sexo biologico que tiene una persona del sistema. |
 
 ## Modelo Conceptual
 ![Modelo Conceptual](/docs/resources/ModeloConceptualDiseñoWeb.png)
