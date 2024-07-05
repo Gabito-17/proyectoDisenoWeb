@@ -588,3 +588,12 @@ Ninguno
 ## Modelo Navegacional
 
 ![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPrincipal.png)
+---
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPacientes.png)
+---
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalTipoDocumento.png)
+---
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionaSexo.png)
+---
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionaPais.png)
+---
