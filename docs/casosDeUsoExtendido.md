@@ -213,120 +213,6 @@
 - 3a. Si no hay ningún paciente que desea cambiar la fecha y/o hora de su sesión, se termina el caso de uso.
 - 4a. Si el paciente no desea modificar su sesión, el sistema realizará el paso 3 nuevamente con la próxima persona de la lista.
 ---
-### UC–42 - Obtener Estado Civil
-
-| UC–42  | Obtener Estado Civil | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema debe permitir obtener todos los tipos de estado civil que tiene una persona mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.  |
-| **Precondición** | El sistema tiene acceso a la API externa que proporciona los tipos de estado civil que tiene una persona. |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema la lista de los tipos de estado civil de una persona. |
-| | 5 | El sistema envía una solicitud a la API externa para obtener lista de los tipos de estado civil que tiene una persona. |
-| | 6 | La API externa responde con lista de los tipos de estado civil que tiene una persona. |
-| | 7 | El sistema muestra la lista de los tipos de estado civil que tiene una persona. |
-| **Postcondición** | El usuario obtiene la lista de los tipos de estado civil que tiene una persona. |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 4 | Si el sistema detecta que ya hay una lista de los tipos de estado civil que tiene una persona, le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
-| | 5 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
-| | 6 | Si la API externa devuelve un error o no se encuentran los tipos de estado civil que tiene una persona, se muestra un mensaje indicando que no se encontraron resultados. |
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | 6 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
-| **Frecuencia** | - |
-| **Estabilidad** | alta |
-| **Comentarios** | Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario. |
-
----
-
-### UC–43 - Modificar Estado Civil
-
-| UC–43  | Modificar Estado Civil | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la modificación de un tipo de estado civil que tiene una persona.  |
-| **Precondición** | El usuario debe tener permisos de administrador para realizar esta tarea. |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema los datos del tipo de estado civil que tiene una persona. |
-| | 5 | El sistema le devuelve los datos requeridos. |
-| | 6 | El administrador ingresa los nuevos datos. |
-| | 7 | El sistema pregunta si quiere continuar con la operación. |
-| | 8 | El sistema informa que el tipo de sexo ha sido modificado. |
-| **Postcondición** | El tipo de estado civil, posee los datos actualizados. |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | - | - |
-| **Frecuencia** | - |
-| **Estabilidad** | alta |
-| **Comentarios** | - |
-
----
-
-### UC–44 - Consultar Estado Civil
-
-| UC–44  | Consultar Estado Civil | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de de los tipos de estado civil que tiene una persona.  |
-| **Precondición** | Se desea conocer los distintos tipos de estado civil que tiene una persona que el sistema posee cargados. |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema la lista de los tipos de estado civil que tiene una persona. |
-| | 5 | El sistema le proporciona los datos obtenidos. |
-| **Postcondición** | Los distintos tipos de estado civil que tiene una persona son listados para el usuario. |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | - | - |
-| **Frecuencia** | - |
-| **Estabilidad** | alta |
-| **Comentarios** | - |
-
----
-
-### UC–45 - Eliminar Estado Civil
-
-| UC–45  | Eliminar Estado Civil | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un tipo de estado civil que tiene una persona.  |
-| **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema la lista de los tipos de estado civil que tiene una persona. |
-| | 5 | El sistema le proporciona los datos obtenidos. |
-| | 7 | El administrador selecciona de la lista, el/los tipo/s de estado civil que desea eliminar. |
-| | 8 | El sistema pregunta si quiere continuar con la operación. |
-| | 9 | El sistema informa que el tipo de documentos de identidad ha sido eliminado. |
-| **Postcondición** | El o los tipos de estado civil fueron eliminados correctamente |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 9 | El sistema informa que posee datos relacionados dicho tipo de estado civil y que no podrá eliminarse. El caso de uso queda sin efecto. |
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | - | - |
-| **Frecuencia** | - |
-| **Estabilidad** | alta |
-| **Comentarios** | - |
-
----
-
 ### UC–29 - Obtener Provincias
 
 | UC–29  | Obtener Provincias | |
@@ -503,3 +389,330 @@
 | **Comentarios** | - |
 
 ---
+### UC–42 - Obtener Estado Civil
+
+| UC–42  | Obtener Estado Civil | |
+|--------|------------------|----|
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema debe permitir obtener todos los tipos de estado civil que tiene una persona mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.  |
+| **Precondición** | El sistema tiene acceso a la API externa que proporciona los tipos de estado civil que tiene una persona. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador solicita al sistema la lista de los tipos de estado civil de una persona. |
+| | 5 | El sistema envía una solicitud a la API externa para obtener lista de los tipos de estado civil que tiene una persona. |
+| | 6 | La API externa responde con lista de los tipos de estado civil que tiene una persona. |
+| | 7 | El sistema muestra la lista de los tipos de estado civil que tiene una persona. |
+| **Postcondición** | El usuario obtiene la lista de los tipos de estado civil que tiene una persona. |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 4 | Si el sistema detecta que ya hay una lista de los tipos de estado civil que tiene una persona, le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
+| | 5 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
+| | 6 | Si la API externa devuelve un error o no se encuentran los tipos de estado civil que tiene una persona, se muestra un mensaje indicando que no se encontraron resultados. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | 6 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario. |
+
+---
+
+### UC–43 - Modificar Estado Civil
+
+| UC–43  | Modificar Estado Civil | |
+|--------|------------------|----|
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la modificación de un tipo de estado civil que tiene una persona.  |
+| **Precondición** | El usuario debe tener permisos de administrador para realizar esta tarea. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador solicita al sistema los datos del tipo de estado civil que tiene una persona. |
+| | 5 | El sistema le devuelve los datos requeridos. |
+| | 6 | El administrador ingresa los nuevos datos. |
+| | 7 | El sistema pregunta si quiere continuar con la operación. |
+| | 8 | El sistema informa que el tipo de sexo ha sido modificado. |
+| **Postcondición** | El tipo de estado civil, posee los datos actualizados. |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
+
+---
+
+### UC–44 - Consultar Estado Civil
+
+| UC–44  | Consultar Estado Civil | |
+|--------|------------------|----|
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de de los tipos de estado civil que tiene una persona.  |
+| **Precondición** | Se desea conocer los distintos tipos de estado civil que tiene una persona que el sistema posee cargados. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador solicita al sistema la lista de los tipos de estado civil que tiene una persona. |
+| | 5 | El sistema le proporciona los datos obtenidos. |
+| **Postcondición** | Los distintos tipos de estado civil que tiene una persona son listados para el usuario. |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
+
+---
+
+### UC–45 - Eliminar Estado Civil
+
+| UC–45  | Eliminar Estado Civil | |
+|--------|------------------|----|
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un tipo de estado civil que tiene una persona.  |
+| **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador solicita al sistema la lista de los tipos de estado civil que tiene una persona. |
+| | 5 | El sistema le proporciona los datos obtenidos. |
+| | 7 | El administrador selecciona de la lista, el/los tipo/s de estado civil que desea eliminar. |
+| | 8 | El sistema pregunta si quiere continuar con la operación. |
+| | 9 | El sistema informa que el tipo de documentos de identidad ha sido eliminado. |
+| **Postcondición** | El o los tipos de estado civil fueron eliminados correctamente |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
+| | 9 | El sistema informa que posee datos relacionados dicho tipo de estado civil y que no podrá eliminarse. El caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
+
+---
+
+### UC–58 - Iniciar Sesión
+
+| UC–58  | Iniciar Sesión | |
+|--------|-------------------|----|
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-01: Información sobre Pacientes <br> - IRQ-02: Información sobre los parámetros del sistema <br> - IRQ-03: Información sobre Seguridad |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el Administrador, Psicologo o Secretario desee iniciar sesión como usuario. |
+| **Precondición** | El Administrador, Psicologo o Secretario que desee iniciar sesión debe poseer usuario y contraseña. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El Administrador, Psicologo o Secretario solicita al sistema comenzar con el proceso de Inicio de Sesión. |
+| | 2 | El sistema solicita nombre de usuario y contraseña.|
+| | 3 | El sistema termina el proceso de Inicio de Sesión.|
+| **Postcondición** | El usuario ha iniciado sesion en el sistema |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
+
+---
+
+### UC–59 - Cerrar Sesión
+
+| UC–58  | Cerrar Sesión | |
+|--------|-------------------|----|
+| **Objetivos asociados** | - OBJ02-Gestionar pacientes <br> - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-01: Información sobre Pacientes <br> - IRQ-02: Información sobre los parámetros del sistema <br> - IRQ-03: Información sobre Seguridad |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el Administrador, Psicologo o Secretario desee cerrar sesión. |
+| **Precondición** | El Administrador, Psicologo o Secretario qque desee cerrar sesión tuvo que haber iniciado sesión. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El Administrador, Psicologo o Secretario solicita al sistema comenzar con el proceso de Cierre de Sesión. |
+| | 2 | El sistema pregunta si realmente desea cerrar sesión.|
+| | 3 | El sistema termina el proceso de Cierre de Sesión.|
+| **Postcondición** | El usuario ha cerrado sesion en el sistema |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | - | - |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
+
+---
+---
+
+### UC–61 - Crear Rol
+
+| UC–61  | Crear Rol | |
+|--------|-----------|----|
+| **Objetivos asociados** | - OBJ-05: Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-03: Información sobre Seguridad |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso, cuando el administrador desea crear un rol. |
+| **Precondición** | El administrador desea generar un nuevo rol, para ser asignado a los usuarios que se registren. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador ingresa los datos correspondientes al rol que desea guardar. |
+| | 5 | El sistema valida los datos ingresados. |
+| | 6 | El sistema avisa que los datos ingresados fueron guardados correctamente. |
+| **Postcondición** | El rol se encuentra creado en el sistema. |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta que el nombre de usuario o contraseña proporcionado no concuerda con uno de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedará sin efecto el caso de uso. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | alta |
+| **Comentarios** | - |
+
+---
+
+### UC–62 - Modificar Rol
+
+| UC–62  | Modificar Rol | |
+|--------|---------------|----|
+| **Objetivos asociados** | - OBJ-05: Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-03: Información sobre Seguridad |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso, cuando el administrador desea modificar un rol creado. |
+| **Precondición** | El administrador conoce de antemano cuál es el rol que desea modificar. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador solicita el rol en cuestión para proceder a su modificación. |
+| | 5 | El sistema le devuelve los datos. |
+| | 6 | El administrador procede a ingresar los nuevos datos del rol. |
+| | 7 | El sistema le pregunta si desea guardar los cambios realizados. |
+| | 8 | El sistema informa que los cambios fueron guardados. |
+| **Postcondición** | El rol se modificó correctamente. |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta que el nombre de usuario o contraseña proporcionado no concuerda con uno de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedará sin efecto el caso de uso. |
+| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | Alta |
+| **Comentarios** | - |
+
+---
+
+### UC–63 - Eliminar Rol
+
+| UC–63  | Eliminar Rol | |
+|--------|--------------|----|
+| **Objetivos asociados** | - OBJ-05: Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-03: Información sobre Seguridad |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso, cuando el administrador desea eliminar algún rol de usuario que haya creado. |
+| **Precondición** | El administrador conoce de antemano el rol que desea eliminar. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador solicita el rol en cuestión para proceder a su eliminación. |
+| | 5 | El sistema le devuelve los datos. |
+| | 6 | El administrador procede a efectuar el borrado de dicho rol. |
+| | 7 | El sistema pregunta si desea continuar con el proceso. |
+| | 8 | El sistema avisa que el rol fue revocado del sistema. |
+| **Postcondición** | El rol ya no puede ser asignado a ningún usuario. |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta que el nombre de usuario o contraseña proporcionado no concuerda con uno de los usuarios del sistema, le pedirá que ingrese nuevamente esos datos. De lo contrario, quedará sin efecto el caso de uso. |
+| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| | 8 | El sistema avisa que dicho rol está asignado a usuarios, pudiendo el administrador proseguir con la eliminación y dejar dichos usuarios sin rol; o bien, asignar otro tipo de rol a dichos usuarios. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | Alta |
+| **Comentarios** | - |
+
+---
+
+### UC–64 - Asignar Rol
+
+| UC–64  | Asignar Rol | |
+|--------|--------------|----|
+| **Objetivos asociados** | - OBJ-05: Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-03: Información sobre Seguridad |
+| **Descripción** | El sistema deberá comportarse tal como lo describe el siguiente caso de uso, cuando el administrador desea asignar un rol a un usuario especificado. |
+| **Precondición** | El administrador conoce de antemano al usuario en cuestión. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador solicita al sistema, los datos de un determinado usuario. |
+| | 5 | El sistema le devuelve los datos solicitados. |
+| | 6 | El administrador procede a elegir el rol adecuado para el usuario en cuestión. |
+| | 7 | El sistema pregunta si desea continuar con el proceso. |
+| | 8 | El sistema avisa que los datos fueron guardados correctamente. |
+| **Postcondición** | Los permisos del usuario han cambiado. |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta que el nombre de usuario o contraseña proporcionado no concuerda con uno de los usuarios del sistema, le pedirá que ingrese nuevamente esos datos. De lo contrario, quedará sin efecto el caso de uso. |
+| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | Alta |
+| **Comentarios** | - |
+
+---
+
+### UC–65 - Desasignar Rol
+
+| UC–65  | Desasignar Rol | |
+|--------|--------------|----|
+| **Objetivos asociados** | - OBJ-05: Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-03: Información sobre Seguridad |
+| **Descripción** | El sistema deberá comportarse tal como lo describe el siguiente caso de uso, cuando el administrador desea banear o quitar algún rol a un usuario especificado. |
+| **Precondición** | El administrador conoce de antemano al usuario en cuestión. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador solicita al sistema, los datos de un determinado usuario. |
+| | 5 | El sistema le devuelve los datos solicitados. |
+| | 6 | El administrador procede a elegir el rol adecuado para el usuario en cuestión. |
+| | 7 | El sistema pregunta si desea continuar con el proceso. |
+| | 8 | El sistema avisa que los datos fueron guardados correctamente. |
+| **Postcondición** | Los permisos del usuario han cambiado. |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta que el nombre de usuario o contraseña proporcionado no concuerda con uno de los usuarios del sistema, le pedirá que ingrese nuevamente esos datos. De lo contrario, quedará sin efecto el caso de uso. |
+| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | Alta |
+| **Comentarios** | - |
+
+---
+
+### UC–66 - Consulta de Roles
+
+| UC–66  | Consulta de Roles | |
+|--------|--------------|----|
+| **Objetivos asociados** | - OBJ-05: Gestionar Seguridad |
+| **Requisitos asociados** | - IRQ-03: Información sobre Seguridad |
+| **Descripción** | El sistema deberá comportarse como lo describe el siguiente caso de uso, cuando el Administrador desea consultar sobre los roles que deben poseer los usuarios. |
+| **Precondición** | El administrador sabe de antemano, que existen los roles en el sistema. |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El sistema pide al administrador que se identifique. |
+| | 2 | El administrador proporciona los datos solicitados. |
+| | 3 | El sistema valida al usuario. |
+| | 4 | El administrador solicita al sistema, los distintos tipos de roles que poseen los usuarios. |
+| | 5 | El sistema devuelve los datos solicitados. |
+| **Postcondición** | El administrador cuenta con los datos requeridos. |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si el sistema detecta que el nombre de usuario o contraseña proporcionado no concuerda con uno de los usuarios del sistema, le pedirá que ingrese nuevamente esos datos. De lo contrario, quedará sin efecto el caso de uso. |
+| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | - | - |
+| **Frecuencia** | - |
+| **Estabilidad** | Alta |
+| **Comentarios** | - |
