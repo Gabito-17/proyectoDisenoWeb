@@ -47,6 +47,7 @@ El objetivo principal del sistema es mejorar la eficiencia y la organización de
 - **OBJ04-Gestionar Parámetros de Sistema**: El sistema permitirá la gestión integral de todos los parámetros necesarios para su óptimo funcionamiento. Estos parámetros incluirán los tipos de especialidad de los psicologos, los estados de las sesiones, ciertos datos de los pacientes (como podria ser su pais de residencia, su ciudad, etc) y cualquier otra variable que influya en la operativa diaria del consultorio. La gestión de estos parámetros garantizará que el sistema se adapte de manera flexible y eficiente a las necesidades específicas del consultorio, facilitando un entorno operativo fluido y personalizado.
 - **OBJ05-Gestionar Seguridad**: El sistema gestionará toda la información relacionada con la seguridad de acceso del sitio, garantizando la protección de los datos sensibles de los pacientes y del consultorio. Esto incluirá la implementación de medidas de seguridad como la validación de usuarios, contar con sesiones, y la gestión de permisos y roles. Estas medidas asegurarán que solo el personal autorizado tenga acceso a la información relevante, manteniendo la confidencialidad y la integridad de los datos en cumplimiento con las normativas vigentes de protección de datos en el ámbito de la salud.
 ---
+# Requisitos del Sistema
 
 ## Requisitos de Información
 
@@ -654,7 +655,7 @@ Alta
 ---
 
 ---
-# Requerimientos no Funcionales
+## Requerimientos no Funcionales
 
 | **NFR - 01**                 | **Soporte de actualizaciones** |
 |--------------------------|------------------------|
@@ -690,3 +691,20 @@ Alta
 | Requisitos asociados     |**IRQ - 05**: Control de acceso diferenciado para la computadora principal y la de la secretaria |
 | Descripción              | El sistema debe garantizar que la computadora principal tenga acceso completo a todos los registros contables y de pacientes, mientras que la computadora de la secretaria tendrá acceso restringido únicamente a los aspectos pertinentes para su función. |
 | Comentarios              | Ninguno                |
+---
+## Matriz de Rastreabilidad Objetivo/Requisitos
+
+| OBJ/IRQ                 | **OBJ01-Gestión de Psicólogos** | **OBJ02-Gestion de Pacientes** | **OBJ03-Gestión de Sesiones** | **OBJ04-Gestionar Parámetros de Sistema** | **OBJ05-Gestionar Seguridad** |
+|:--------------------------|:------------------------:|:------------------------:|:------------------------:|:------------------------:|:------------------------:|
+| **IRQ 01**||**X**||||
+| **IRQ 02**||||**X**|**X**|
+| **IRQ 03**|||||**X**|
+| **NFR 01**|**X**|||||
+| **NFR 02**||**X**||||
+| **NFR 03**||**X**||||
+| **NFR 04**||||**X**||
+ **NFR 05**|||||**X**|
+ ---
+
+ ## Modelo Conceptual
+ ![Modelo Conceptual](/docs/resources/ModeloConceptualDiseñoWeb.png)
