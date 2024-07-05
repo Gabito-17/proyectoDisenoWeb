@@ -1182,8 +1182,15 @@ Alta
 | **NFR 02**||**X**||||
 | **NFR 03**||**X**||||
 | **NFR 04**||||**X**||
- **NFR 05**|||||**X**|
- ---
+**NFR 05**|||||**X**|
+---
 
- ## Modelo Conceptual
- ![Modelo Conceptual](/docs/resources/ModeloConceptualDiseñoWeb.png)
+## Modelo Conceptual
+![Modelo Conceptual](/docs/resources/ModeloConceptualDiseñoWeb.png)
+---
+
+## U.I.D. - Diagrama de Interacción de Usuario
+
+![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPaís.png)
+
+![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónProvincia.png)
