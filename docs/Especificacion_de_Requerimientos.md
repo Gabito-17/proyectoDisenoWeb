@@ -661,3 +661,6 @@ Alta
 ---
 ![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPaciente.png)
 ---
+## Modelo Navegacional
+
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPrincipal.png)
