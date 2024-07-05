@@ -3,6 +3,77 @@
 
 ---
 
+# Todos los casos de uso del sistema
+
+- ### UC-01 - Registrar Paciente
+- ### UC-02 - Modificar Paciente
+- ### UC-03 - Eliminar Paciente
+- ### UC-04 - Consultar Paciente
+- ### UC-05 - Registrar Sesión
+- ### UC-06 - Consultar Sesión
+- ### UC-07 - Cancelar Sesión
+- ### UC-08 - Consultar Agenda
+- ### UC-09 - Derivar Paciente
+- ### UC-10 - Consultar Historia Clínica
+- ### UC-11 - Registrar Historia Clínica
+- ### UC-12 - Modificar Informe de Sesión
+- ### UC-13 - Consultar Informe de Sesión
+- ### UC-14 - Registrar Informe de Sesión
+- ### UC-15 - Generar Informe de Asistencia
+- ### UC-16 - Enviar Recordatorio de Sesión al Paciente
+- ### UC-17 - Adelantar Sesión de un Paciente en Caso de Cancelación
+- ### UC-18 - Registrar Psicólogo
+- ### UC-19 - Modificar Psicólogo
+- ### UC-20 - Consultar Psicólogo
+- ### UC-21 - Eliminar Psicólogo
+- ### UC-22 - Registrar Secretario
+- ### UC-23 - Modificar Secretario
+- ### UC-24 - Consultar Secretario
+- ### UC-25 - Eliminar Secretario
+- ### UC-26 - Obtener Países
+- ### UC-27 - Consultar Países
+- ### UC-28 - Eliminar Países
+- ### UC-29 - Obtener Provincias
+- ### UC-30 - Consultar Provincias
+- ### UC-31 - Eliminar Provincias
+- ### UC-32 - Obtener Ciudades
+- ### UC-33 - Consultar Ciudades
+- ### UC-34 - Eliminar Ciudades
+- ### UC-35 - Obtener Tipos de Documento
+- ### UC-36 - Consultar Tipos de Documento
+- ### UC-37 - Eliminar Tipos de Documento
+- ### UC-38 - Obtener Sexo
+- ### UC-39 - Modificar Sexo
+- ### UC-40 - Consultar Sexo
+- ### UC-41 - Eliminar Sexo
+- ### UC-42 - Obtener Estado Civil
+- ### UC-43 - Modificar Estado Civil
+- ### UC-44 - Consultar Estado Civil
+- ### UC-45 - Eliminar Estado Civil
+- ### UC-46 - Registrar Especialidad
+- ### UC-47 - Modificar Especialidad
+- ### UC-48 - Consultar Especialidad
+- ### UC-49 - Eliminar Especialidad
+- ### UC-50 - Registrar Estado de la Sesión
+- ### UC-51 - Modificar Estado de la Sesión
+- ### UC-52 - Consultar Estado de la Sesión
+- ### UC-53 - Eliminar Estado de la Sesión
+- ### UC-54 - Registrar Tipo de Descripción
+- ### UC-55 - Modificar Tipo de Descripción
+- ### UC-56 - Consultar Tipo de Descripción
+- ### UC-57 - Eliminar Tipo de Descripción
+- ### UC-58 - Iniciar Sesión
+- ### UC-59 - Cerrar Sesión
+- ### UC-60 - Validar Usuario
+- ### UC-61 - Crear Rol
+- ### UC-62 - Modificar Rol
+- ### UC-63 - Eliminar Rol
+- ### UC-64 - Asignar Rol
+- ### UC-65 - Desasignar Rol
+- ### UC-66 - Consultar Roles
+- ### UC-67 - Validar Sesión
+- ### UC-68 - Validar Informe de Sesión
+
 # Casos de Uso Extendidos
 
 ## UC- 01 - Registrar Paciente
