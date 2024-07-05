@@ -39,7 +39,8 @@
 - ### UC-32 - Obtener Ciudades
 - ### UC-33 - Consultar Ciudades
 - ### UC-34 - Eliminar Ciudades
-- ### UC-35 - Obtener Tipos de Documento
+- ### UC-35 - Alta de Tipo de Documento
+- ### UC-69 - Modificar Tipo de Documento
 - ### UC-36 - Consultar Tipos de Documento
 - ### UC-37 - Eliminar Tipos de Documento
 - ### UC-38 - Obtener Sexo
