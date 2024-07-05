@@ -49,7 +49,7 @@ Los parámetros que dan forma a la iteración son: código, duración y fase a l
 
 ## Metas
 - **Documentacion:** Documentar las funcionalidades desarrolladas en esta iteracion.
-- **Modelo:**Crear un modelo basico del proyecto.
+- **Modelo:** Crear un modelo basico del proyecto.
 - **Gestion de Pacientes:** Implementar las funcionalidades para el registro, modificacion y baja de pacientes.
 - **Gestion de Parametros:** Implementar las funcionalidades para el registro, modificacion y eliminacion de los parametros del sistema (Sexo, TipoDocumento, Pais).
 
