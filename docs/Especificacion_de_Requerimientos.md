@@ -18,8 +18,8 @@
 
 | Nro | Fecha     | Descripción       | Autor |
 |-----|-----------|-------------------|-------|
-| 0   | 07/06/2024| Version 0.1     | Pavón Juan Gabriel |
-| 1   | 07/06/2024| Definicion de requisitos iteracion 01, Definicion de Objetivos iteracion 01| Pavon Juan Gabriel |
+| 0   | 07/06/2024| Version 0.1     | Gelabert André, Pavón Juan Gabriel |
+| 1   | 07/06/2024| Definicion de requisitos iteracion 01, Definicion de Objetivos iteracion 01| Gelabert André, Pavon Juan Gabriel |
 
 ---
 
