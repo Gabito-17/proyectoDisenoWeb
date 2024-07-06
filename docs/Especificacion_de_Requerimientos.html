@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Proyecto</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="proyecto">Proyecto</h1>
+<h2 id="alma">ALMA</h2>
+<h3 id="documento-de-requisitos-del-sistema">Documento de Requisitos del Sistema</h3>
+<p><strong>Versión:</strong> 0.1</p>
+<p><strong>Fecha:</strong> 07/06/2024</p>
+<p><strong>Realizado por:</strong> Gelabert André, Pavón Juan Gabriel.</p>
+<p><strong>Realizado para:</strong> &quot;Consultorio Alma&quot;</p>
+<hr>
+<h2 id="lista-de-cambios">Lista de Cambios</h2>
+<table>
+<thead>
+<tr>
+<th>Nro</th>
+<th>Fecha</th>
+<th>Descripción</th>
+<th>Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>07/06/2024</td>
+<td>Version 0.1</td>
+<td>Pavón Juan Gabriel</td>
+</tr>
+<tr>
+<td>1</td>
+<td>07/06/2024</td>
+<td>Definicion de requisitos iteracion 01, Definicion de Objetivos iteracion 01</td>
+<td>Pavon Juan Gabriel</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="presentacion-general">Presentacion General</h2>
+<p>El proyecto consiste en el desarrollo de un sistema web para &quot;Consultorio Alma&quot;, ubicado en la ciudad de Montecarlo, Misiones. Este sistema se centrará en optimizar la gestión del consultorio psicológico que forma parte del sanatorio, el cual actualmente ofrece servicios de psicoterapia presencial para adultos de forma individual.</p>
+<p>El objetivo principal del sistema es mejorar la eficiencia y la organización del consultorio, reemplazando los métodos tradicionales de almacenamiento de información en papel con una solución digital moderna que garantice la confidencialidad y la accesibilidad de los datos de los pacientes.</p>
+<hr>
+<h2 id="participantes-del-proyecto">Participantes del Proyecto</h2>
+<h3 id="desarrolladores">Desarrolladores</h3>
+<ul>
+<li>Gelabert, André.</li>
+<li>Pavon, Juan Gabriel.</li>
+</ul>
+<h3 id="cliente">Cliente</h3>
+<ul>
+<li>Rosch, Jonathan Alexander.</li>
+</ul>
+<h2 id="objetivos-del-proyecto">Objetivos del Proyecto</h2>
+<ul>
+<li><strong>OBJ01-Gestión de Psicólogos</strong>: Permitir el registro sencillo de psicólogos, asegurando que toda la información relevante se almacene de forma digital y segura. Además, permitir la modificación de los datos almacenados de un psicólogo ya registrado. Por último, permitir la baja lógica de un psicólogo, garantizando que el historial de sesiones y pacientes se mantenga coherente y actualizado.</li>
+<li><strong>OBJ02-Gestion de Pacientes</strong>: Permitir el registro sencillo de un paciente y su respectiva asociacion a un psicologo del consultorio, asegurando que toda la información relevante se almacene de forma digital y segura. Ademas permitir la modificacion de los datos almacenados de un paciente. Por ultimo permitir la baja logica de un paciente el historial de pacientes se mantenga coherente y actualizado.</li>
+<li><strong>OBJ03-Gestión de Sesiones</strong>: Permitir el registro sencillo de sesiones y su respectiva asociación a un psicólogo y a un paciente del consultorio, asegurando que toda la información relevante se almacene de forma digital y segura. Además, permitir la modificación de los datos almacenados de una sesión ya registrada. Por último, permitir la baja lógica de una sesión, garantizando que el historial de sesiones se mantenga coherente y actualizado.</li>
+<li><strong>OBJ04-Gestionar Parámetros de Sistema</strong>: El sistema permitirá la gestión integral de todos los parámetros necesarios para su óptimo funcionamiento. Estos parámetros incluirán los tipos de especialidad de los psicologos, los estados de las sesiones, ciertos datos de los pacientes (como podria ser su pais de residencia, su ciudad, etc) y cualquier otra variable que influya en la operativa diaria del consultorio. La gestión de estos parámetros garantizará que el sistema se adapte de manera flexible y eficiente a las necesidades específicas del consultorio, facilitando un entorno operativo fluido y personalizado.</li>
+<li><strong>OBJ05-Gestionar Seguridad</strong>: El sistema gestionará toda la información relacionada con la seguridad de acceso del sitio, garantizando la protección de los datos sensibles de los pacientes y del consultorio. Esto incluirá la implementación de medidas de seguridad como la validación de usuarios, contar con sesiones, y la gestión de permisos y roles. Estas medidas asegurarán que solo el personal autorizado tenga acceso a la información relevante, manteniendo la confidencialidad y la integridad de los datos en cumplimiento con las normativas vigentes de protección de datos en el ámbito de la salud.</li>
+</ul>
+<hr>
+<h1 id="requisitos-del-sistema">Requisitos del Sistema</h1>
+<h2 id="requisitos-de-información">Requisitos de Información</h2>
+<h3 id="irq--01-información-sobre-pacientes">IRQ – 01 Información sobre Pacientes</h3>
+<p><strong>Objetivos asociados</strong></p>
+<ul>
+<li>OBJ – 02: Gestionar Pacientes</li>
+</ul>
+<p><strong>Requisitos asociados</strong></p>
+<ul>
+<li>UC-01: Registrar Pacientes</li>
+<li>UC-02: Modificación de Pacientes</li>
+<li>UC-03: Eliminar Pacientes</li>
+</ul>
+<p><strong>Descripción</strong>
+Se almacenará toda la información necesaria de los Pacientes que desean ser atendidos en el consultorio.</p>
+<p><strong>Datos específicos</strong></p>
+<ul>
+<li>Nombre y apellido</li>
+<li>Tipo de DNI</li>
+<li>DNI</li>
+<li>Ciudad – Provincia - País</li>
+<li>Dirección</li>
+<li>Teléfono</li>
+<li>Mail</li>
+<li>Motivo Baja (en caso de ser necesario)</li>
+<li>Fecha Baja (en caso de ser necesario)</li>
+</ul>
+<p><strong>Estabilidad</strong>
+Alta</p>
+<p><strong>Comentarios</strong>
+Ninguno</p>
+<hr>
+<h3 id="irq--02-información-sobre-los-parámetros-del-sistema">IRQ – 02 Información sobre los parámetros del Sistema</h3>
+<p><strong>Objetivos asociados</strong></p>
+<ul>
+<li>OBJ04-Gestionar Parámetros de Sistema</li>
+<li>OBJ05-Gestionar Seguridad</li>
+</ul>
+<p><strong>Requisitos asociados</strong></p>
+<ul>
+<li>UC- 26 - Obtener Paises</li>
+<li>UC- 27 - Consultar Paises</li>
+<li>UC- 28 - Eliminar Paises</li>
+<li>UC- 35 - Obtener Tipos de Documento</li>
+<li>UC- 36 - Consultar Tipos de Documento</li>
+<li>UC- 37 - Eliminar Tipos de Documento</li>
+<li>UC- 38 - Obtener Sexo</li>
+<li>UC- 39 - Modificar Sexo</li>
+<li>UC- 40 - Consultar Sexo</li>
+<li>UC- 41 - Eliminar Sexo</li>
+</ul>
+<p><strong>Descripción</strong>
+Se registrara toda la información necesaria, reconocidas como parámetros del sistema, para poder operar con el sitio del consultorio</p>
+<p><strong>Datos específicos</strong></p>
+<ul>
+<li>Nombre de País</li>
+<li>Tipo de Documento</li>
+<li>Sexo</li>
+</ul>
+<p><strong>Estabilidad</strong>
+Alta</p>
+<p><strong>Comentarios</strong>
+Ninguno</p>
+<hr>
+<h2 id="requisitos-funcionales">Requisitos Funcionales</h2>
+<ul>
+<li><strong>Registrar pacientes</strong>: El secretario debe poder registrar pacientes en el software.</li>
+<li><strong>Modificar paciente</strong>: El psicólogo o secretario debe poder modificar un paciente registrado en el sistema.</li>
+<li><strong>Eliminar paciente</strong>: El psicólogo o secretario debe poder eliminar un paciente del sistema.</li>
+<li><strong>Registrar, modificar y eliminar parameteros del sistema</strong>: Se debe poder registrar toda la información necesaria, reconocidas como parámetros del sistema, para poder operar con el sitio del consultorio.</li>
+</ul>
+<hr>
+<h2 id="diagrama-de-subsistemas">Diagrama de Subsistemas</h2>
+<p><img src="file:////docs/resources/subsistemas.png" alt="Diagrama de Subsistemas"></p>
+<hr>
+<h2 id="diagrama-de-caso-de-uso-del-subsistema-gestión-de-pacientes">Diagrama de Caso de Uso del Subsistema Gestión de Pacientes</h2>
+<p><img src="file:////docs/resources/ucSubsistemaPacientes.png" alt="Diagrama de Casos de Uso del Subsistemas Gestion de Pacientes"></p>
+<h3 id="definición-de-actores">Definición de Actores:</h3>
+<table>
+<thead>
+<tr>
+<th>ACT–01</th>
+<th>Secretario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>Este actor representa a la secretaria del consultorio</td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>La secretaria es la responsable de realizar la gestion de pacientes y de sesiones</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>ACT–02</th>
+<th>Psicologo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>Este actor representa a un psicologo del consultorio</td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>El Psicologo es la responsable de llevar a cabo las sesiones con los pacientes y realizar los informes de sesion correspondientes, ademas debe poder registrar nuevos pacientes y sesiones</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="diagrama-de-caso-de-uso-del-subsistema-gestión-de-parametros-del-sistema">Diagrama de Caso de Uso del Subsistema Gestión de Parametros del sistema</h2>
+<p><img src="file:////docs/resources/ucSubsistemaParametrosSistema.png" alt="Diagrama de Casos de Uso del Subsistemas Gestion de Parametros del sistema"></p>
+<h3 id="definición-de-actores-1">Definición de Actores:</h3>
+<table>
+<thead>
+<tr>
+<th>ACT–01</th>
+<th>Administrador</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>Este actor es el encargado de asignar los permisos a los usuarios para poder utilizar el sistema; tendrá privilegios para hacer todo tipo de modificación en cuanto a los grupos de usuarios y poder reparar algún tipo de inconsistencia en los datos que presenta el sistema. También se encargará de cargar y actualizar todos los parámetros del sistema cuando así lo requieran</td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>Ninguno</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="casos-de-uso-del-sistema">Casos de Uso del Sistema</h2>
+<h3 id="uc-01---registrar-paciente">UC-01 - Registrar Paciente</h3>
+<table>
+<thead>
+<tr>
+<th>UC–01</th>
+<th>Registrar Paciente</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ02-Gestionar pacientes</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>IRQ–01 Información sobre pacientes</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>Permite registrar un nuevo paciente en el sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>El secretario tiene acceso al sistema y los datos necesarios del paciente</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El secretario ingresa los datos del paciente (nombre, apellido, documento, dirección, teléfono, etc.)</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema valida los datos ingresados</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>El sistema registra al paciente y confirma el registro</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>El paciente debe estar previamente registrado en el sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>2 segundos</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>10 veces/día</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>Si hay algún error en los datos, el sistema permite corregirlos y reintentar el registro</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc02---modificar-paciente">UC–02 - Modificar Paciente</h3>
+<table>
+<thead>
+<tr>
+<th>UC–02</th>
+<th>Modificar Paciente</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ02-Gestionar pacientes</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>IRQ–01 Información sobre pacientes</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>Permite modificar la información de un paciente existente</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>El secretario tiene acceso al sistema y los datos necesarios del paciente</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El secretario selecciona al paciente a modificar</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema muestra los datos actuales del paciente</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>El secretario modifica los datos necesarios</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>El sistema valida los nuevos datos</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>El sistema actualiza la información del paciente y confirma la modificación</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>Los datos del paciente están actualizados en el sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>2 segundos</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>5 veces/día</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>Si hay algún error en los datos, el sistema permite corregirlos y reintentar la modificación</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc03---eliminar-paciente">UC–03 - Eliminar Paciente</h3>
+<table>
+<thead>
+<tr>
+<th>UC–03</th>
+<th>Eliminar Paciente</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ02-Gestionar pacientes</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>IRQ–01 Información sobre pacientes</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>Permite dar de baja lógicamente a un paciente del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>El secretario tiene acceso al sistema y los datos necesarios del paciente</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El secretario selecciona al paciente a eliminar</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema solicita confirmación para eliminar al paciente</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>El secretario confirma la eliminación</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>El sistema elimina al paciente y confirma la eliminación</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>El paciente está eliminado del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>2a</td>
+<td>Si el secretario no confirma la eliminación, el paciente no es eliminado</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>1 segundo</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>1 vez/día</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>Si el paciente es eliminado, toda su información es archivada y no se puede acceder a ella a menos que sea reactivada</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc04---consultar-paciente">UC–04 - Consultar Paciente</h3>
+<table>
+<thead>
+<tr>
+<th>UC–04</th>
+<th>Consultar Paciente</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ02-Gestionar pacientes</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>IRQ–01 Información sobre pacientes</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>Permite consultar la información de un paciente</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>El usuario tiene acceso al sistema y los datos necesarios del paciente</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El usuario selecciona al paciente a consultar</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema muestra la información detallada del paciente</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>La información del paciente es visualizada por el usuario</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1a</td>
+<td>Si el paciente no está registrado, el sistema muestra un mensaje de error</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>1 segundo</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>10 veces/día</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>La consulta de información de pacientes está disponible solo para usuarios autorizados</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc26---obtener-paises">UC–26 - Obtener Paises</h3>
+<table>
+<thead>
+<tr>
+<th>UC–26</th>
+<th>Obtener Paises</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ04-Gestionar Parámetros de Sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>- IRQ-02: Información sobre los parámetros del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>El sistema debe permitir obtener una lista de todos los países del mundo, o filtrar algunos países por región, mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>El sistema tiene acceso a la API externa que proporciona la información de los países.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El administrador solicita la lista de países desde el sistema.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>(Opcional) El administrador proporciona un filtro de región para la búsqueda.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema envía una solicitud a la API externa para obtener la lista de países, con o sin filtro de región.</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>La API externa responde con la lista de países.</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>El sistema muestra la lista de países al administrador.</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>El usuario obtiene la lista de países solicitada, ya sea completa o filtrada por región.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>Si el sistema detecta que ya hay Paises almacenados le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento.</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>Si la API externa devuelve un error o no se encuentran países, se muestra un mensaje indicando que no se encontraron resultados.</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>La respuesta de la API externa debe recibirse en menos de 5 segundos.</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc27---consultar-paises">UC–27 - Consultar Paises</h3>
+<table>
+<thead>
+<tr>
+<th>UC–27</th>
+<th>Consultar Paises</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ04-Gestionar Parámetros de Sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>- IRQ-02: Información sobre los parámetros del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de país.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>Se desea conocer los distintos países que el sistema posee cargados.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El administrador solicita la lista de países al sistema.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema muestra la lista de países al administrador.</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>Los distintos países son listados para el usuario.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto.</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc28---eliminar-paises">UC–28 - Eliminar Paises</h3>
+<table>
+<thead>
+<tr>
+<th>UC–28</th>
+<th>Eliminar Paises</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ04-Gestionar Parámetros de Sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>- IRQ-02: Información sobre los parámetros del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un país.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>El usuario debe tener permisos de administrador para realizar esta operación.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El administrador solicita la lista de países al sistema.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema muestra la lista de países al administrador.</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>El administrador selecciona de la lista, el/los País/es que desea eliminar.</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>El sistema pregunta si quiere continuar con la operación.</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>El sistema informa que el País ha sido removido.</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>El o los Países fueron eliminados correctamente</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>El sistema informa que posee datos relacionados dicho país y que no podrá eliminarse. El caso de uso queda sin efecto.</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc35---alta-de-tipo-de-documento">UC–35 - Alta de Tipo de Documento</h3>
+<table>
+<thead>
+<tr>
+<th>UC–35</th>
+<th>Alta de Tipo de Documento</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ04-Gestionar Parámetros de Sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>- IRQ-02: Información sobre los parámetros del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice el alta de un Tipo de documento.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>El sistema tiene acceso a la API externa que proporciona los tipos de documento de identidad.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El administrador proporciona los datos para registrar el Tipo de Documento.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema valida los datos ingresados.</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>El sistema avisa que el Tipo de Documento ha sido registrado.</td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>Si el sistema detecta que los datos que se estan intentando ingresar ya existen, se le informa al usuario y se le solicita que cambie los datos o que cancele la carga</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc69---modificar-tipo-de-documento">UC–69 - Modificar Tipo de Documento</h3>
+<table>
+<thead>
+<tr>
+<th>UC–69</th>
+<th>Modificar Tipo de Documento</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ04-Gestionar Parámetros de Sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>- IRQ-02: Información sobre los parámetros del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la modificación de un Tipo de Documento.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>El usuario debe tener permisos de administrador para realizar esta tarea.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El administrador solicita los datos del Tipo de Documento</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema le devuelve los datos requeridos.</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>El administrador ingresa los nuevos datos.</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>El sistema pregunta si quiere continuar con la operación.</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>El sistema informa que el Tipo de Documento ha sido modificado</td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto.</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>Si el sistema detecta que los datos que se estan intentando ingresar ya existen, se le informa al usuario y se le solicita que cambie los datos o que cancele la carga</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc36---consultar-tipos-de-documento">UC–36 - Consultar Tipos de Documento</h3>
+<table>
+<thead>
+<tr>
+<th>UC–36</th>
+<th>Consultar Tipos de Documento</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ04-Gestionar Parámetros de Sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>- IRQ-02: Información sobre los parámetros del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de tipos de documentos de identidad.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>Se desea conocer los distintos tipos de documentos de identidad que el sistema posee cargados.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El administrador solicita al sistema los tipos de documentos de identidad cargados.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema muestra la lista de tipos de documentos de identidad al administrador.</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>Los distintos tipos de documentos de identidad son listados para el usuario.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto.</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc37---eliminar-tipos-de-documento">UC–37 - Eliminar Tipos de Documento</h3>
+<table>
+<thead>
+<tr>
+<th>UC–37</th>
+<th>Eliminar Tipos de Documento</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ04-Gestionar Parámetros de Sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>- IRQ-02: Información sobre los parámetros del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un tipo de documentos de identidad.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>El usuario debe tener permisos de administrador para realizar esta operación.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El administrador solicita al sistema los tipos de documentos de identidad cargados.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema muestra la lista de tipos de documentos de identidad al administrador.</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>El administrador selecciona de la lista, el/los tipos de documentos de identidad que desea eliminar.</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>El sistema pregunta si quiere continuar con la operación.</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>El sistema informa que el tipo de documentos de identidad ha sido eliminado.</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>El o los tipos de documentos de identidad fueron eliminados correctamente</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>El sistema informa que posee datos relacionados dicho tipo de documento de identidad y que no podrá eliminarse. El caso de uso queda sin efecto.</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc38---obtener-sexo">UC–38 - Obtener Sexo</h3>
+<table>
+<thead>
+<tr>
+<th>UC–38</th>
+<th>Obtener Sexo</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ04-Gestionar Parámetros de Sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>- IRQ-02: Información sobre los parámetros del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>El sistema debe permitir obtener todos los tipos de sexo biologico que tiene una persona mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>El sistema tiene acceso a la API externa que proporciona los tipos de sexo biologico que tiene una persona.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El administrador solicita al sistema la lista de los tipos de sexo biologico que tiene una persona.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema envía una solicitud a la API externa para obtener lista de los tipos de sexo biologico que tiene una persona.</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>La API externa responde con lista de los tipos de sexo biologico que tiene una persona.</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>El sistema muestra la lista de los tipos de sexo biologico que tiene una persona.</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>El usuario obtiene la lista de los tipos de sexo biologico que tiene una persona.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>Si el sistema detecta que ya hay una lista de los tipos de sexo biologico que tiene una persona, le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento.</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>Si la API externa devuelve un error o no se encuentran los tipos de sexo biologico que tiene una persona, se muestra un mensaje indicando que no se encontraron resultados.</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>La respuesta de la API externa debe recibirse en menos de 5 segundos.</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc39---modificar-sexo">UC–39 - Modificar Sexo</h3>
+<table>
+<thead>
+<tr>
+<th>UC–39</th>
+<th>Modificar Sexo</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ04-Gestionar Parámetros de Sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>- IRQ-02: Información sobre los parámetros del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la modificación de un tipo de sexo biologico que tiene una persona.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>El usuario debe tener permisos de administrador para realizar esta tarea.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El administrador solicita al sistema los datos del tipo de sexo biologico que tiene una persona.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema le devuelve los datos requeridos.</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>El administrador ingresa los nuevos datos.</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>El sistema pregunta si quiere continuar con la operación.</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>El sistema informa que el tipo de sexo ha sido modificado.</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>El tipo de sexo biologico, posee los datos actualizados.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto.</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc40---consultar-sexo">UC–40 - Consultar Sexo</h3>
+<table>
+<thead>
+<tr>
+<th>UC–40</th>
+<th>Consultar Sexo</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ04-Gestionar Parámetros de Sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>- IRQ-02: Información sobre los parámetros del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de de los tipos de sexo biologico que tiene una persona.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>Se desea conocer los distintos tipos de sexo biologico que tiene una persona que el sistema posee cargados.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El administrador solicita al sistema la lista de los tipos de sexo biologico que tiene una persona.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema le proporciona los datos obtenidos.</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>Los distintos tipos de sexo biologico que tiene una persona son listados para el usuario.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto.</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="uc41---eliminar-sexo">UC–41 - Eliminar Sexo</h3>
+<table>
+<thead>
+<tr>
+<th>UC–41</th>
+<th>Eliminar Sexo</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objetivos asociados</strong></td>
+<td>- OBJ04-Gestionar Parámetros de Sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requisitos asociados</strong></td>
+<td>- IRQ-02: Información sobre los parámetros del sistema</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un tipo de sexo biologico que tiene una persona.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precondición</strong></td>
+<td>El usuario debe tener permisos de administrador para realizar esta operación.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Principal</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>El administrador solicita al sistema la lista de los tipos de sexo biologico que tiene una persona.</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>El sistema le proporciona los datos obtenidos.</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>El administrador selecciona de la lista, el/los tipo/s de sexo biologico que desea eliminar.</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>El sistema pregunta si quiere continuar con la operación.</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>El sistema informa que el tipo de sexo biologico ha sido eliminado.</td>
+</tr>
+<tr>
+<td><strong>Postcondición</strong></td>
+<td>El o los tipos de sexo biologico fueron eliminados correctamente</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Flujo Alternativo</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Acción</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>El sistema informa que posee datos relacionados dicho tipo de sexo biologico y que no podrá eliminarse. El caso de uso queda sin efecto.</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td><strong>Paso</strong></td>
+<td><strong>Cota de tiempo</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>alta</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="requerimientos-no-funcionales">Requerimientos no Funcionales</h2>
+<table>
+<thead>
+<tr>
+<th><strong>NFR - 01</strong></th>
+<th><strong>Soporte de actualizaciones</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Objetivos asociados</td>
+<td><strong>OBJ - 01</strong>: Mantener el software actualizado</td>
+</tr>
+<tr>
+<td>Requisitos asociados</td>
+<td><strong>IRQ - 01</strong>: Mecanismo de actualización del software</td>
+</tr>
+<tr>
+<td>Descripción</td>
+<td>El sistema debe ser capaz de recibir e implementar actualizaciones periódicas para mejorar su funcionamiento y seguridad.</td>
+</tr>
+<tr>
+<td>Comentarios</td>
+<td>Ninguno</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>NFR - 02</strong></th>
+<th><strong>Soporte de nuevas funcionalidades</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Objetivos asociados</td>
+<td><strong>OBJ - 02</strong>: Permitir la incorporación de nuevas funcionalidades</td>
+</tr>
+<tr>
+<td>Requisitos asociados</td>
+<td><strong>IRQ - 02</strong>: Flexibilidad para la adición de funciones</td>
+</tr>
+<tr>
+<td>Descripción</td>
+<td>El sistema debe ser diseñado de manera que sea fácil agregar nuevas funcionalidades sin afectar la estabilidad del sistema existente.</td>
+</tr>
+<tr>
+<td>Comentarios</td>
+<td>Ninguno</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>NFR - 03</strong></th>
+<th><strong>Plataforma web</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Objetivos asociados</td>
+<td><strong>OBJ - 03</strong>: Desarrollar el sistema para funcionar en plataformas web</td>
+</tr>
+<tr>
+<td>Requisitos asociados</td>
+<td><strong>IRQ - 03</strong>: Compatibilidad con navegadores web estándar</td>
+</tr>
+<tr>
+<td>Descripción</td>
+<td>El sistema estará diseñado y desarrollado para ser accesible a través de navegadores web estándar, lo que permitirá un fácil acceso desde diferentes dispositivos.</td>
+</tr>
+<tr>
+<td>Comentarios</td>
+<td>Ninguno</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>NFR - 04</strong></th>
+<th><strong>Restricción de documentación</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Objetivos asociados</td>
+<td><strong>OBJ - 04</strong>: Restringir acceso a la documentación según los roles</td>
+</tr>
+<tr>
+<td>Requisitos asociados</td>
+<td><strong>IRQ - 04</strong>: Mecanismo de control de acceso a la documentación</td>
+</tr>
+<tr>
+<td>Descripción</td>
+<td>La documentación del sistema estará disponible solo para los roles autorizados, con un mecanismo de control de acceso que asegure la confidencialidad de la información.</td>
+</tr>
+<tr>
+<td>Comentarios</td>
+<td>Ninguno</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>NFR - 05</strong></th>
+<th><strong>Computadora principal y para la secretaria</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Objetivos asociados</td>
+<td><strong>OBJ - 05</strong>: Garantizar acceso adecuado a los registros según los roles</td>
+</tr>
+<tr>
+<td>Requisitos asociados</td>
+<td><strong>IRQ - 05</strong>: Control de acceso diferenciado para la computadora principal y la de la secretaria</td>
+</tr>
+<tr>
+<td>Descripción</td>
+<td>El sistema debe garantizar que la computadora principal tenga acceso completo a todos los registros contables y de pacientes, mientras que la computadora de la secretaria tendrá acceso restringido únicamente a los aspectos pertinentes para su función.</td>
+</tr>
+<tr>
+<td>Comentarios</td>
+<td>Ninguno</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="matriz-de-rastreabilidad-objetivorequisitos">Matriz de Rastreabilidad Objetivo/Requisitos</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">OBJ/IRQ</th>
+<th style="text-align:center"><strong>OBJ01-Gestión de Psicólogos</strong></th>
+<th style="text-align:center"><strong>OBJ02-Gestion de Pacientes</strong></th>
+<th style="text-align:center"><strong>OBJ04-Gestionar Parámetros de Sistema</strong></th>
+<th style="text-align:center"><strong>OBJ05-Gestionar Seguridad</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>IRQ 01</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><strong>X</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>IRQ 02</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><strong>X</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>IRQ 03</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>NFR 01</strong></td>
+<td style="text-align:center"><strong>X</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>NFR 02</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><strong>X</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>NFR 03</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><strong>X</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>NFR 04</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><strong>X</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>NFR 05</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="glosario-de-términos">Glosario de Términos</h2>
+<table>
+<thead>
+<tr>
+<th>Termino</th>
+<th>Categoría</th>
+<th>Comentarios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Administrador</strong></td>
+<td>Actor</td>
+<td>Este actor representa a la persona que se administrar los usuarios del sistema, como axial también agregar todos los parámetros para su uso.</td>
+</tr>
+<tr>
+<td><strong>Secretario</strong></td>
+<td>Actor</td>
+<td>El secretario es el responsable de realizar la gestion de pacientes y de sesiones.</td>
+</tr>
+<tr>
+<td><strong>Psicologo</strong></td>
+<td>Actor</td>
+<td>El Psicologo es la responsable de llevar a cabo las sesiones con los pacientes y realizar los informes de sesion correspondientes ademas debe poder registrar nuevos pacientes y sesiones.</td>
+</tr>
+<tr>
+<td><strong>Registrar Pacientes</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para registrar un paciente.</td>
+</tr>
+<tr>
+<td><strong>Modificar Pacientes</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para modifcar un paciente.</td>
+</tr>
+<tr>
+<td><strong>Eliminar Pacientes</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para eliminar un paciente del sistema.</td>
+</tr>
+<tr>
+<td><strong>Consultar Pacientes</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para consultar los datos de los paciente del sistema.</td>
+</tr>
+<tr>
+<td><strong>Obtener Países</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para obtener un país mediante una API.</td>
+</tr>
+<tr>
+<td><strong>Consultar Países</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para consultar los paises presentes en el sistema.</td>
+</tr>
+<tr>
+<td><strong>Eliminar Países</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para eliminar un país del sistema.</td>
+</tr>
+<tr>
+<td><strong>Alta Tipo de Documento</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para registrar un tipo de documento.</td>
+</tr>
+<tr>
+<td><strong>Modificar Tipos de Documento</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para modifcar un tipo de documento.</td>
+</tr>
+<tr>
+<td><strong>Eliminar Tipo de Documento</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para eliminar un tipo de documento del sistema.</td>
+</tr>
+<tr>
+<td><strong>Consultar Tipos de Documento</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para consultar los tipos de documento presentes en el sistema.</td>
+</tr>
+<tr>
+<td><strong>Obtener Sexo</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para obtener todos los tipos de sexo biologico que tiene una persona mediante una API.</td>
+</tr>
+<tr>
+<td><strong>Modificar Sexo</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para modifcar un tipo de sexo biologico que puede tener una persona.</td>
+</tr>
+<tr>
+<td><strong>Consultar Sexo</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para consultar todos los tipos de sexo biologico que tiene una persona presentes en el sistema.</td>
+</tr>
+<tr>
+<td><strong>Eliminar Sexo</strong></td>
+<td>Caso de uso</td>
+<td>Este caso de uso describe los pasos que se debe realizar para eliminar un tipo de sexo biologico que tiene una persona del sistema.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="modelo-conceptual">Modelo Conceptual</h2>
+<h2 id=""><img src="file:////docs/resources/ModeloConceptualDise%C3%B1oWeb.png" alt="Modelo Conceptual"></h2>
+<h2 id="uid---diagrama-de-interacción-de-usuario">U.I.D. - Diagrama de Interacción de Usuario</h2>
+<h2 id="-1"><img src="file:////docs/resources/UID's/UIDAltaModificaci%C3%B3nEliminaci%C3%B3nPa%C3%ADs.png" alt=""></h2>
+<h2 id="-2"><img src="file:////docs/resources/UID's/UIDAltaModificaci%C3%B3nEliminaci%C3%B3nTipoDocumento.png" alt=""></h2>
+<h2 id="-3"><img src="file:////docs/resources/UID's/UIDAltaModificaci%C3%B3nEliminaci%C3%B3nSexo.png" alt=""></h2>
+<h2 id="-4"><img src="file:////docs/resources/UID's/UIDAltaModificaci%C3%B3nEliminaci%C3%B3nPaciente.png" alt=""></h2>
+<h2 id="modelo-navegacional">Modelo Navegacional</h2>
+<h2 id="-5"><img src="file:////docs/resources/ModelosNavegacionales/ModeloNavegacionalPrincipal.png" alt=""></h2>
+<h2 id="-6"><img src="file:////docs/resources/ModelosNavegacionales/ModeloNavegacionalPacientes.png" alt=""></h2>
+<h2 id="-7"><img src="file:////docs/resources/ModelosNavegacionales/ModeloNavegacionalTipoDocumento.png" alt=""></h2>
+<h2 id="-8"><img src="file:////docs/resources/ModelosNavegacionales/ModeloNavegacionaSexo.png" alt=""></h2>
+<h2 id="-9"><img src="file:////docs/resources/ModelosNavegacionales/ModeloNavegacionaPais.png" alt=""></h2>
+<h2 id="diseño-de-interfaz-abstracta">Diseño de Interfaz Abstracta</h2>
+<h3 id="diseño-abstracto-de-registro-y-listado-de-pacientes">Diseño abstracto de registro y listado de pacientes</h3>
+<p><img src="file:////docs/resources/DIA's/diaPantallas-diaRegistrarPaciente.drawio.png" alt=""></p>
+<h3 id="diseño-abstracto-de-modificar-y-eliminar-pacientes">Diseño abstracto de Modificar y eliminar pacientes</h3>
+<p><img src="file:////docs/resources/DIA's/diaPantallas-diaModificar_y_EliminarPaciente.drawio.png" alt=""></p>
+<h3 id="diseño-abstracto-de-parametros">Diseño abstracto de Parametros</h3>
+<p><img src="file:////docs/resources/DIA's/diaPantallas-diaParametros.drawio.png" alt=""></p>
+<h3 id="diseño-abstracto-de-obtener-listar-y-eliminar-paises">Diseño abstracto de obtener, listar y eliminar Paises</h3>
+<p><img src="file:////docs/resources/DIA's/diaPantallas-diaObtenerConsultarEliminarPaises.drawio.png" alt=""></p>
+<h3 id="diseño-abstracto-de-obtener-listar-y-eliminar-sexos">Diseño abstracto de obtener, listar y eliminar Sexos</h3>
+<p><img src="file:////docs/resources/DIA's/diaPantallas-diaObtenerListarEliminarSexo.drawio.png" alt=""></p>
+<h3 id="diseño-abstracto-de-modificar-sexo">Diseño abstracto de modificar Sexo</h3>
+<p><img src="file:////docs/resources/DIA's/diaPantallas-diaEditarSexo.drawio.png" alt=""></p>
+<h3 id="diseño-abstracto-de-registrar-listar-y-eliminar-tipos-de-documento">Diseño abstracto de registrar, listar y eliminar Tipos de documento</h3>
+<p><img src="file:////docs/resources/DIA's/diaPantallas-diaRegistrarTipoDocumento.drawio.png" alt=""></p>
+<h3 id="diseño-abstracto-de-modificar-tipo-de-documento">Diseño abstracto de modificar tipo de documento</h3>
+<p><img src="file:////docs/resources/DIA's/diaPantallas-ModificarTipoDocumento.drawio.png" alt=""></p>
+
+            
+            
+        </body>
+        </html>
