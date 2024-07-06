@@ -157,6 +157,8 @@ Ninguno
 
 ## Casos de Uso del Sistema
 
+### UC-01 - Registrar Paciente
+
 | UC–01  | Registrar Paciente | |
 |--------|--------------------|----|
 | **Objetivos asociados** | - OBJ02-Gestionar pacientes |
@@ -550,8 +552,8 @@ Ninguno
 ---
 ## Matriz de Rastreabilidad Objetivo/Requisitos
 
-| OBJ/IRQ                 | **OBJ01-Gestión de Psicólogos** | **OBJ02-Gestion de Pacientes** | **OBJ03-Gestión de Sesiones** | **OBJ04-Gestionar Parámetros de Sistema** | **OBJ05-Gestionar Seguridad** |
-|:--------------------------|:------------------------:|:------------------------:|:------------------------:|:------------------------:|:------------------------:|
+| OBJ/IRQ                 | **OBJ01-Gestión de Psicólogos** | **OBJ02-Gestion de Pacientes** | **OBJ04-Gestionar Parámetros de Sistema** | **OBJ05-Gestionar Seguridad** |
+|:--------------------------|:------------------------:|:------------------------:|:------------------------:|:------------------------:|
 | **IRQ 01**||**X**||||
 | **IRQ 02**||||**X**|**X**|
 | **IRQ 03**|||||**X**|
