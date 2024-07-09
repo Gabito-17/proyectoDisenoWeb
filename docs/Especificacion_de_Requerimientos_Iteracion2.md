@@ -263,21 +263,17 @@ Ninguno
 | **Descripción** | El sistema debe permitir obtener todos los tipos de estado civil que tiene una persona mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.  |
 | **Precondición** | El sistema tiene acceso a la API externa que proporciona los tipos de estado civil que tiene una persona. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema la lista de los tipos de estado civil de una persona. |
-| | 5 | El sistema envía una solicitud a la API externa para obtener lista de los tipos de estado civil que tiene una persona. |
-| | 6 | La API externa responde con lista de los tipos de estado civil que tiene una persona. |
-| | 7 | El sistema muestra la lista de los tipos de estado civil que tiene una persona. |
+| | 1 | El administrador solicita al sistema la lista de los tipos de estado civil de una persona. |
+| | 2 | El sistema envía una solicitud a la API externa para obtener lista de los tipos de estado civil que tiene una persona. |
+| | 3 | La API externa responde con lista de los tipos de estado civil que tiene una persona. |
+| | 4 | El sistema muestra la lista de los tipos de estado civil que tiene una persona. |
 | **Postcondición** | El usuario obtiene la lista de los tipos de estado civil que tiene una persona. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 4 | Si el sistema detecta que ya hay una lista de los tipos de estado civil que tiene una persona, le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
-| | 5 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
-| | 6 | Si la API externa devuelve un error o no se encuentran los tipos de estado civil que tiene una persona, se muestra un mensaje indicando que no se encontraron resultados. |
+| | 1 | Si el sistema detecta que ya hay una lista de los tipos de estado civil que tiene una persona, le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
+| | 2 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
+| | 3 | Si la API externa devuelve un error o no se encuentran los tipos de estado civil que tiene una persona, se muestra un mensaje indicando que no se encontraron resultados. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | 6 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
+| | 3 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
 | **Frecuencia** | - |
 | **Estabilidad** | alta |
 | **Comentarios** | Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario. |
@@ -293,18 +289,14 @@ Ninguno
 | **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la modificación de un tipo de estado civil que tiene una persona.  |
 | **Precondición** | El usuario debe tener permisos de administrador para realizar esta tarea. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema los datos del tipo de estado civil que tiene una persona. |
-| | 5 | El sistema le devuelve los datos requeridos. |
-| | 6 | El administrador ingresa los nuevos datos. |
-| | 7 | El sistema pregunta si quiere continuar con la operación. |
-| | 8 | El sistema informa que el tipo de sexo ha sido modificado. |
+| | 1 | El administrador solicita al sistema los datos del tipo de estado civil que tiene una persona. |
+| | 2 | El sistema le devuelve los datos requeridos. |
+| | 3 | El administrador ingresa los nuevos datos. |
+| | 4 | El sistema pregunta si quiere continuar con la operación. |
+| | 5 | El sistema informa que el tipo de estado civil ha sido modificado. |
 | **Postcondición** | El tipo de estado civil, posee los datos actualizados. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
@@ -322,15 +314,11 @@ Ninguno
 | **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de de los tipos de estado civil que tiene una persona.  |
 | **Precondición** | Se desea conocer los distintos tipos de estado civil que tiene una persona que el sistema posee cargados. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema la lista de los tipos de estado civil que tiene una persona. |
-| | 5 | El sistema le proporciona los datos obtenidos. |
+| | 1 | El administrador solicita al sistema la lista de los tipos de estado civil que tiene una persona. |
+| | 2 | El sistema le proporciona los datos obtenidos. |
 | **Postcondición** | Los distintos tipos de estado civil que tiene una persona son listados para el usuario. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 5 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
@@ -348,18 +336,14 @@ Ninguno
 | **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un tipo de estado civil que tiene una persona.  |
 | **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El sistema pide al administrador que se identifique. |
-| | 2 | El administrador proporciona los datos solicitados. |
-| | 3 | El sistema valida al usuario. |
-| | 4 | El administrador solicita al sistema la lista de los tipos de estado civil que tiene una persona. |
-| | 5 | El sistema le proporciona los datos obtenidos. |
-| | 7 | El administrador selecciona de la lista, el/los tipo/s de estado civil que desea eliminar. |
-| | 8 | El sistema pregunta si quiere continuar con la operación. |
-| | 9 | El sistema informa que el tipo de documentos de identidad ha sido eliminado. |
+| | 1 | El administrador solicita al sistema la lista de los tipos de estado civil que tiene una persona. |
+| | 2 | El sistema le proporciona los datos obtenidos. |
+| | 3 | El administrador selecciona de la lista, el/los tipo/s de estado civil que desea eliminar. |
+| | 4 | El sistema pregunta si quiere continuar con la operación. |
+| | 5 | El sistema informa que el tipo de documentos de identidad ha sido eliminado. |
 | **Postcondición** | El o los tipos de estado civil fueron eliminados correctamente |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta, que el nombre de usuario o contraseña proporcionado no concuerda con unos de los usuarios del sistema; le pedirá que ingrese nuevamente esos datos. De lo contrario, quedara sin efecto el caso de uso. |
-| | 9 | El sistema informa que posee datos relacionados dicho tipo de estado civil y que no podrá eliminarse. El caso de uso queda sin efecto. |
+| | 5 | El sistema informa que posee datos relacionados dicho tipo de estado civil y que no podrá eliminarse. El caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
