@@ -61,6 +61,7 @@ El objetivo principal del sistema es mejorar la eficiencia y la organización de
 - UC-01: Registrar Pacientes
 - UC-02: Modificación de Pacientes
 - UC-03: Eliminar Pacientes
+- UC-04: Consultar Paciente
 
 **Descripción**
 Se almacenará toda la información necesaria de los Pacientes que desean ser atendidos en el consultorio.
@@ -123,6 +124,7 @@ Ninguno
 - **Registrar pacientes**: El secretario debe poder registrar pacientes en el software.
 - **Modificar paciente**: El psicólogo o secretario debe poder modificar un paciente registrado en el sistema.
 - **Eliminar paciente**: El psicólogo o secretario debe poder eliminar un paciente del sistema.
+- **Consultar pacientes**: El psicólogo o secretario deben poder ver de manera listada todos los pacientes registrados en el sistema.
 - **Registrar, modificar y eliminar parameteros del sistema**: Se debe poder registrar toda la información necesaria, reconocidas como parámetros del sistema, para poder operar con el sitio del consultorio.
 
 
@@ -169,7 +171,7 @@ Ninguno
 | | 1 | El secretario ingresa los datos del paciente (nombre, apellido, documento, dirección, teléfono, etc.) |
 | | 2 | El sistema valida los datos ingresados |
 | | 3 | El sistema registra al paciente y confirma el registro |
-| **Postcondición** | El paciente debe estar previamente registrado en el sistema |
+| **Postcondición** | El paciente pasa a estar registrado en el sistema |
 | **Flujo Alternativo** | **Paso** | **Acción** |
 | | 3 | Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
