@@ -564,14 +564,12 @@ Ninguno
 ### Diseño abstracto de Modificar y eliminar psicologos ###
 ![](/docs/resources/DIA's/diaPantallas-Modificar_y_EliminarPsicologo.png)
 ### Diseño abstracto de Parametros ###
-![](/docs/resources/DIA's/diaPantallas-diaParametros.drawio.png)
-### Diseño abstracto de obtener, listar y eliminar Paises ###
-![](/docs/resources/DIA's/diaPantallas-diaObtenerConsultarEliminarPaises.drawio.png)
-### Diseño abstracto de obtener, listar y eliminar Sexos ###
-![](/docs/resources/DIA's/diaPantallas-diaObtenerListarEliminarSexo.drawio.png)
-### Diseño abstracto de modificar Sexo ###
-![](/docs/resources/DIA's/diaPantallas-diaEditarSexo.drawio.png)
-### Diseño abstracto de registrar, listar y eliminar Tipos de documento ###
-![](/docs/resources/DIA's/diaPantallas-diaRegistrarTipoDocumento.drawio.png)
-### Diseño abstracto de modificar tipo de documento ###
-![](/docs/resources/DIA's/diaPantallas-ModificarTipoDocumento.drawio.png)
+![](/docs/resources/DIA's/diaPantallas-Parametros2daIteracion.png)
+### Diseño abstracto de obtener, listar y eliminar Estados Civiles ###
+![](/docs/resources/DIA's/diaPantallas-ObtenerListarEliminarEstadoCivil.png)
+### Diseño abstracto de modificar Estado civil ###
+![](/docs/resources/DIA's/diaPantallas-EditarEstadoCivil.png)
+### Diseño abstracto de registrar, listar y eliminar Especialidades de un Psicologo ###
+![](/docs/resources/DIA's/diaPantallas-RegistrarEspecialidad.png)
+### Diseño abstracto de modificar Especialidades de un Psicologo ###
+![](/docs/resources/DIA's/diaPantallas-ModificarEspecialidad.png)
