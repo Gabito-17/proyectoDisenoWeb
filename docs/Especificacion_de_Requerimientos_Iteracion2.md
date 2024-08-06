@@ -72,13 +72,12 @@ Se almacenará toda la información necesaria de los Psicólogos que trabajan en
 - Nombre y apellido
 - Tipo de DNI
 - DNI
-- Ciudad – Provincia - País
+- Sexo
 - Dirección
 - Teléfono
 - Mail
 - Especialidad
-- Motivo Baja (en caso de ser necesario)
-- Fecha Baja (en caso de ser necesario)
+- Fecha de nacimiento
 
 **Estabilidad**
 Alta
@@ -96,7 +95,7 @@ Ninguno
 
 **Requisitos asociados**
 
-- UC-42 - Obtener Estado Civil
+- UC-42 - Registrar Estado Civil
 - UC-43 - Modificar Estado Civil
 - UC-44 - Consultar Estado Civil
 - UC-45 - Eliminar Estado Civil
@@ -254,29 +253,26 @@ Ninguno
 
 ---
 
-### UC–42 - Obtener Estado Civil
+### UC–42 - Registrar Estado Civil
 
-| UC–42  | Obtener Estado Civil | |
+| UC–42  | Registrar Estado Civil | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
+| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema debe permitir obtener todos los tipos de estado civil que tiene una persona mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.  |
-| **Precondición** | El sistema tiene acceso a la API externa que proporciona los tipos de estado civil que tiene una persona. |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice el alta de un estado civil que puede tener un paciente.  |
+| **Precondición** | El usuario debe poseer permisos de administrador para realizar esta tarea. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita al sistema la lista de los tipos de estado civil de una persona. |
-| | 2 | El sistema envía una solicitud a la API externa para obtener lista de los tipos de estado civil que tiene una persona. |
-| | 3 | La API externa responde con lista de los tipos de estado civil que tiene una persona. |
-| | 4 | El sistema muestra la lista de los tipos de estado civil que tiene una persona. |
-| **Postcondición** | El usuario obtiene la lista de los tipos de estado civil que tiene una persona. |
+| | 1 | El administrador proporciona los datos para registrar un estado civil que puede tener un paciente. |
+| | 2 | El sistema valida los datos ingresados. |
+| | 3 | El sistema avisa que el estado civil que puede tener un paciente ha sido registrado. |
+| **Postcondición** | El usuario registra en el sistema un estado civil. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 1 | Si el sistema detecta que ya hay una lista de los tipos de estado civil que tiene una persona, le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
-| | 2 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
-| | 3 | Si la API externa devuelve un error o no se encuentran los tipos de estado civil que tiene una persona, se muestra un mensaje indicando que no se encontraron resultados. |
+| | 3 | Si el sistema detecta que los datos que se estan intentando ingresar ya existen, se le informa al usuario y se le solicita que cambie los datos o que cancele la carga |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | 3 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
+| | - | - |
 | **Frecuencia** | - |
 | **Estabilidad** | alta |
-| **Comentarios** | Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario. |
+| **Comentarios** | - |
 
 ---
 
@@ -507,7 +503,7 @@ Ninguno
 | **Modificar Psicólogos** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar un psicólogo. |
 | **Eliminar Psicólogos** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un psicólogo del sistema. |
 | **Consultar Psicólogos** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los datos de los psicólogos del sistema. |
-| **Obtener Estado Civil** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para obtener los estados civiles mediante una API. |
+| **Registrar Estado Civil** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para registrar un estado civil que puede tener un paciente. |
 | **Modificar Estado Civil** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar un estado civil que puede tener una persona. |
 | **Consultar Estado Civil** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los estados civiles presentes en el sistema. |
 | **Eliminar Estado Civil** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un estado civil del sistema. |

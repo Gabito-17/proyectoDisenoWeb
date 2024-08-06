@@ -42,7 +42,7 @@
 - ### UC-39 - Modificar Sexo
 - ### UC-40 - Consultar Sexo
 - ### UC-41 - Eliminar Sexo
-- ### UC-42 - Obtener Estado Civil
+- ### UC-42 - Registrar Estado Civil
 - ### UC-43 - Modificar Estado Civil
 - ### UC-44 - Consultar Estado Civil
 - ### UC-45 - Eliminar Estado Civil
