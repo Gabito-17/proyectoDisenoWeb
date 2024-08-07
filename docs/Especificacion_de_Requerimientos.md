@@ -46,6 +46,8 @@ El objetivo principal del sistema es mejorar la eficiencia y la organización de
 - **OBJ03-Gestión de Sesiones**: Permitir el registro sencillo de sesiones y su respectiva asociación a un psicólogo y a un paciente del consultorio, asegurando que toda la información relevante se almacene de forma digital y segura. Además, permitir la modificación de los datos almacenados de una sesión ya registrada. Por último, permitir la baja lógica de una sesión, garantizando que el historial de sesiones se mantenga coherente y actualizado.
 - **OBJ04-Gestionar Parámetros de Sistema**: El sistema permitirá la gestión integral de todos los parámetros necesarios para su óptimo funcionamiento. Estos parámetros incluirán los tipos de especialidad de los psicologos, los estados de las sesiones, ciertos datos de los pacientes (como podria ser su pais de residencia, su ciudad, etc) y cualquier otra variable que influya en la operativa diaria del consultorio. La gestión de estos parámetros garantizará que el sistema se adapte de manera flexible y eficiente a las necesidades específicas del consultorio, facilitando un entorno operativo fluido y personalizado.
 - **OBJ05-Gestionar Seguridad**: El sistema gestionará toda la información relacionada con la seguridad de acceso del sitio, garantizando la protección de los datos sensibles de los pacientes y del consultorio. Esto incluirá la implementación de medidas de seguridad como la validación de usuarios, contar con sesiones, y la gestión de permisos y roles. Estas medidas asegurarán que solo el personal autorizado tenga acceso a la información relevante, manteniendo la confidencialidad y la integridad de los datos en cumplimiento con las normativas vigentes de protección de datos en el ámbito de la salud.
+- **OBJ06-Gestion de Secretarios**: Permitir el registro sencillo de un secretario, asegurando que toda la información relevante se almacene de forma digital y segura. Ademas permitir la modificacion de los datos almacenados de un secretario. Este ultimo siendo importante para asistir al psicologo y ayudarle al mismo con la gestion de sesiones y pacientes. Ademas se ha de permitir la baja logica de un secretario.
+
 ---
 # Requisitos del Sistema
 
@@ -68,13 +70,13 @@ Se almacenará toda la información necesaria de los Pacientes que desean ser at
 
 **Datos específicos**
 - Nombre y apellido
-- Tipo de DNI
-- DNI
-- Ciudad – Provincia - País
+- Tipo de Documento
+- Numero de documento
+- Sexo
 - Dirección
 - Teléfono
 - Mail
-- Motivo Baja (en caso de ser necesario)
+- Ocupacion
 - Fecha Baja (en caso de ser necesario)
 
 **Estabilidad**
@@ -92,24 +94,48 @@ Ninguno
 - OBJ05-Gestionar Seguridad
 
 **Requisitos asociados**
-- UC- 26 - Obtener Paises
-- UC- 27 - Consultar Paises
-- UC- 28 - Eliminar Paises
 - UC- 35 - Obtener Tipos de Documento
 - UC- 36 - Consultar Tipos de Documento
 - UC- 37 - Eliminar Tipos de Documento
-- UC- 38 - Obtener Sexo
-- UC- 39 - Modificar Sexo
-- UC- 40 - Consultar Sexo
-- UC- 41 - Eliminar Sexo
 
 **Descripción**
 Se registrara toda la información necesaria, reconocidas como parámetros del sistema, para poder operar con el sitio del consultorio
 
 **Datos específicos**
-- Nombre de País
 - Tipo de Documento
+
+**Estabilidad**
+Alta
+
+**Comentarios**
+Ninguno
+
+---
+
+### IRQ – 03 Información sobre Secretarios
+
+**Objetivos asociados**
+- OBJ – 06: Gestionar Secretario
+
+**Requisitos asociados**
+
+- UC-22: Registrar Secretario
+- UC-23: Modificación de Secretario
+- UC-24: Consultar Secretarios
+- UC-25: Eliminar Secretario
+
+**Descripción**
+Se almacenará toda la información necesaria de los secretarios que trabajan en el consultorio.
+
+**Datos específicos**
+- Nombre y apellido
+- Tipo de Documento
+- Numero de documento
 - Sexo
+- Dirección
+- Teléfono
+- Mail
+- Fecha Baja (en caso de ser necesario)
 
 **Estabilidad**
 Alta
@@ -122,9 +148,13 @@ Ninguno
 ## Requisitos Funcionales
 
 - **Registrar pacientes**: El secretario debe poder registrar pacientes en el software.
-- **Modificar paciente**: El psicólogo o secretario debe poder modificar un paciente registrado en el sistema.
-- **Eliminar paciente**: El psicólogo o secretario debe poder eliminar un paciente del sistema.
+- **Modificar paciente**: El secretario debe poder modificar un paciente registrado en el sistema.
+- **Eliminar paciente**: El secretario debe poder eliminar un paciente del sistema.
 - **Consultar pacientes**: El psicólogo o secretario deben poder ver de manera listada todos los pacientes registrados en el sistema.
+- **Registrar secretario**: El psicólogo debe poder registrar nuevos secretarios en el sistema.
+- **Modificar secretario**: El psicólogo debe poder modificar la información de un secretario registrado en el sistema.
+- **Eliminar secretario**: El psicólogo debe poder eliminar un secretario del sistema.
+- **Consultar secretarios**: El psicólogo debe poder ver de manera listada todos los secretarios registrados en el sistema.
 - **Registrar, modificar y eliminar parameteros del sistema**: Se debe poder registrar toda la información necesaria, reconocidas como parámetros del sistema, para poder operar con el sitio del consultorio.
 
 
@@ -139,12 +169,22 @@ Ninguno
 | ACT–01  | Secretario             |
 |---------|-------------------|
 | **Descripción** | Este actor representa a la secretaria del consultorio |
-| **Comentarios** | La secretaria es la responsable de realizar la gestion de pacientes y de sesiones |
+| **Comentarios** | El secretario es la responsable de realizar la gestion de pacientes y de sesiones |
 
 | ACT–02  | Psicologo             |
 |---------|-------------------|
 | **Descripción** | Este actor representa a un psicologo del consultorio |
-| **Comentarios** | El Psicologo es la responsable de llevar a cabo las sesiones con los pacientes y realizar los informes de sesion correspondientes, ademas debe poder registrar nuevos pacientes y sesiones |
+| **Comentarios** | El Psicologo es la responsable de llevar a cabo las sesiones con los pacientes y realizar los informes de sesion correspondientes, ademas debe poder registrar nuevos pacientes, secretarios y sesiones |
+
+---
+## Diagrama de Caso de Uso del Subsistema Gestión de Secretarios
+![Diagrama de Casos de Uso del Subsistemas Gestion de Secretarios](/docs/resources/ucSubsistemaSecretarios.png)
+### Definición de Actores:
+
+| ACT–01  | Psicologo             |
+|---------|-------------------|
+| **Descripción** | Este actor representa a un psicologo del consultorio |
+| **Comentarios** | El Psicologo es la responsable de llevar a cabo las sesiones con los pacientes y realizar los informes de sesion correspondientes, ademas debe poder registrar nuevos pacientes, secretarios y sesiones |
 
 ---
 ## Diagrama de Caso de Uso del Subsistema Gestión de Parametros del sistema
@@ -253,78 +293,6 @@ Ninguno
 
 ---
 
-### UC–26 - Obtener Paises
-
-| UC–26  | Obtener Paises | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema debe permitir obtener una lista de todos los países del mundo, o filtrar algunos países por región, mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.  |
-| **Precondición** | El sistema tiene acceso a la API externa que proporciona la información de los países. |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita la lista de países desde el sistema. |
-| | 2 | (Opcional) El administrador proporciona un filtro de región para la búsqueda. |
-| | 2 | El sistema envía una solicitud a la API externa para obtener la lista de países, con o sin filtro de región. |
-| | 4 | La API externa responde con la lista de países. |
-| | 5 | El sistema muestra la lista de países al administrador. |
-| **Postcondición** | El usuario obtiene la lista de países solicitada, ya sea completa o filtrada por región. |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 1 | Si el sistema detecta que ya hay Paises almacenados le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
-| | 2 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
-| | 4 | Si la API externa devuelve un error o no se encuentran países, se muestra un mensaje indicando que no se encontraron resultados. |
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | 4 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
-| **Frecuencia** | - |
-| **Estabilidad** | alta |
-| **Comentarios** | Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario. |
-
----
-
-### UC–27 - Consultar Paises
-
-| UC–27  | Consultar Paises | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de país.  |
-| **Precondición** | Se desea conocer los distintos países que el sistema posee cargados. |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita la lista de países al sistema. |
-| | 2 | El sistema muestra la lista de países al administrador. |
-| **Postcondición** | Los distintos países son listados para el usuario. |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | - | - |
-| **Frecuencia** | - |
-| **Estabilidad** | alta |
-| **Comentarios** | - |
-
----
-
-### UC–28 - Eliminar Paises
-
-| UC–28  | Eliminar Paises | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un país.  |
-| **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita la lista de países al sistema. |
-| | 2 | El sistema muestra la lista de países al administrador. |
-| | 3 | El administrador selecciona de la lista, el/los País/es que desea eliminar. |
-| | 4 | El sistema pregunta si quiere continuar con la operación. |
-| | 5 | El sistema informa que el País ha sido removido. |
-| **Postcondición** | El o los Países fueron eliminados correctamente |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 5 | El sistema informa que posee datos relacionados dicho país y que no podrá eliminarse. El caso de uso queda sin efecto. |
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | - | - |
-| **Frecuencia** | - |
-| **Estabilidad** | alta |
-| **Comentarios** | - |
-
 ---
 ### UC–35 - Alta de Tipo de Documento
 
@@ -333,7 +301,7 @@ Ninguno
 | **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
 | **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice el alta de un Tipo de documento.  |
-| **Precondición** | El sistema tiene acceso a la API externa que proporciona los tipos de documento de identidad. |
+| **Precondición** | El usuario debe poseer permisos de administrador para realizar esta tarea. |
 | **Flujo Principal** | **Paso** | **Acción** |
 | | 1 | El administrador proporciona los datos para registrar el Tipo de Documento. |
 | | 2 | El sistema valida los datos ingresados. |
@@ -418,102 +386,6 @@ Ninguno
 | **Estabilidad** | alta |
 | **Comentarios** | - |
 
----
-### UC–38 - Obtener Sexo
-
-| UC–38  | Obtener Sexo | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema debe permitir obtener todos los tipos de sexo biologico que tiene una persona mediante una API externa. Esta funcionalidad es esencial para el registro y manejo de datos de los usuarios del sistema.  |
-| **Precondición** | El sistema tiene acceso a la API externa que proporciona los tipos de sexo biologico que tiene una persona. |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita al sistema la lista de los tipos de sexo biologico que tiene una persona. |
-| | 2 | El sistema envía una solicitud a la API externa para obtener lista de los tipos de sexo biologico que tiene una persona. |
-| | 3 | La API externa responde con lista de los tipos de sexo biologico que tiene una persona. |
-| | 4 | El sistema muestra la lista de los tipos de sexo biologico que tiene una persona. |
-| **Postcondición** | El usuario obtiene la lista de los tipos de sexo biologico que tiene una persona. |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 1 | Si el sistema detecta que ya hay una lista de los tipos de sexo biologico que tiene una persona, le pregunta al usuario si desea sobrescribirlos. Si no desea sobreescribir se termina el caso de uso, mientras que si está de acuerdo en sobrescribir se sigue el caso de uso con normalidad. |
-| | 2 | Si el sistema no puede conectarse a la API externa, se muestra un mensaje de error indicando que la información no está disponible en ese momento. |
-| | 3 | Si la API externa devuelve un error o no se encuentran los tipos de sexo biologico que tiene una persona, se muestra un mensaje indicando que no se encontraron resultados. |
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | 3 | La respuesta de la API externa debe recibirse en menos de 5 segundos. |
-| **Frecuencia** | - |
-| **Estabilidad** | alta |
-| **Comentarios** | Es importante garantizar que el sistema maneje adecuadamente las posibles fallas en la conexión con la API externa y proporcione mensajes de error claros al usuario. |
-
----
-
-### UC–39 - Modificar Sexo
-
-| UC–39  | Modificar Sexo | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la modificación de un tipo de sexo biologico que tiene una persona.  |
-| **Precondición** | El usuario debe tener permisos de administrador para realizar esta tarea. |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita al sistema los datos del tipo de sexo biologico que tiene una persona. |
-| | 2 | El sistema le devuelve los datos requeridos. |
-| | 3 | El administrador ingresa los nuevos datos. |
-| | 4 | El sistema pregunta si quiere continuar con la operación. |
-| | 5 | El sistema informa que el tipo de sexo ha sido modificado. |
-| **Postcondición** | El tipo de sexo biologico, posee los datos actualizados. |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | - | - |
-| **Frecuencia** | - |
-| **Estabilidad** | alta |
-| **Comentarios** | - |
-
----
-
-### UC–40 - Consultar Sexo
-
-| UC–40  | Consultar Sexo | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de de los tipos de sexo biologico que tiene una persona.  |
-| **Precondición** | Se desea conocer los distintos tipos de sexo biologico que tiene una persona que el sistema posee cargados. |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita al sistema la lista de los tipos de sexo biologico que tiene una persona. |
-| | 2 | El sistema le proporciona los datos obtenidos. |
-| **Postcondición** | Los distintos tipos de sexo biologico que tiene una persona son listados para el usuario. |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | - | - |
-| **Frecuencia** | - |
-| **Estabilidad** | alta |
-| **Comentarios** | - |
-
----
-
-### UC–41 - Eliminar Sexo
-
-| UC–41  | Eliminar Sexo | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un tipo de sexo biologico que tiene una persona.  |
-| **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita al sistema la lista de los tipos de sexo biologico que tiene una persona. |
-| | 2 | El sistema le proporciona los datos obtenidos. |
-| | 3 | El administrador selecciona de la lista, el/los tipo/s de sexo biologico que desea eliminar. |
-| | 4 | El sistema pregunta si quiere continuar con la operación. |
-| | 5 | El sistema informa que el tipo de sexo biologico ha sido eliminado. |
-| **Postcondición** | El o los tipos de sexo biologico fueron eliminados correctamente |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 5 | El sistema informa que posee datos relacionados dicho tipo de sexo biologico y que no podrá eliminarse. El caso de uso queda sin efecto. |
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | - | - |
-| **Frecuencia** | - |
-| **Estabilidad** | alta |
-| **Comentarios** | - |
 ---
 ## Requerimientos no Funcionales
 
