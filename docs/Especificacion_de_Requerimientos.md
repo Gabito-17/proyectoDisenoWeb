@@ -271,20 +271,20 @@ Ninguno
 
 ---
 
-### UC–04 - Consultar Paciente
+### UC–04 - Consultar Pacientes
 
-| UC–04  | Consultar Paciente | |
+| UC–04  | Consultar Pacientes | |
 |--------|--------------------|----|
 | **Objetivos asociados** | - OBJ02-Gestionar pacientes |
 | **Requisitos asociados** | IRQ–01 Información sobre pacientes |
-| **Descripción** | Permite consultar la información de un paciente |
-| **Precondición** | El usuario tiene acceso al sistema y los datos necesarios del paciente |
+| **Descripción** | Permite consultar la información de los pacientes |
+| **Precondición** | El secretario tiene acceso al sistema |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El usuario selecciona al paciente a consultar |
-| | 2 | El sistema muestra la información detallada del paciente |
-| **Postcondición** | La información del paciente es visualizada por el usuario |
+| | 1 | El secretario solicita al sistema la lista de los pacientes que estan registrados en el sistema. |
+| | 2 | El sistema le proporciona los datos obtenidos. |
+| **Postcondición** | Los distintos pacientes que estan registrados en el sistema son listados para el usuario. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 1a | Si el paciente no está registrado, el sistema muestra un mensaje de error |
+| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | 2 | 1 segundo |
 | **Frecuencia** | 10 veces/día |
@@ -292,6 +292,98 @@ Ninguno
 | **Comentarios** | La consulta de información de pacientes está disponible solo para usuarios autorizados |
 
 ---
+### UC-22 - Registrar Secretario
+
+| UC–22  | Registrar Secretario | |
+|--------|--------------------|----|
+| **Objetivos asociados** | OBJ06-Gestionar Secretario |
+| **Requisitos asociados** | IRQ–03 Información sobre secretario |
+| **Descripción** | Permite registrar un nuevo secretario en el sistema |
+| **Precondición** | El piscologo tiene acceso al sistema y los datos necesarios del secretario |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El piscologo ingresa los datos del secretario (nombre, apellido, documento, dirección, teléfono, etc.) |
+| | 2 | El sistema valida los datos ingresados |
+| | 3 | El sistema registra al secretario y confirma el registro |
+| **Postcondición** | El secretario pasa a estar registrado en el sistema |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 3 | Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | 3 | 2 segundos |
+| **Frecuencia** | 10 veces/día |
+| **Estabilidad** | alta |
+| **Comentarios** | Si hay algún error en los datos, el sistema permite corregirlos y reintentar el registro |
+
+---
+
+### UC–23 - Modificar Secretario
+
+| UC–23  | Modificar Secretario | |
+|--------|--------------------|----|
+| **Objetivos asociados** | OBJ06-Gestionar Secretario |
+| **Requisitos asociados** | IRQ–03 Información sobre secretario |
+| **Descripción** | Permite modificar la información de un secretario existente |
+| **Precondición** | El piscologo tiene acceso al sistema y los datos necesarios del secretario |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El piscologo selecciona al secretario a modificar |
+| | 2 | El sistema muestra los datos actuales del secretario |
+| | 3 | El piscologo modifica los datos necesarios |
+| | 4 | El sistema valida los nuevos datos |
+| | 5 | El sistema actualiza la información del secretario y confirma la modificación |
+| **Postcondición** | Los datos del secretario están actualizados en el sistema |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 5 | Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | 5 | 2 segundos |
+| **Frecuencia** | 5 veces/día |
+| **Estabilidad** | alta |
+| **Comentarios** | Si hay algún error en los datos, el sistema permite corregirlos y reintentar la modificación |
+
+---
+
+### UC–25 - Eliminar Secretario
+
+| UC–25  | Eliminar Secretario | |
+|--------|-------------------|----|
+| **Objetivos asociados** | OBJ06-Gestionar Secretario |
+| **Requisitos asociados** | IRQ–03 Información sobre secretario |
+| **Descripción** | Permite dar de baja lógicamente a un secretario del sistema |
+| **Precondición** | El piscologo tiene acceso al sistema y los datos necesarios del secretario |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El piscologo selecciona al secretario a eliminar |
+| | 2 | El sistema solicita confirmación para eliminar al secretario |
+| | 3 | El piscologo confirma la eliminación |
+| | 4 | El sistema elimina al secretario y confirma la eliminación |
+| **Postcondición** | El secretario está eliminado del sistema |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 2a | Si el piscologo no confirma la eliminación, el secretario no es eliminado |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | 4 | 1 segundo |
+| **Frecuencia** | 1 vez/día |
+| **Estabilidad** | alta |
+| **Comentarios** | Si el paciente es eliminado, toda su información es archivada y no se puede acceder a ella a menos que sea reactivada |
+
+---
+
+### UC–24 - Consultar Secretarios
+
+| UC–24  | Consultar Secretarios | |
+|--------|--------------------|----|
+| **Objetivos asociados** | OBJ06-Gestionar Secretario |
+| **Requisitos asociados** | IRQ–03 Información sobre secretario |
+| **Descripción** | Permite consultar la información de los secretarios |
+| **Precondición** | El Psicólogo tiene acceso al sistema |
+| **Flujo Principal** | **Paso** | **Acción** |
+| | 1 | El Psicólogo solicita al sistema la lista de los secretarios que estan registrados en el sistema. |
+| | 2 | El sistema le proporciona los datos obtenidos. |
+| **Postcondición** | Los distintos secretarios que estan registrados en el sistema son listados para el usuario. |
+| **Flujo Alternativo** | **Paso** | **Acción** |
+| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
+| **Rendimiento** | **Paso** | **Cota de tiempo** |
+| | 2 | 1 segundo |
+| **Frecuencia** | 10 veces/día |
+| **Estabilidad** | alta |
+| **Comentarios** | La consulta de información de secretarios está disponible solo para usuarios autorizados |
+
 
 ---
 ### UC–35 - Alta de Tipo de Documento
@@ -426,16 +518,16 @@ Ninguno
 ---
 ## Matriz de Rastreabilidad Objetivo/Requisitos
 
-| OBJ/IRQ                 | **OBJ01-Gestión de Psicólogos** | **OBJ02-Gestion de Pacientes** | **OBJ04-Gestionar Parámetros de Sistema** | **OBJ05-Gestionar Seguridad** |
+| OBJ/IRQ                 | **OBJ02-Gestionar Pacientes** | **OBJ04-Gestionar Parámetros de Sistema** | **OBJ05-Gestionar Seguridad** | **OBJ06-Gestionar Secretarios**|
 |:--------------------------|:------------------------:|:------------------------:|:------------------------:|:------------------------:|
-| **IRQ 01**||**X**||||
-| **IRQ 02**||||**X**|**X**|
-| **IRQ 03**|||||**X**|
-| **NFR 01**|**X**|||||
-| **NFR 02**||**X**||||
-| **NFR 03**||**X**||||
-| **NFR 04**||||**X**||
-**NFR 05**|||||**X**|
+| **IRQ 01**|**X**||||
+| **IRQ 02**||**X**|**X**||
+| **IRQ 03**||||**X**|
+| **NFR 01**|**X**||||
+| **NFR 02**||**X**|**X**||
+| **NFR 03**|**X**|**X**|**X**|**X**|
+| **NFR 04**|||**X**||
+**NFR 05**||||**X**|
 ---
 
 ## Glosario de Términos
@@ -448,18 +540,15 @@ Ninguno
 | **Registrar Pacientes** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para registrar un paciente. |
 | **Modificar Pacientes** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar un paciente. |
 | **Eliminar Pacientes** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un paciente del sistema. |
-| **Consultar Pacientes** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los datos de los paciente del sistema. |
-| **Obtener Países** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para obtener un país mediante una API. |
-| **Consultar Países** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los paises presentes en el sistema. |
-| **Eliminar Países** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un país del sistema. |
+| **Consultar Pacientes** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los paciente registrados del sistema. |
+| **Registrar Secretarios** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para registrar un secretario. |
+| **Modificar Secretarios** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar un secretario. |
+| **Eliminar Secretarios** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un secretario del sistema. |
+| **Consultar Secretarios** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los secretario registrados del sistema. |
 | **Alta Tipo de Documento** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para registrar un tipo de documento. |
 | **Modificar Tipos de Documento** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar un tipo de documento. |
 | **Eliminar Tipo de Documento** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un tipo de documento del sistema. |
 | **Consultar Tipos de Documento** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los tipos de documento presentes en el sistema. |
-| **Obtener Sexo** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para obtener todos los tipos de sexo biologico que tiene una persona mediante una API. |
-| **Modificar Sexo** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar un tipo de sexo biologico que puede tener una persona. |
-| **Consultar Sexo** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar todos los tipos de sexo biologico que tiene una persona presentes en el sistema. |
-| **Eliminar Sexo** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un tipo de sexo biologico que tiene una persona del sistema. |
 
 ## Modelo Conceptual
 ![Modelo Conceptual](/docs/resources/ModeloConceptualDiseñoWeb.png)
@@ -467,13 +556,13 @@ Ninguno
 
 ## U.I.D. - Diagrama de Interacción de Usuario
 
-![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPaís.png)
+![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPaciente.png)
 ---
 ![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónTipoDocumento.png)
 ---
-![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónSexo.png)
+![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónSecretario.png)
 ---
-![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPaciente.png)
+
 ---
 ## Modelo Navegacional
 

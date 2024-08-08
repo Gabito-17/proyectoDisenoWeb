@@ -207,23 +207,23 @@ Ninguno
 
 ---
 
-### UC-20 - Consultar Psicólogo
+### UC–20 - Consultar Psicólogos
 
-| UC-20  | Consultar Psicólogo | |
+| UC–20  | Consultar Psicólogos | |
 |--------|--------------------|----|
 | **Objetivos asociados** | - OBJ01-Gestion de Psicólogos |
 | **Requisitos asociados** | IRQ–01 Información sobre Psicólogos |
-| **Descripción** | Permite consultar la información de un psicólogo |
-| **Precondición** | Un Administrador o otro psicólogo tiene acceso al sistema y los datos necesarios del psicólogo a listar |
+| **Descripción** | Permite consultar la información de los psicólogos |
+| **Precondición** | Un Administrador o otro psicólogo tienen acceso al sistema. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | Un Administrador o otro psicólogo selecciona al psicólogo a consultar |
-| | 2 | El sistema muestra la información detallada del psicólogo |
-| **Postcondición** | La información del psicólogo es visualizada por un Administrador o otro psicólogo |
+| | 1 | Un Administrador o otro psicólogo solicita al sistema la lista de los psicólogos que estan registrados en el sistema. |
+| | 2 | El sistema le proporciona los datos obtenidos. |
+| **Postcondición** | Los distintos psicólogos que estan registrados en el sistema son listados para el usuario. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 1 | Si el psicólogo no está registrado, el sistema muestra un mensaje de error y se termina el caso de uso |
+| | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | - | - |
-| **Frecuencia** | - |
+| | 2 | 1 segundo |
+| **Frecuencia** | 10 veces/día |
 | **Estabilidad** | alta |
 | **Comentarios** | La consulta de información de psicólogos está disponible solo para usuarios autorizados |
 
@@ -483,7 +483,7 @@ Ninguno
 ---
 ## Matriz de Rastreabilidad Objetivo/Requisitos
 
-| OBJ/IRQ                 | **OBJ01-Gestión de Psicólogos** | **OBJ02-Gestion de Pacientes** | **OBJ04-Gestionar Parámetros de Sistema** | **OBJ05-Gestionar Seguridad** |
+| OBJ/IRQ                 | **OBJ01-Gestionar Psicólogos** | **OBJ02-Gestionar Pacientes** | **OBJ04-Gestionar Parámetros de Sistema** | **OBJ05-Gestionar Seguridad** |
 |:--------------------------|:------------------------:|:------------------------:|:------------------------:|:------------------------:|
 | **IRQ 01**|**X**|||||
 | **IRQ 02**|||**X**|**X**||
@@ -524,6 +524,8 @@ Ninguno
 ![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónEspecialidad.png)
 ---
 ![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPsicologo.png)
+---
+![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPaciente2daIteracion.png)
 ---
 ## Modelo Navegacional
 

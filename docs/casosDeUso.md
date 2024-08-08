@@ -3,7 +3,7 @@
 - ### UC-01 - Registrar Paciente
 - ### UC-02 - Modificar Paciente
 - ### UC-03 - Eliminar Paciente
-- ### UC-04 - Consultar Paciente
+- ### UC-04 - Consultar Pacientes
 - ### UC-05 - Registrar Sesión
 - ### UC-06 - Consultar Sesión
 - ### UC-07 - Cancelar Sesión
@@ -19,11 +19,11 @@
 - ### UC-17 - Adelantar Sesión de un Paciente en Caso de Cancelación
 - ### UC-18 - Registrar Psicólogo
 - ### UC-19 - Modificar Psicólogo
-- ### UC-20 - Consultar Psicólogo
+- ### UC-20 - Consultar Psicólogos
 - ### UC-21 - Eliminar Psicólogo
 - ### UC-22 - Registrar Secretario
 - ### UC-23 - Modificar Secretario
-- ### UC-24 - Consultar Secretario
+- ### UC-24 - Consultar Secretarios
 - ### UC-25 - Eliminar Secretario
 - ### UC-26 - Obtener Países
 - ### UC-27 - Consultar Países
