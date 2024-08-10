@@ -570,11 +570,9 @@ Ninguno
 ---
 ![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPacientes.png)
 ---
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalSecretarios.png)
+---
 ![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalTipoDocumento.png)
----
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionaSexo.png)
----
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionaPais.png)
 ---
 
 ## Diseño de Interfaz Abstracta
