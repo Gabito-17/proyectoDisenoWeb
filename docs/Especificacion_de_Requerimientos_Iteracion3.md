@@ -494,15 +494,16 @@ Ninguno
 ---
 ## Matriz de Rastreabilidad Objetivo/Requisitos
 
-| OBJ/IRQ                 | **OBJ01-Gestionar Psicólogos** | **OBJ02-Gestionar Pacientes** | **OBJ04-Gestionar Parámetros de Sistema** | **OBJ05-Gestionar Seguridad** |
-|:--------------------------|:------------------------:|:------------------------:|:------------------------:|:------------------------:|
-| **IRQ 01**|**X**|||||
-| **IRQ 02**|||**X**|**X**||
-| **NFR 01**|**X**|||||
-| **NFR 02**|**X**|||||
-| **NFR 03**|**X**|**X**||||
-| **NFR 04**||||**X**||
-**NFR 05**||||**X**||
+| OBJ/IRQ                 | **OBJ04-Gestionar Parámetros de Sistema** | **OBJ05-Gestionar Seguridad** | **OBJ07-Gestión de Sesiones** | **OBJ08-Gestión de Informes de Sesion** | **OBJ06-Gestion de Secretarios**|
+|:--------------------------|:------------------------:|:------------------------:|:------------------------:|:------------------------:|:------------------------:|
+| **IRQ 01**|||**X**||
+| **IRQ 02**|**X**|**X**|||**X**|
+| **IRQ 03**||||**X**|
+| **NFR 01**|**X**|**X**||||
+| **NFR 02**|**X**|||**X**|
+| **NFR 03**|**X**|**X**|**X**|**X**|
+| **NFR 04**||||**X**|
+**NFR 05**|||**X**||**X**|
 ---
 
 ## Glosario de Términos
@@ -510,33 +511,33 @@ Ninguno
 | Termino  | Categoría | Comentarios |
 |--------|--------------|----|
 | **Administrador** | Actor | Este actor representa a la persona que se administrar los usuarios del sistema, como axial también agregar todos los parámetros para su uso. |
+| **Secretario** | Actor | El secretario es el responsable de realizar la gestion de pacientes y de sesiones. |
 | **Psicologo** | Actor | El Psicologo es la responsable de llevar a cabo las sesiones con los pacientes y realizar los informes de sesion correspondientes ademas debe poder registrar nuevos pacientes y sesiones. |
-| **Registrar Psicólogos** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para registrar un psicólogo. |
-| **Modificar Psicólogos** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar un psicólogo. |
-| **Eliminar Psicólogos** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un psicólogo del sistema. |
-| **Consultar Psicólogos** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los datos de los psicólogos del sistema. |
-| **Registrar Estado Civil** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para registrar un estado civil que puede tener un paciente. |
-| **Modificar Estado Civil** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar un estado civil que puede tener una persona. |
-| **Consultar Estado Civil** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los estados civiles presentes en el sistema. |
-| **Eliminar Estado Civil** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar un estado civil del sistema. |
-| **Registrar Especialidad** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para registrar la especialidad que puede tener un psicólogo. |
-| **Modificar Especialidad** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar una especialidad que puede tener un psicólogo. |
-| **Eliminar Especialidad** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar una especialidad que puede tener un psicólogo del sistema. |
-| **Consultar Especialidad** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los tipos de especialidades que puede tener un psicólogo presentes en el sistema. |
+| **Registrar Sesión** | Caso de uso | Este caso de uso describe los pasos que se deben realizar para registrar una sesión en el sistema. |
+| **Modificar Sesión** | Caso de uso | Este caso de uso describe los pasos que se deben realizar para modificar una sesión existente en el sistema. |
+| **Cancelar Sesión** | Caso de uso | Este caso de uso describe los pasos que se deben realizar para cancelar una sesión del sistema. |
+| **Consultar Sesión** | Caso de uso | Este caso de uso describe los pasos que se deben realizar para consultar las sesiones de los pacientes cargadas en el sistema. |
+| **Registrar Informe Sesión** | Caso de uso | Este caso de uso describe los pasos que se deben realizar para registrar un informe de sesión en el sistema. |
+| **Modificar Informe Sesión** | Caso de uso | Este caso de uso describe los pasos que se deben realizar para modificar un informe de sesión existente en el sistema. |
+| **Consultar Informe Sesión** | Caso de uso | Este caso de uso describe los pasos que se deben realizar para consultar un informe de sesion de una sesión en particular cargada en el sistema. |
+| **Registrar ocupación** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para registrar la ocupación que puede tener un paciente. |
+| **Modificar ocupación** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para modifcar una ocupación que puede tener un paciente. |
+| **Eliminar ocupación** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para eliminar una ocupación que puede tener un paciente del sistema. |
+| **Consultar ocupación** | Caso de uso | Este caso de uso describe los pasos que se debe realizar para consultar los tipos de ocupaciones que pueden tener los paciente presentes en el sistema. |
 
 ## Modelo Conceptual
-![Modelo Conceptual](/docs/resources/ModeloConceptual2daIteracion.png)
+![Modelo Conceptual](/docs/resources/ModeloConceptual3eraIteracion.png)
 ---
 
 ## U.I.D. - Diagrama de Interacción de Usuario
 
-![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónEstadoCivil.png)
+![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónOcupacion.png)
 ---
-![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónEspecialidad.png)
+![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónSesion.png)
 ---
-![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPsicologo.png)
+![](/docs/resources/UID's/UIDAltaModificaciónInformeSesion.png)
 ---
-![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPaciente2daIteracion.png)
+![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónSecretario3eraIteracion.png)
 ---
 ## Modelo Navegacional
 
