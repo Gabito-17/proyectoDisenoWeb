@@ -578,18 +578,16 @@ Ninguno
 ## Diseño de Interfaz Abstracta
 
 ### Diseño abstracto de registro y listado de pacientes ###
-![](/docs/resources/DIA's/diaPantallas-diaRegistrarPaciente.drawio.png)
+![](/docs/resources/DIA's/diaPantallas-diaRegistrarPaciente.png)
 ### Diseño abstracto de Modificar y eliminar pacientes ###
-![](/docs/resources/DIA's/diaPantallas-diaModificar_y_EliminarPaciente.drawio.png)
+![](/docs/resources/DIA's/diaPantallas-diaModificar_y_EliminarPaciente.png)
 ### Diseño abstracto de Parametros ###
-![](/docs/resources/DIA's/diaPantallas-diaParametros.drawio.png)
-### Diseño abstracto de obtener, listar y eliminar Paises ###
-![](/docs/resources/DIA's/diaPantallas-diaObtenerConsultarEliminarPaises.drawio.png)
-### Diseño abstracto de obtener, listar y eliminar Sexos ###
-![](/docs/resources/DIA's/diaPantallas-diaObtenerListarEliminarSexo.drawio.png)
-### Diseño abstracto de modificar Sexo ###
-![](/docs/resources/DIA's/diaPantallas-diaEditarSexo.drawio.png)
+![](/docs/resources/DIA's/diaPantallas-diaParametros.png)
+### Diseño abstracto de registro y listado de Secretarios ###
+![](/docs/resources/DIA's/diaPantallas-diaRegistrarSecretario.png)
+### Diseño abstracto de Modificar y eliminar Secretarios ###
+![](/docs/resources/DIA's/diaPantallas-diaModificarEliminarSecretario.png)
 ### Diseño abstracto de registrar, listar y eliminar Tipos de documento ###
-![](/docs/resources/DIA's/diaPantallas-diaRegistrarTipoDocumento.drawio.png)
+![](/docs/resources/DIA's/diaPantallas-diaRegistrarTipoDocumento.png)
 ### Diseño abstracto de modificar tipo de documento ###
-![](/docs/resources/DIA's/diaPantallas-ModificarTipoDocumento.drawio.png)
+![](/docs/resources/DIA's/diaPantallas-diaModificarTipoDocumento.png)
