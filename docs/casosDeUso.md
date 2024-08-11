@@ -6,6 +6,7 @@
 - ### UC-04 - Consultar Pacientes
 - ### UC-05 - Registrar Sesión
 - ### UC-06 - Consultar Sesión
+- ### UC-69 - Modificar Sesión
 - ### UC-07 - Cancelar Sesión
 - ### UC-08 - Consultar Agenda
 - ### UC-09 - Derivar Paciente
@@ -69,3 +70,7 @@
 - ### UC-66 - Consultar Roles
 - ### UC-67 - Validar Sesión
 - ### UC-68 - Validar Informe de Sesión
+- ### UC-70 - Registrar Ocupación
+- ### UC-71 - Modificar Ocupación
+- ### UC-72 - Consultar Ocupación
+- ### UC-73 - Eliminar Ocupación

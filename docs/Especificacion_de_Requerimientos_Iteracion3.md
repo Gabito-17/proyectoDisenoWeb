@@ -6,7 +6,7 @@
 
 **Versión:** 0.1
 
-**Fecha:** 07/06/2024
+**Fecha:** 11/08/2024
 
 **Realizado por:** Gelabert André, Pavón Juan Gabriel.
 
@@ -21,6 +21,7 @@
 | 0   | 07/06/2024| Version 0.1     | Gelabert André, Pavón Juan Gabriel |
 | 1   | 07/06/2024| Definicion de requisitos iteracion 01, Definicion de Objetivos iteracion 01| Gelabert André, Pavon Juan Gabriel |
 | 2   | 08/07/2024| Definicion de requisitos iteracion 02, Definicion de Objetivos iteracion 02| Gelabert André, Pavon Juan Gabriel |
+| 3   | 11/08/2024| Definicion de requisitos iteracion 03, Definicion de Objetivos iteracion 03| Gelabert André, Pavon Juan Gabriel |
 
 ---
 
@@ -48,37 +49,35 @@ El objetivo principal del sistema es mejorar la eficiencia y la organización de
 - **OBJ04-Gestionar Parámetros de Sistema**: El sistema permitirá la gestión integral de todos los parámetros necesarios para su óptimo funcionamiento. Estos parámetros incluirán los tipos de especialidad de los psicologos, los estados de las sesiones, ciertos datos de los pacientes (como podria ser su pais de residencia, su ciudad, etc) y cualquier otra variable que influya en la operativa diaria del consultorio. La gestión de estos parámetros garantizará que el sistema se adapte de manera flexible y eficiente a las necesidades específicas del consultorio, facilitando un entorno operativo fluido y personalizado.
 - **OBJ05-Gestionar Seguridad**: El sistema gestionará toda la información relacionada con la seguridad de acceso del sitio, garantizando la protección de los datos sensibles de los pacientes y del consultorio. Esto incluirá la implementación de medidas de seguridad como la validación de usuarios, contar con sesiones, y la gestión de permisos y roles. Estas medidas asegurarán que solo el personal autorizado tenga acceso a la información relevante, manteniendo la confidencialidad y la integridad de los datos en cumplimiento con las normativas vigentes de protección de datos en el ámbito de la salud.
 - **OBJ06-Gestion de Secretarios**: Permitir el registro sencillo de un secretario, asegurando que toda la información relevante se almacene de forma digital y segura. Ademas permitir la modificacion de los datos almacenados de un secretario. Este ultimo siendo importante para asistir al psicologo y ayudarle al mismo con la gestion de sesiones y pacientes. Ademas se ha de permitir la baja logica de un secretario.
+- **OBJ07-Gestión de Sesiones**: Facilitar la gestión de las sesiones entre los pacientes y los psicólogos, permitiendo el registro, modificación y eliminación de sesiones. Además, garantizar la asociación correcta de cada sesión con el paciente y el psicólogo correspondiente, asegurando la integridad de los datos y la trazabilidad de las sesiones realizadas.
+- **OBJ08-Gestión de Informes de Sesion**: Permitir la generación y gestión de informes de las sesiones realizadas, asegurando que cada sesión tenga su correspondiente informe asociado. Además, permitir la modificación y eliminación de los informes existentes, garantizando la actualización y coherencia de la información registrada.
 
 ---
 # Requisitos del Sistema
 
 ## Requisitos de Información
 
-### IRQ – 01 Información sobre Psicólogos
+### IRQ – 01 Información sobre Sesiones
 
 **Objetivos asociados**
-- OBJ01 - Gestión de Psicólogos
+- OBJ07 - Gestión de Sesiones
 
 **Requisitos asociados**
 
-- UC-18 - Registrar Psicólogo
-- UC-19 - Modificar Psicólogo
-- UC-20 - Consultar Psicólogo
-- UC-21 - Eliminar Psicólogo
+- UC-05 - Registrar Sesión
+- UC-69 - Modificar Sesión
+- UC-06 - Consultar Sesión
+- UC-07 - Cancelar Sesión
 
 **Descripción**
-Se almacenará toda la información necesaria de los Psicólogos que trabajan en el consultorio.
+Se almacenará toda la información necesaria de las Sesiones que se llevan a cabo en el consultorio.
 
 **Datos específicos**
-- Nombre y apellido
-- Tipo de Documento
-- Numero de documento
-- Sexo
-- Dirección
-- Teléfono
-- Mail
-- Especialidad
-- Fecha de nacimiento
+- Fecha
+- Hora
+- Estado
+- PacienteSesion
+- PsicologoSesion
 - Fecha Baja (en caso de ser necesario)
 
 **Estabilidad**
@@ -97,21 +96,43 @@ Ninguno
 
 **Requisitos asociados**
 
-- UC-42 - Registrar Estado Civil
-- UC-43 - Modificar Estado Civil
-- UC-44 - Consultar Estado Civil
-- UC-45 - Eliminar Estado Civil
-- UC-46 - Registrar Especialidad
-- UC-47 - Modificar Especialidad
-- UC-48 - Consultar Especialidad
-- UC-49 - Eliminar Especialidad
+- UC-70 - Registrar Ocupación
+- UC-71 - Modificar Ocupación
+- UC-72 - Consultar Ocupación
+- UC-73 - Eliminar Ocupación
 
 **Descripción**
 Se registrara toda la información necesaria, reconocidas como parámetros del sistema, para poder operar con el sitio del consultorio
 
 **Datos específicos**
-- Estado Civil
-- Especialidad del psicologo
+- Ocupación
+
+**Estabilidad**
+Alta
+
+**Comentarios**
+Ninguno
+
+---
+### IRQ – 03 Información sobre Informes de Sesion
+
+**Objetivos asociados**
+- OBJ08 - Gestión de Informes de Sesion
+
+**Requisitos asociados**
+
+- UC-14 - Registrar Informe de Sesión
+- UC-12 - Modificar Informe de Sesión
+- UC-13 - Consultar Informe de Sesión
+
+**Descripción**
+Se almacenará toda la información necesaria de los informes de las sesiones que se llevan a cabo en el consultorio.
+
+**Datos específicos**
+- Fecha
+- Hora
+- Descripción
+- Tipo de descripción
 
 **Estabilidad**
 Alta
@@ -124,23 +145,26 @@ Ninguno
 ## Requisitos Funcionales
 
 - **Registrar, modificar y eliminar parameteros del sistema**: Se debe poder registrar toda la información necesaria, reconocidas como parámetros del sistema, para poder operar con el sitio del consultorio.
-- **Registrar Psicólogo**: El sistema debe poder registrar psicólogos en el sistema.
-- **Modificar Psicólogo**: El psicólogo debe poder modificar sus datos registrados en el sistema.
-- **Eliminar Psicólogo**:  El sistema debe poder eliminar un psicólogo del sistema.
-- **Listar Psicólogos**: El sistema debe poder listar a todos los psicólogos registrados.
+- **Registrar Sesión**: El sistema debe permitir el registro de sesiones, incluyendo la fecha, hora, paciente, y psicólogo asociados. Esto garantizará un seguimiento adecuado de las sesiones realizadas en el consultorio.
+- **Modificar Sesión**: El sistema debe permitir la modificación de los datos de una sesión ya registrada, como la fecha y la hora de la misma. Esto permitirá corregir cualquier error o actualizar la información relevante.
+- **Consultar Sesión**: El sistema debe permitir la consulta y el listado de todas las sesiones presentes en el sistema.
+- **Cancelar Sesión**: El sistema debe permitir la cancelación de una sesión, actualizando su estado correspondiente. Esto garantizará un manejo adecuado de las sesiones programadas y permitirá liberar recursos en caso de cancelaciones.
+- **Generar Informe de Sesión**: El sistema debe permitir la generación de informes de las sesiones realizadas. Esto incluye la captura de la fecha, hora, descripción y tipo de descripción de la sesión. El informe generado debe estar asociado correctamente a la sesión correspondiente, garantizando la integridad de los datos y la trazabilidad de las sesiones realizadas.
+- **Consultar Informe de Sesión**: El sistema debe permitir consultar un informe de sesión de una sesión en particular y mostrar al usuario su respectiva información
+- **Modificar Informe de Sesión**: El sistema debe permitir la modificación de los datos de un informe de sesión ya registrado, como la descripción y tipo de descripción de la misma. Esto permitirá corregir cualquier error o actualizar la información relevante.
 
 ---
 ## Diagrama de Subsistemas
-![Diagrama de Subsistemas](/docs/resources/subsistemas2daIteracion.png)
+![Diagrama de Subsistemas](/docs/resources/subsistemas3eraIteracion.png)
 
 ---
-## Diagrama de Caso de Uso del Subsistema Gestión de Psicologos
-![Diagrama de Casos de Uso del Subsistemas Gestion de Psicologos](/docs/resources/ucSubsistemaPsicologos.png)
+## Diagrama de Caso de Uso del Subsistema Gestión de Sesiones
+![Diagrama de Casos de Uso del Subsistemas Gestion de Sesiones](/docs/resources/ucSubsistemaSesiones.png)
 ### Definición de Actores:
-| ACT–01  | Administrador             |
+| ACT–01  | Secretario             |
 |---------|-------------------|
-| **Descripción** | Este actor es el encargado de asignar los permisos a los usuarios para poder utilizar el sistema; tendrá privilegios para hacer todo tipo de modificación en cuanto a los grupos de usuarios y poder reparar algún tipo de inconsistencia en los datos que presenta el sistema. También se encargará de cargar y actualizar todos los parámetros del sistema cuando así lo requieran|
-| **Comentarios** | Ninguno |
+| **Descripción** | Este actor representa a la secretaria del consultorio |
+| **Comentarios** | El secretario es la responsable de realizar la gestion de pacientes y de sesiones |
 
 | ACT–02  | Psicologo             |
 |---------|-------------------|
@@ -149,7 +173,7 @@ Ninguno
 
 ---
 ## Diagrama de Caso de Uso del Subsistema Gestión de Parametros del sistema
-![Diagrama de Casos de Uso del Subsistemas Gestion de Parametros del sistema](/docs/resources/ucSubsistemaParametrosSistemaIteracion2.png)
+![Diagrama de Casos de Uso del Subsistemas Gestion de Parametros del sistema](/docs/resources/ucSubsistemaParametrosSistemaIteracion3.png)
 ### Definición de Actores:
 | ACT–01  | Administrador             |
 |---------|-------------------|
@@ -157,22 +181,31 @@ Ninguno
 | **Comentarios** | Ninguno |
 
 ---
+## Diagrama de Caso de Uso del Subsistema Gestión de Informes de Sesión
+![Diagrama de Casos de Uso del Subsistemas Gestion de Informes de Sesión](/docs/resources/ucSubsistemaInformesSesion.png)
+### Definición de Actores:
+| ACT–01  | Psicologo             |
+|---------|-------------------|
+| **Descripción** | Este actor representa a un psicologo del consultorio |
+| **Comentarios** | El Psicologo es la responsable de llevar a cabo las sesiones con los pacientes y realizar los informes de sesion correspondientes, ademas debe poder registrar nuevos pacientes y sesiones |
+
+---
 
 ## Casos de Uso del Sistema
 
-### UC-18 - Registrar Psicólogo
+### UC-05 - Registrar Sesión
 
-| UC–18  | Registrar Psicólogo | |
+| UC–05  | Registrar Sesión | |
 |--------|--------------------|----|
-| **Objetivos asociados** | - OBJ01-Gestion de Psicólogos |
-| **Requisitos asociados** | IRQ–01 Información sobre Psicólogos |
-| **Descripción** | Permite registrar un nuevo psicólogo en el sistema |
-| **Precondición** | Un Administrador o otro psicólogo tiene acceso al sistema y los datos necesarios del psicólogo |
+| **Objetivos asociados** | - OBJ07-Gestion de Sesiones |
+| **Requisitos asociados** | IRQ–01 Información sobre Sesiones |
+| **Descripción** | Permite registrar una nueva sesión para un paciente. |
+| **Precondición** | Un secretario o un psicólogo tiene acceso al sistema y los datos necesarios para la sesión |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El Administrador o otro psicólogo ingresa los datos del psicologo (nombre, apellido, documento, dirección, teléfono, especialidad, etc.) |
+| | 1 | El secretario o otro psicólogo ingresa los datos de la sesión (fecha, hora, paciente y psicólogo) |
 | | 2 | El sistema valida los datos ingresados |
-| | 3 | El sistema registra al psicólogo y confirma el registro |
-| **Postcondición** | El psicólogo debe estar posteriormente registrado en el sistema |
+| | 3 | El sistema registra la sesión y confirma el registro. |
+| **Postcondición** | La sesión debe estar posteriormente registrada en el sistema |
 | **Flujo Alternativo** | **Paso** | **Acción** |
 | | 3 | Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
@@ -183,21 +216,21 @@ Ninguno
 
 ---
 
-### UC-19 - Modificar Psicólogo
+### UC-69 - Modificar Sesión
 
-| UC-19  | Modificar Psicólogo | |
+| UC-69  | Modificar Sesión | |
 |--------|--------------------|----|
-| **Objetivos asociados** | - OBJ01-Gestion de Psicólogos |
-| **Requisitos asociados** | IRQ–01 Información sobre Psicólogos |
-| **Descripción** | Permite modificar la información de un psicólogo existente |
-| **Precondición** | Un Administrador o otro psicólogo tienen acceso al sistema y los datos necesarios del psicólogo |
+| **Objetivos asociados** | - OBJ07-Gestion de Sesiones |
+| **Requisitos asociados** | IRQ–01 Información sobre Sesiones |
+| **Descripción** | Permite modificar la información de una sesión existente |
+| **Precondición** | Un secretario o un psicólogo tienen acceso al sistema y los datos necesarios de la sesión |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | Un Administrador o otro psicólogo selecciona al psicólogo a modificar |
-| | 2 | El sistema muestra los datos actuales del psicólogo |
-| | 3 | Un Administrador o otro psicólogo modifica los datos necesarios |
+| | 1 | Un secretario o un psicólogo selecciona la sesión a modificar |
+| | 2 | El sistema muestra los datos actuales del sesión |
+| | 3 | Un secretario o un psicólogo modifica los datos necesarios |
 | | 4 | El sistema valida los nuevos datos |
-| | 5 | El sistema actualiza la información del psicólogo y confirma la modificación |
-| **Postcondición** | Los datos del psicólogo están actualizados en el sistema |
+| | 5 | El sistema actualiza la información del sesión y confirma la modificación |
+| **Postcondición** | Los datos de la sesion están actualizados en el sistema |
 | **Flujo Alternativo** | **Paso** | **Acción** |
 | | 5 | Si los datos ingresados no son válidos, el sistema muestra un mensaje de error y permite corregirlos |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
@@ -208,68 +241,69 @@ Ninguno
 
 ---
 
-### UC–20 - Consultar Psicólogos
+### UC–06 - Consultar Sesión
 
-| UC–20  | Consultar Psicólogos | |
+| UC–06  | Consultar Sesión | |
 |--------|--------------------|----|
-| **Objetivos asociados** | - OBJ01-Gestion de Psicólogos |
-| **Requisitos asociados** | IRQ–01 Información sobre Psicólogos |
+| **Objetivos asociados** | - OBJ07-Gestion de Sesiones |
+| **Requisitos asociados** | IRQ–01 Información sobre Sesiones |
 | **Descripción** | Permite consultar la información de los psicólogos |
-| **Precondición** | Un Administrador o otro psicólogo tienen acceso al sistema. |
+| **Precondición** | Un secretario o un psicólogo tienen acceso al sistema. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | Un Administrador o otro psicólogo solicita al sistema la lista de los psicólogos que estan registrados en el sistema. |
+| | 1 | Un Administrador o otro psicólogo solicita al sistema la lista de las sesiones que estan registradas en el sistema. |
 | | 2 | El sistema le proporciona los datos obtenidos. |
-| **Postcondición** | Los distintos psicólogos que estan registrados en el sistema son listados para el usuario. |
+| **Postcondición** | Las distintas sesiones que estan registradas en el sistema son listadas para el usuario. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
 | | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | 2 | 1 segundo |
 | **Frecuencia** | 10 veces/día |
 | **Estabilidad** | alta |
-| **Comentarios** | La consulta de información de psicólogos está disponible solo para usuarios autorizados |
+| **Comentarios** | La consulta de información de sesiones está disponible solo para usuarios autorizados |
 
 ---
 
-### UC-21 - Eliminar Psicólogo
+### UC-07 - Cancelar Sesión
 
-| UC-21  | Eliminar Psicólogo | |
+| UC-07  | Cancelar Sesión | |
 |--------|-------------------|----|
-| **Objetivos asociados** | - OBJ01-Gestion de Psicólogos |
-| **Requisitos asociados** | IRQ–01 Información sobre Psicólogos |
-| **Descripción** | Permite dar de baja lógicamente a un psicólogo del sistema |
-| **Precondición** | Un Administrador o otro psicólogo tiene acceso al sistema y los datos necesarios del psicólogo a ser dado de baja |
+| **Objetivos asociados** | - OBJ07-Gestion de Sesiones |
+| **Requisitos asociados** | IRQ–01 Información sobre Sesiones |
+| **Descripción** | Permite cancelar una sesión del sistema |
+| **Precondición** | Un secretario o un psicólogo tiene acceso al sistema y los datos necesarios de la sesión a ser cancelada |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | Un Administrador o otro psicólogo selecciona al psicólogo a eliminar |
-| | 2 | El sistema solicita confirmación para eliminar al psicólogo |
-| | 3 | Un Administrador o otro psicólogo confirma la eliminación |
-| | 4 | El sistema elimina al psicólogo y confirma la eliminación |
-| **Postcondición** | El psicólogo está eliminado del sistema |
+| | 1 | Un secretario o un psicólogo selecciona la sesión a cancelar |
+| | 2 | El sistema solicita confirmación para cancelar la sesión |
+| | 3 | Un secretario o un psicólogo confirma la cancelación |
+| | 4 | El sistema cancela sesión |
+| **Postcondición** | El estado de la sesión pasa a estar "cancelada" |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 2 | Si el administrador, o otro psicólogo, no confirma la eliminación, el psicólogo no es eliminado |
-| | 4 | El sistema informa que posee datos relacionados de dicho psicólogo y que no podrá eliminarse. El caso de uso queda sin efecto. |
+| | 2 | Si el secretario o un psicólogo, no confirma la cancelación, la sesión no es cancelada |
+| | 4 | El sistema informa que la sesion ya fue realizada y no se puede cancelar. El caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
 | **Estabilidad** | alta |
-| **Comentarios** | Si el psicólogo es eliminado, toda su información es archivada y no se puede acceder a ella a menos que sea reactivada |
+| **Comentarios** | Si la sesión es cancelada, toda su información es archivada y no se puede acceder a ella a menos que sea reactivada |
 
 ---
 
-### UC–42 - Registrar Estado Civil
+### UC–14 - Registrar Informe de Sesión
 
-| UC–42  | Registrar Estado Civil | |
+| UC–14  | Registrar Informe de Sesión | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice el alta de un estado civil que puede tener un paciente.  |
-| **Precondición** | El usuario debe poseer permisos de administrador para realizar esta tarea. |
+| **Objetivos asociados** | - OBJ08-Gestión de Informes de Sesion |
+| **Requisitos asociados** | - IRQ-03: Información sobre Informes de Sesion |
+| **Descripción** | Permite registrar un nuevo informe de sesión para un paciente.  |
+| **Precondición** | Un psicólogo tiene acceso al sistema y los datos necesarios para el informe sesión. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador proporciona los datos para registrar un estado civil que puede tener un paciente. |
-| | 2 | El sistema valida los datos ingresados. |
-| | 3 | El sistema avisa que el estado civil que puede tener un paciente ha sido registrado. |
+| | 1 | El psicólogo selecciona una sesión. |
+| | 2 | El psicólogo ingresa los detalles del informe de sesión (fecha, hora, descripción, tipo de descripción, etc.).|
+| | 3 | El sistema valida los datos ingresados. |
+| | 4 | El sistema avisa que el informe de sesión de la sesión ha sido registrado. |
 | **Postcondición** | El usuario registra en el sistema un estado civil. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 3 | Si el sistema detecta que los datos que se estan intentando ingresar ya existen, se le informa al usuario y se le solicita que cambie los datos o que cancele la carga |
+| | 4 | Si el sistema detecta que los datos que se estan intentando ingresar ya existen, se le informa al usuario y se le solicita que cambie los datos o que cancele la carga |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
@@ -278,21 +312,21 @@ Ninguno
 
 ---
 
-### UC–43 - Modificar Estado Civil
+### UC–12 - Modificar Informe de Sesión
 
-| UC–43  | Modificar Estado Civil | |
+| UC–12  | Modificar Informe de Sesión | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la modificación de un tipo de estado civil que tiene una persona.  |
-| **Precondición** | El usuario debe tener permisos de administrador para realizar esta tarea. |
+| **Objetivos asociados** | - OBJ08-Gestión de Informes de Sesion |
+| **Requisitos asociados** | - IRQ-03: Información sobre Informes de Sesion |
+| **Descripción** | Permite modificar la información de un informe de sesión existente.  |
+| **Precondición** | Un psicólogo tiene acceso al sistema y los datos necesarios para el informe sesión. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita al sistema los datos del tipo de estado civil que tiene una persona. |
+| | 1 | El psicólogo solicita al sistema los datos del informe de sesion que tiene una sesión. |
 | | 2 | El sistema le devuelve los datos requeridos. |
-| | 3 | El administrador ingresa los nuevos datos. |
+| | 3 | El psicólogo ingresa los nuevos datos. |
 | | 4 | El sistema pregunta si quiere continuar con la operación. |
-| | 5 | El sistema informa que el tipo de estado civil ha sido modificado. |
-| **Postcondición** | El tipo de estado civil, posee los datos actualizados. |
+| | 5 | El sistema informa que el informe de sesion ha sido modificado. |
+| **Postcondición** | El informe de sesion, posee los datos actualizados. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
 | | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
@@ -303,18 +337,18 @@ Ninguno
 
 ---
 
-### UC–44 - Consultar Estado Civil
+### UC–13 - Consultar Informe de Sesión
 
-| UC–44  | Consultar Estado Civil | |
+| UC–13  | Consultar Informe de Sesión | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de de los tipos de estado civil que tiene una persona.  |
-| **Precondición** | Se desea conocer los distintos tipos de estado civil que tiene una persona que el sistema posee cargados. |
+| **Objetivos asociados** | - OBJ08-Gestión de Informes de Sesion |
+| **Requisitos asociados** | - IRQ-03: Información sobre Informes de Sesion |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta del informe de sesión que tiene la sesión.  |
+| **Precondición** | Se desea conocer el informe de sesión que tiene una sesión. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita al sistema la lista de los tipos de estado civil que tiene una persona. |
+| | 1 | El administrador solicita al sistema el informe de sesión y sus respectivos datos que tiene la sesión seleccionada. |
 | | 2 | El sistema le proporciona los datos obtenidos. |
-| **Postcondición** | Los distintos tipos de estado civil que tiene una persona son listados para el usuario. |
+| **Postcondición** | El informe de sesión que tiene la sesión son listados para el usuario. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
 | | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
@@ -325,44 +359,20 @@ Ninguno
 
 ---
 
-### UC–45 - Eliminar Estado Civil
 
-| UC–45  | Eliminar Estado Civil | |
-|--------|------------------|----|
-| **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema <br> - OBJ05-Gestionar Seguridad |
-| **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de un tipo de estado civil que tiene una persona.  |
-| **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
-| **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita al sistema la lista de los tipos de estado civil que tiene una persona. |
-| | 2 | El sistema le proporciona los datos obtenidos. |
-| | 3 | El administrador selecciona de la lista, el/los tipo/s de estado civil que desea eliminar. |
-| | 4 | El sistema pregunta si quiere continuar con la operación. |
-| | 5 | El sistema informa que el tipo de documentos de identidad ha sido eliminado. |
-| **Postcondición** | El o los tipos de estado civil fueron eliminados correctamente |
-| **Flujo Alternativo** | **Paso** | **Acción** |
-| | 5 | El sistema informa que posee datos relacionados dicho tipo de estado civil y que no podrá eliminarse. El caso de uso queda sin efecto. |
-| **Rendimiento** | **Paso** | **Cota de tiempo** |
-| | - | - |
-| **Frecuencia** | - |
-| **Estabilidad** | alta |
-| **Comentarios** | - |
+### UC–70 - Registrar Ocupación
 
----
-
-### UC–46 - Registrar Especialidad
-
-| UC–46  | Registrar Especialidad | |
+| UC–70  | Registrar Ocupación | |
 |--------|------------------|----|
 | **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice el alta de una especialidad que puede tener un psicologo.  |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice el alta de una ocupacion que puede tener un paciente.  |
 | **Precondición** | El usuario debe poseer permisos de administrador para realizar esta tarea. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador proporciona los datos para registrar una especialidad que puede tener un psicologo. |
+| | 1 | El administrador proporciona los datos para registrar una ocupacion que puede tener un paciente. |
 | | 2 | El sistema valida los datos ingresados. |
-| | 3 | El sistema avisa que la especialidad que puede tener un psicologo ha sido registrado. |
-| **Postcondición** | El usuario registra en el sistema una especialidad que puede tener un psicologo. |
+| | 3 | El sistema avisa que la ocupacion que puede tener un paciente ha sido registrado. |
+| **Postcondición** | El usuario registra en el sistema una ocupacion que puede tener un paciente. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
 | | 3 | Si el sistema detecta que los datos que se estan intentando ingresar ya existen, se le informa al usuario y se le solicita que cambie los datos o que cancele la carga |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
@@ -373,21 +383,21 @@ Ninguno
 
 ---
 
-### UC–47 - Modificar Especialidad
+### UC–71 - Modificar Ocupación
 
-| UC–47  | Modificar Especialidad | |
+| UC–71  | Modificar Ocupación | |
 |--------|------------------|----|
 | **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la modificación de una especialidad que puede tener un psicologo.  |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la modificación de una ocupacion que puede tener un paciente.  |
 | **Precondición** | El usuario debe tener permisos de administrador para realizar esta tarea. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita los datos de una especialidad que puede tener un psicologo |
+| | 1 | El administrador solicita los datos de una ocupacion que puede tener un paciente |
 | | 2 | El sistema le devuelve los datos requeridos. |
 | | 3 | El administrador ingresa los nuevos datos. |
 | | 4 | El sistema pregunta si quiere continuar con la operación. |
-| | 5 | El sistema informa que la especialidad que puede tener un psicologo ha sido modificado |
-| **Postcondición** | El tipo de especialidad, posee los datos actualizados. |
+| | 5 | El sistema informa que la ocupacion que puede tener un paciente ha sido modificado |
+| **Postcondición** | La ocupacion que puede tener un paciente, posee los datos actualizados. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
 | | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | | 5 | Si el sistema detecta que los datos que se estan intentando ingresar ya existen, se le informa al usuario y se le solicita que cambie los datos o que cancele la carga |
@@ -399,18 +409,18 @@ Ninguno
 
 ---
 
-### UC–48 - Consultar Especialidad
+### UC–72 - Consultar Ocupación
 
-| UC–48  | Consultar Especialidad | |
+| UC–72  | Consultar Ocupación | |
 |--------|------------------|----|
 | **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de las de especialidades que pueden tener los psicologos.  |
-| **Precondición** | Se desea conocer las distintas especialidades que pueden tener los psicologos que el sistema posee cargados. |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta de las distintas ocupaciones que pueden tener los pacientes.  |
+| **Precondición** | Se desea conocer las distintas ocupaciones que pueden tener los pacientes que el sistema posee cargados. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita al sistema las distintas especialidades que pueden tener los psicologos cargados en el sistema. |
-| | 2 | El sistema muestra la lista de especialidades que pueden tener los psicologos al administrador. |
-| **Postcondición** | Las distintas especialidades que pueden tener los psicologos son listadas para el usuario. |
+| | 1 | El administrador solicita al sistema las distintas ocupaciones que pueden tener los pacientes cargados en el sistema. |
+| | 2 | El sistema muestra la lista de las distintas ocupaciones que pueden tener los pacientes al administrador. |
+| **Postcondición** | Las distintas ocupaciones que pueden tener los pacientes son listadas para el usuario. |
 | **Flujo Alternativo** | **Paso** | **Acción** |
 | | 2 | El sistema avisa que no se encontraron datos de acuerdo al criterio seleccionado; y solicita que se modifique. En caso contrario, el caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
@@ -421,23 +431,23 @@ Ninguno
 
 ---
 
-### UC–49 - Eliminar Especialidad
+### UC–49 - Eliminar Ocupación
 
-| UC–49  | Eliminar Especialidad | |
+| UC–49  | Eliminar Ocupación | |
 |--------|------------------|----|
 | **Objetivos asociados** | - OBJ04-Gestionar Parámetros de Sistema |
 | **Requisitos asociados** | - IRQ-02: Información sobre los parámetros del sistema |
-| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de una especialidad que puede tener un psicologo.  |
+| **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador realice la baja de una ocupación que puede tener un paciente.  |
 | **Precondición** | El usuario debe tener permisos de administrador para realizar esta operación. |
 | **Flujo Principal** | **Paso** | **Acción** |
-| | 1 | El administrador solicita al sistema las especialidades que puede tener un psicologo cargadas. |
-| | 2 | El sistema muestra la lista de las especialidades que puede tener un psicologo al administrador. |
-| | 3 | El administrador selecciona de la lista, la/las especialidad/es que puede tener un psicologo, que desea eliminar. |
+| | 1 | El administrador solicita al sistema las ocupación que puede tener un paciente cargadas. |
+| | 2 | El sistema muestra la lista de las ocupación que puede tener un paciente al administrador. |
+| | 3 | El administrador selecciona de la lista, la/las ocupación/es que puede tener un paciente, que desea eliminar. |
 | | 4 | El sistema pregunta si quiere continuar con la operación. |
-| | 5 | El sistema informa que la especialidad que puede tener un psicologo ha sido eliminado. |
-| **Postcondición** | La o las especialidades que puede tener un psicologo fueron eliminadas correctamente |
+| | 5 | El sistema informa que la ocupación que puede tener un paciente ha sido eliminado. |
+| **Postcondición** | La o las ocupaciones que puede tener un paciente fueron eliminadas correctamente |
 | **Flujo Alternativo** | **Paso** | **Acción** |
-| | 5 | El sistema informa que posee datos relacionados dicha especialidad y que no podrá eliminarse. El caso de uso queda sin efecto. |
+| | 5 | El sistema informa que posee datos relacionados dicha ocupación y que no podrá eliminarse. El caso de uso queda sin efecto. |
 | **Rendimiento** | **Paso** | **Cota de tiempo** |
 | | - | - |
 | **Frecuencia** | - |
