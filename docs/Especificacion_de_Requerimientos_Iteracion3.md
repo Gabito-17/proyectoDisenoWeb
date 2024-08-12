@@ -541,34 +541,40 @@ Ninguno
 ---
 ## Modelo Navegacional
 
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPrincipal2daIteracion.png)
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPrincipal3eraIteracion.png)
 ---
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPacientes2daIteracion.png)
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPacientes3eraIteracion.png)
 ---
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPsicologos.png)
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalSecretarios3eraIteracion.png)
 ---
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalEspecialidad.png)
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalSesiones.png)
 ---
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionaEstadoCivil.png)
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalInformeSesion.png)
+---
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalOcupacion.png)
 ---
 
 ## Diseño de Interfaz Abstracta
 
-### Diseño abstracto de registro y listado de psicologos ###
-![](/docs/resources/DIA's/diaPantallas-RegistrarPsicologo.png)
-### Diseño abstracto de Modificar y eliminar psicologos ###
-![](/docs/resources/DIA's/diaPantallas-Modificar_y_EliminarPsicologo.png)
-### Diseño abstracto de registro y listado de Pacientes 2da Iteracion ###
-![](/docs/resources/DIA's/diaPantallas-diaRegistrarPaciente2daIteracion.png)
-### Diseño abstracto de Modificar y eliminar Pacientes 2da Iteracion ###
-![](/docs/resources/DIA's/diaPantallas-diaModificarEliminarPaciente2daIteracion.png)
+### Diseño abstracto de registro y listado de sesiones ###
+![](/docs/resources/DIA's/diaPantallas-RegistrarSesion.png)
+### Diseño abstracto de Modificar y eliminar sesiones ###
+![](/docs/resources/DIA's/diaPantallas-Modificar_y_EliminarSesion.png)
 ### Diseño abstracto de Parametros ###
-![](/docs/resources/DIA's/diaPantallas-Parametros2daIteracion.png)
-### Diseño abstracto de obtener, listar y eliminar Estados Civiles ###
-![](/docs/resources/DIA's/diaPantallas-ObtenerListarEliminarEstadoCivil.png)
-### Diseño abstracto de modificar Estado civil ###
-![](/docs/resources/DIA's/diaPantallas-EditarEstadoCivil.png)
-### Diseño abstracto de registrar, listar y eliminar Especialidades de un Psicologo ###
-![](/docs/resources/DIA's/diaPantallas-RegistrarEspecialidad.png)
-### Diseño abstracto de modificar Especialidades de un Psicologo ###
-![](/docs/resources/DIA's/diaPantallas-ModificarEspecialidad.png)
+![](/docs/resources/DIA's/diaPantallas-Parametros3eraIteracion.png)
+### Diseño abstracto de obtener, listar y eliminar Ocupaciones ###
+![](/docs/resources/DIA's/diaPantallas-ObtenerListarEliminarOcupacion.png)
+### Diseño abstracto de modificar Ocupaciones ###
+![](/docs/resources/DIA's/diaPantallas-EditarOcupacion.png)
+### Diseño abstracto de registrar y listar Informe de una sesion ###
+![](/docs/resources/DIA's/diaPantallas-RegistrarInformeSesion.png)
+### Diseño abstracto de modificar Informe de una sesion ###
+![](/docs/resources/DIA's/diaPantallas-ModificarInformeSesion.png)
+### Diseño abstracto de registro y listado de Pacientes 3era Iteracion ###
+![](/docs/resources/DIA's/diaPantallas-diaRegistrarPaciente3eraIteracion.png)
+### Diseño abstracto de Modificar y eliminar Pacientes 3era Iteracion ###
+![](/docs/resources/DIA's/diaPantallas-diaModificarEliminarPaciente3eraIteracion.png)
+### Diseño abstracto de registro y listado de Secretarios 3era Iteracion ###
+![](/docs/resources/DIA's/diaPantallas-diaRegistrarSecretario3eraIteracion.png)
+### Diseño abstracto de Modificar y eliminar Secretarios 3era Iteracion ###
+![](/docs/resources/DIA's/diaPantallas-diaModificarEliminarSecretario3eraIteracion.png)
