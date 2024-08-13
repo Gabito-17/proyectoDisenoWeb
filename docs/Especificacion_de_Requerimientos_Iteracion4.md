@@ -626,23 +626,25 @@ Ninguno
 ---
 ![](/docs/resources/UID's/UIDInicioCierreSesion.png)
 ---
+![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPaciente4taIteracion.png)
+---
 ![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónPsicologo4taIteracion.png)
 ---
 ![](/docs/resources/UID's/UIDAltaModificaciónEliminaciónSecretario4taIteracion.png)
 ---
 ## Modelo Navegacional
 
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPrincipal3eraIteracion.png)
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPrincipal4taIteracion.png)
 ---
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPacientes3eraIteracion.png)
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPacientes4taIteracion.png)
 ---
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalSecretarios3eraIteracion.png)
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalSecretarios4taIteracion.png)
 ---
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalSesiones.png)
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalPsicologos4taIteracion.png)
 ---
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalInformeSesion.png)
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalUbicacionGeografica.png)
 ---
-![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalOcupacion.png)
+![](/docs/resources/ModelosNavegacionales/ModeloNavegacionalRoles.png)
 ---
 
 ## Diseño de Interfaz Abstracta
