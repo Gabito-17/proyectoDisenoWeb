@@ -649,25 +649,27 @@ Ninguno
 
 ## Diseño de Interfaz Abstracta
 
-### Diseño abstracto de registro y listado de sesiones ###
-![](/docs/resources/DIA's/diaPantallas-RegistrarSesion.png)
-### Diseño abstracto de Modificar y eliminar sesiones ###
-![](/docs/resources/DIA's/diaPantallas-Modificar_y_EliminarSesion.png)
+### Diseño abstracto de Iniciar Sesion ###
+![](/docs/resources/DIA's/diaIniciarSesion.png)
+### Diseño abstracto de Registrar, listar y eliminar Roles ###
+![](/docs/resources/DIA's/diaRegistrarListarEliminarRoles.png)
+### Diseño abstracto de Modificar Roles ###
+![](/docs/resources/DIA's/diaModificarRoles.png)
 ### Diseño abstracto de Parametros ###
-![](/docs/resources/DIA's/diaPantallas-Parametros3eraIteracion.png)
-### Diseño abstracto de obtener, listar y eliminar Ocupaciones ###
-![](/docs/resources/DIA's/diaPantallas-ObtenerListarEliminarOcupacion.png)
-### Diseño abstracto de modificar Ocupaciones ###
-![](/docs/resources/DIA's/diaPantallas-EditarOcupacion.png)
-### Diseño abstracto de registrar y listar Informe de una sesion ###
-![](/docs/resources/DIA's/diaPantallas-RegistrarInformeSesion.png)
-### Diseño abstracto de modificar Informe de una sesion ###
-![](/docs/resources/DIA's/diaPantallas-ModificarInformeSesion.png)
-### Diseño abstracto de registro y listado de Pacientes 3era Iteracion ###
-![](/docs/resources/DIA's/diaPantallas-diaRegistrarPaciente3eraIteracion.png)
-### Diseño abstracto de Modificar y eliminar Pacientes 3era Iteracion ###
-![](/docs/resources/DIA's/diaPantallas-diaModificarEliminarPaciente3eraIteracion.png)
-### Diseño abstracto de registro y listado de Secretarios 3era Iteracion ###
-![](/docs/resources/DIA's/diaPantallas-diaRegistrarSecretario3eraIteracion.png)
-### Diseño abstracto de Modificar y eliminar Secretarios 3era Iteracion ###
-![](/docs/resources/DIA's/diaPantallas-diaModificarEliminarSecretario3eraIteracion.png)
+![](/docs/resources/DIA's/diaParametros4taIteracion.png)
+### Diseño abstracto de obtener, listar y eliminar Paises ###
+![](/docs/resources/DIA's/diaObtenerListarEliminarPaises.png)
+### Diseño abstracto de obtener, listar y eliminar Provincias ###
+![](/docs/resources/DIA's/diaObtenerListarEliminarProvincias.png)
+### Diseño abstracto de registro y listado de Pacientes 4ta Iteracion ###
+![](/docs/resources/DIA's/diaRegistrarPaciente4taIteracion.png)
+### Diseño abstracto de Modificar y eliminar Pacientes 4ta Iteracion ###
+![](/docs/resources/DIA's/diaModificarEliminarPaciente4taIteracion.png)
+### Diseño abstracto de registro y listado de Secretarios 4ta Iteracion ###
+![](/docs/resources/DIA's/diaRegistrarSecretario4taIteracion.png)
+### Diseño abstracto de Modificar y eliminar Secretarios 4ta Iteracion ###
+![](/docs/resources/DIA's/diaModificarEliminarSecretario4taIteracion.png)
+### Diseño abstracto de registro y listado de Psicologos 4ta Iteracion ###
+![](/docs/resources/DIA's/diaRegistrarPsicologo4taIteracion.png)
+### Diseño abstracto de Modificar y eliminar Psicologos 4ta Iteracion ###
+![](/docs/resources/DIA's/diaModificarEliminarPsicologo4taIteracion.png)
