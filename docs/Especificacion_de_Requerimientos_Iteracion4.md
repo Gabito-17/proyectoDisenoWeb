@@ -672,3 +672,9 @@ Ninguno
 ![](/docs/resources/DIA's/diaRegistrarPsicologo4taIteracion.png)
 ### Diseño abstracto de Modificar y eliminar Psicologos 4ta Iteracion ###
 ![](/docs/resources/DIA's/diaModificarEliminarPsicologo4taIteracion.png)
+### Diseño abstracto de Registro Informe Sesion 4ta Iteracion ###
+![](/docs/resources/DIA's/diaRegistrarInforme.jpeg)
+### Diseño abstracto de Modificar Informe Sesion 4ta Iteracion ###
+![](/docs/resources/DIA's/diaModificarInforme.jpeg)
+### Diseño abstracto de Consultar Informe 4ta Iteracion ###
+![](/docs/resources/DIA's/diaVerInforme.jpeg)
