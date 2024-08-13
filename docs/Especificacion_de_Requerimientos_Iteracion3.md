@@ -49,8 +49,7 @@ El objetivo principal del sistema es mejorar la eficiencia y la organización de
 - **OBJ04-Gestionar Parámetros de Sistema**: El sistema permitirá la gestión integral de todos los parámetros necesarios para su óptimo funcionamiento. Estos parámetros incluirán los tipos de especialidad de los psicologos, los estados de las sesiones, ciertos datos de los pacientes (como podria ser su pais de residencia, su ciudad, etc) y cualquier otra variable que influya en la operativa diaria del consultorio. La gestión de estos parámetros garantizará que el sistema se adapte de manera flexible y eficiente a las necesidades específicas del consultorio, facilitando un entorno operativo fluido y personalizado.
 - **OBJ05-Gestionar Seguridad**: El sistema gestionará toda la información relacionada con la seguridad de acceso del sitio, garantizando la protección de los datos sensibles de los pacientes y del consultorio. Esto incluirá la implementación de medidas de seguridad como la validación de usuarios, contar con sesiones, y la gestión de permisos y roles. Estas medidas asegurarán que solo el personal autorizado tenga acceso a la información relevante, manteniendo la confidencialidad y la integridad de los datos en cumplimiento con las normativas vigentes de protección de datos en el ámbito de la salud.
 - **OBJ06-Gestion de Secretarios**: Permitir el registro sencillo de un secretario, asegurando que toda la información relevante se almacene de forma digital y segura. Ademas permitir la modificacion de los datos almacenados de un secretario. Este ultimo siendo importante para asistir al psicologo y ayudarle al mismo con la gestion de sesiones y pacientes. Ademas se ha de permitir la baja logica de un secretario.
-- **OBJ07-Gestión de Sesiones**: Facilitar la gestión de las sesiones entre los pacientes y los psicólogos, permitiendo el registro, modificación y eliminación de sesiones. Además, garantizar la asociación correcta de cada sesión con el paciente y el psicólogo correspondiente, asegurando la integridad de los datos y la trazabilidad de las sesiones realizadas.
-- **OBJ08-Gestión de Informes de Sesion**: Permitir la generación y gestión de informes de las sesiones realizadas, asegurando que cada sesión tenga su correspondiente informe asociado. Además, permitir la modificación y eliminación de los informes existentes, garantizando la actualización y coherencia de la información registrada.
+- **OBJ7-Gestión de Informes de Sesion**: Permitir la generación y gestión de informes de las sesiones realizadas, asegurando que cada sesión tenga su correspondiente informe asociado. Además, permitir la modificación y eliminación de los informes existentes, garantizando la actualización y coherencia de la información registrada.
 
 ---
 # Requisitos del Sistema
@@ -60,7 +59,7 @@ El objetivo principal del sistema es mejorar la eficiencia y la organización de
 ### IRQ – 01 Información sobre Sesiones
 
 **Objetivos asociados**
-- OBJ07 - Gestión de Sesiones
+- OBJ03 - Gestión de Sesiones
 
 **Requisitos asociados**
 
@@ -117,7 +116,7 @@ Ninguno
 ### IRQ – 03 Información sobre Informes de Sesion
 
 **Objetivos asociados**
-- OBJ08 - Gestión de Informes de Sesion
+- OBJ07 - Gestión de Informes de Sesion
 
 **Requisitos asociados**
 
@@ -197,7 +196,7 @@ Ninguno
 
 | UC–05  | Registrar Sesión | |
 |--------|--------------------|----|
-| **Objetivos asociados** | - OBJ07-Gestion de Sesiones |
+| **Objetivos asociados** | - OBJ03-Gestion de Sesiones |
 | **Requisitos asociados** | IRQ–01 Información sobre Sesiones |
 | **Descripción** | Permite registrar una nueva sesión para un paciente. |
 | **Precondición** | Un secretario o un psicólogo tiene acceso al sistema y los datos necesarios para la sesión |
@@ -220,7 +219,7 @@ Ninguno
 
 | UC-69  | Modificar Sesión | |
 |--------|--------------------|----|
-| **Objetivos asociados** | - OBJ07-Gestion de Sesiones |
+| **Objetivos asociados** | - OBJ03-Gestion de Sesiones |
 | **Requisitos asociados** | IRQ–01 Información sobre Sesiones |
 | **Descripción** | Permite modificar la información de una sesión existente |
 | **Precondición** | Un secretario o un psicólogo tienen acceso al sistema y los datos necesarios de la sesión |
@@ -245,7 +244,7 @@ Ninguno
 
 | UC–06  | Consultar Sesión | |
 |--------|--------------------|----|
-| **Objetivos asociados** | - OBJ07-Gestion de Sesiones |
+| **Objetivos asociados** | - OBJ03-Gestion de Sesiones |
 | **Requisitos asociados** | IRQ–01 Información sobre Sesiones |
 | **Descripción** | Permite consultar la información de los psicólogos |
 | **Precondición** | Un secretario o un psicólogo tienen acceso al sistema. |
@@ -267,7 +266,7 @@ Ninguno
 
 | UC-07  | Cancelar Sesión | |
 |--------|-------------------|----|
-| **Objetivos asociados** | - OBJ07-Gestion de Sesiones |
+| **Objetivos asociados** | - OBJ03-Gestion de Sesiones |
 | **Requisitos asociados** | IRQ–01 Información sobre Sesiones |
 | **Descripción** | Permite cancelar una sesión del sistema |
 | **Precondición** | Un secretario o un psicólogo tiene acceso al sistema y los datos necesarios de la sesión a ser cancelada |
@@ -292,7 +291,7 @@ Ninguno
 
 | UC–14  | Registrar Informe de Sesión | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ08-Gestión de Informes de Sesion |
+| **Objetivos asociados** | - OBJ07-Gestión de Informes de Sesion |
 | **Requisitos asociados** | - IRQ-03: Información sobre Informes de Sesion |
 | **Descripción** | Permite registrar un nuevo informe de sesión para un paciente.  |
 | **Precondición** | Un psicólogo tiene acceso al sistema y los datos necesarios para el informe sesión. |
@@ -316,7 +315,7 @@ Ninguno
 
 | UC–12  | Modificar Informe de Sesión | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ08-Gestión de Informes de Sesion |
+| **Objetivos asociados** | - OBJ07-Gestión de Informes de Sesion |
 | **Requisitos asociados** | - IRQ-03: Información sobre Informes de Sesion |
 | **Descripción** | Permite modificar la información de un informe de sesión existente.  |
 | **Precondición** | Un psicólogo tiene acceso al sistema y los datos necesarios para el informe sesión. |
@@ -341,7 +340,7 @@ Ninguno
 
 | UC–13  | Consultar Informe de Sesión | |
 |--------|------------------|----|
-| **Objetivos asociados** | - OBJ08-Gestión de Informes de Sesion |
+| **Objetivos asociados** | - OBJ07-Gestión de Informes de Sesion |
 | **Requisitos asociados** | - IRQ-03: Información sobre Informes de Sesion |
 | **Descripción** | El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el usuario realice consulta del informe de sesión que tiene la sesión.  |
 | **Precondición** | Se desea conocer el informe de sesión que tiene una sesión. |
@@ -494,7 +493,7 @@ Ninguno
 ---
 ## Matriz de Rastreabilidad Objetivo/Requisitos
 
-| OBJ/IRQ                 | **OBJ04-Gestionar Parámetros de Sistema** | **OBJ05-Gestionar Seguridad** | **OBJ07-Gestión de Sesiones** | **OBJ08-Gestión de Informes de Sesion** | **OBJ06-Gestion de Secretarios**|
+| OBJ/IRQ                 | **OBJ04-Gestionar Parámetros de Sistema** | **OBJ05-Gestionar Seguridad** | **OBJ03-Gestión de Sesiones** | **OBJ07-Gestión de Informes de Sesion** | **OBJ06-Gestion de Secretarios**|
 |:--------------------------|:------------------------:|:------------------------:|:------------------------:|:------------------------:|:------------------------:|
 | **IRQ 01**|||**X**||
 | **IRQ 02**|**X**|**X**|||**X**|
